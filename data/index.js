@@ -1,15 +1,22 @@
+//hobbies imports
 import gym from "../app/public/home/gym.jpg";
 import bike from "../app/public/home/bike ride.jpg";
 import cooking from "../app/public/home/cooking.jpg";
 import hiking from "../app/public/home/hiking.jpg";
 import coding from "../app/public/home/coding.jpg";
 
+//icons imports
 import insta from "../app/public/icons/insta_icon.ico";
 import github from "../app/public/icons/github_icon.ico";
 import dribbble from "../app/public/icons/dribbble_icon.ico";
 import linkedin from "../app/public/icons/linkedin_icon_blue.ico";
 import gmail from "../app/public/icons/gmail_icon.ico";
 
+//projects imports
+import ionarcThumbnail1 from "../app/public/home/ionarc thumbnail.png";
+import ionarcThumbnail2 from "../app/public/home/ionarc thumbnail_2.png";
+import ionarcThumbnail3 from "../app/public/home/ionarc thumbnail_3.png";
+import thumb from "../app/public/home/bike ride.jpg";
 export const footerLinks = [
   {
     name: "Linkedin",
@@ -96,5 +103,105 @@ export const skills = [
       "git & github",
       "Wire framing",
     ],
+  },
+];
+
+export const projectsData = [
+  {
+    projectName: "IonArc",
+    projectHeading: "IonArc Consultancy Website",
+    period: "July 2024 - July 2024",
+    projectLink: "https://ionarc-website.vercel.app/",
+    projectDescription:
+      "A dynamic and engaging digital platform designed to showcase the client’s expertise and services. The website delivers a seamless user experience with its modern, responsive design, ensuring visitors can easily navigate and access key information. Crafted to highlight industry-leading solutions, the site combines professional aesthetics with intuitive functionality, positioning the client as a trusted consultancy partner while effectively capturing the attention of potential clients.",
+    techStack: ["React", "tailwind CSS", "Figma", "Postman"],
+    thingsUsed: [],
+    theJourney: [
+      "Client consultation",
+      "User Research",
+      "Design & wire framing",
+      "Development",
+      "Testing & deployment",
+    ],
+    projectImages: [
+      ionarcThumbnail1,
+      ionarcThumbnail2,
+      ionarcThumbnail3,
+      thumb,
+    ],
+  },
+  {
+    projectName: "Projects Section",
+    projectHeading: "Portfolio Projects Section",
+    period: "October 2024 - Present",
+    projectLink:
+      "https://dribbble.com/shots/24987554-Portfolio-s-Projects-section",
+    projectDescription:
+      "A dynamic and engaging digital platform designed to showcase the client’s expertise and services. The website delivers a seamless user experience with its modern, responsive design, ensuring visitors can easily navigate and access key information. Crafted to highlight industry-leading solutions, the site combines professional aesthetics with intuitive functionality, positioning the client as a trusted consultancy partner while effectively capturing the attention of potential clients.",
+    techStack: ["React", "tailwind CSS", "Figma", "Postman"],
+    thingsUsed: [],
+    theJourney: [
+      "Client consultation",
+      "User Research",
+      "Design & wire framing",
+      "Development",
+      "Testing & deployment",
+    ],
+    projectImages: [ionarcThumbnail1, ionarcThumbnail2, ionarcThumbnail3],
+  },
+  {
+    projectName: "LinkedIn Re-design",
+    projectHeading: "LinkedIn Home Page Re-design",
+    period: "September 2024 - September 2024",
+    projectLink:
+      "https://dribbble.com/shots/24944391-LinkedIn-Home-Page-Refresh",
+    projectDescription:
+      "A dynamic and engaging digital platform designed to showcase the client’s expertise and services. The website delivers a seamless user experience with its modern, responsive design, ensuring visitors can easily navigate and access key information. Crafted to highlight industry-leading solutions, the site combines professional aesthetics with intuitive functionality, positioning the client as a trusted consultancy partner while effectively capturing the attention of potential clients.",
+    techStack: ["React", "tailwind CSS", "Figma", "Postman"],
+    thingsUsed: [],
+    theJourney: [
+      "Client consultation",
+      "User Research",
+      "Design & wire framing",
+      "Development",
+      "Testing & deployment",
+    ],
+    projectImages: [ionarcThumbnail1, ionarcThumbnail2, ionarcThumbnail3],
+  },
+  {
+    projectName: "Morning Buddy",
+    projectHeading: "Morning Buddy (Your every day instant news bud!)",
+    projectLink: "https://dribbble.com/shots/24895816-Morning-Buddy",
+    period: "September 2024 - September 2024",
+    projectDescription:
+      "A dynamic and engaging digital platform designed to showcase the client’s expertise and services. The website delivers a seamless user experience with its modern, responsive design, ensuring visitors can easily navigate and access key information. Crafted to highlight industry-leading solutions, the site combines professional aesthetics with intuitive functionality, positioning the client as a trusted consultancy partner while effectively capturing the attention of potential clients.",
+    techStack: ["React", "tailwind CSS", "Figma", "Postman"],
+    thingsUsed: [],
+    theJourney: [
+      "Client consultation",
+      "User Research",
+      "Design & wire framing",
+      "Development",
+      "Testing & deployment",
+    ],
+    projectImages: [ionarcThumbnail1, ionarcThumbnail2, ionarcThumbnail3],
+  },
+  {
+    projectName: "Final Year Project",
+    projectHeading: "College Project Submission Portal",
+    period: "July 2023 - July 2024",
+    projectLink: "https://github.com/adnan179/final_year_project",
+    projectDescription:
+      "A dynamic and engaging digital platform designed to showcase the client’s expertise and services. The website delivers a seamless user experience with its modern, responsive design, ensuring visitors can easily navigate and access key information. Crafted to highlight industry-leading solutions, the site combines professional aesthetics with intuitive functionality, positioning the client as a trusted consultancy partner while effectively capturing the attention of potential clients.",
+    techStack: ["React", "tailwind CSS", "Figma", "Postman"],
+    thingsUsed: [],
+    theJourney: [
+      "Client consultation",
+      "User Research",
+      "Design & wire framing",
+      "Development",
+      "Testing & deployment",
+    ],
+    projectImages: [ionarcThumbnail1, ionarcThumbnail2, ionarcThumbnail3],
   },
 ];

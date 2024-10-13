@@ -9,7 +9,7 @@ import resume from "../../app/public/icons/resume_icon.ico";
 
 const SpeedySnapshot = () => {
   return (
-    <div className="w-full flex flex-col lg:px-12 px-4">
+    <div className="w-full min-h-screen flex flex-col lg:px-12 px-4">
       <div className="flex w-full justify-start items-center">
         <SectionHeading heading={"Speedy Snapshot"} />
       </div>
