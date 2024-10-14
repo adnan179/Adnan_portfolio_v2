@@ -68,6 +68,25 @@ export const hobbies = [
   },
 ];
 
+export const degreeAndDeeds = [
+  {
+    name: "Student at GITAM university, Bangalore",
+    period: "Aug 2020 - Apr 2024",
+  },
+  {
+    name: "Quality Assurance Intern at Reverr",
+    period: "Jul 2023 - Nov 2023",
+  },
+  {
+    name: "UI/UX designer at GITAM’s github community",
+    period: "Nov 2023 - Apr 2024",
+  },
+  {
+    name: "Freelancing with eyes open for exciting roles",
+    period: "Present",
+  },
+];
+
 export const skills = [
   {
     skillSet: "Front-end",

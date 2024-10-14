@@ -26,9 +26,9 @@ const Footer = () => {
     e.preventDefault();
     setLoading(true);
 
-    const serviceKey = "service_kx3jypm";
-    const templateId = "template_d1jz9n7";
-    const publicKey = "IxMNoToC0PWyLli8Q";
+    const serviceKey = process.env.NEXT_PUBLIC_SERVICE_KEY;
+    const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID;
+    const publicKey = process.env.NEXT_PUBLIC_PUBLICKEY;
 
     // Collect the empty field errors
     let missingFields = [];
@@ -63,7 +63,7 @@ const Footer = () => {
         })
         .catch((error) => {
           console.log("Error sending email", error);
-          toast.error("Error sending email");
+          toast.error(`Error sending email: ${error}`);
           setLoading(false);
         });
     } catch (error) {

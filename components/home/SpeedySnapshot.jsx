@@ -2,14 +2,14 @@ import React from "react";
 import SectionHeading from "../SectionHeading";
 import closeUp from "../../app/public/home/portfolio_profile_close_up.jpg";
 import Image from "next/image";
-import { footerLinks, hobbies, skills } from "@/data";
+import { degreeAndDeeds, footerLinks, hobbies, skills } from "@/data";
 import world from "../../app/public/home/world.gif";
 import Link from "next/link";
 import resume from "../../app/public/icons/resume_icon.ico";
 
 const SpeedySnapshot = () => {
   return (
-    <div className="w-full min-h-screen flex flex-col lg:px-12 px-4">
+    <div className="w-full min-h-screen flex flex-col lg:px-8 px-4">
       <div className="flex w-full justify-start items-center">
         <SectionHeading heading={"Speedy Snapshot"} />
       </div>
@@ -105,11 +105,30 @@ const SpeedySnapshot = () => {
       {/* first col first col */}
       {/* second col second row */}
       <div className="flex md:flex-row flex-col gap-4 w-full justify-center items-center mt-5">
+        {/* degree and deeds */}
         <div className="lg:w-[500px] lg:h-[200px] h-[200px] w-full rounded-[24px] bg-[#171717] flex flex-col gap-2 p-4 drop-shadow-lg">
           <h3 className="text-white font-medium text-[18px]">
             Degree and deeds
           </h3>
+          <div className="flex items-center justify-center mt-6">
+            <div className="relative flex items-center justify-between w-full">
+              <div className="absolute top-[48%] left-0 right-0 h-[1.5px] bg-[#808080]"></div>
+              {degreeAndDeeds.map((d, idx) => (
+                <div key={idx} className="flex flex-col items-center gap-2">
+                  <span className="sm:text-[10px] text-[8px] text-center text-white font-medium">
+                    {d.period}
+                  </span>
+                  <div className="mt-2 relative flex items-center justify-center w-4 h-4 bg-white rounded-full"></div>
+                  <span className="sm:text-[9px] text-[8px] text-center text-white">
+                    {d.name}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
+        {/* degree and deeds */}
+        {/* skills */}
         <div className="lg:w-[360px] h-[200px] w-full rounded-[24px] bg-[#171717] flex flex-col gap-2 p-3 overflow-y-auto custom-scrollbar drop-shadow-lg">
           {skills.map((sk, index) => (
             <div key={index} className="flex flex-col gap-1 px-2 w-full">
@@ -127,6 +146,8 @@ const SpeedySnapshot = () => {
             </div>
           ))}
         </div>
+        {/* skills */}
+
         <Link
           href="/mystory"
           className="lg:w-[200px] w-full h-[200px] rounded-[24px] bg-[#171717] flex flex-col items-center justify-center p-4 drop-shadow-lg"
