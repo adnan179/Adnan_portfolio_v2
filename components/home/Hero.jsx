@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { HiOutlineArrowLongRight } from "react-icons/hi2";
+import { GoArrowRight } from "react-icons/go";
 import Image from "next/image";
 import hero from "../../app/public/home/hero_image_portfolio.jpg";
 
@@ -42,7 +42,7 @@ const Hero = () => {
         >
           View Resume
           <span>
-            <HiOutlineArrowLongRight color="white" className="w-9 h-9" />
+            <GoArrowRight color="white" className="w-9 h-9" />
           </span>
           <span className="absolute bottom-0 left-0 w-full h-[1.5px] bg-white rounded-sm"></span>
         </a>
