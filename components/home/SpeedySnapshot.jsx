@@ -2,14 +2,13 @@ import React from "react";
 import SectionHeading from "../SectionHeading";
 import closeUp from "../../app/public/home/portfolio_profile_close_up.jpg";
 import Image from "next/image";
-import { degreeAndDeeds, footerLinks, hobbies, skills } from "@/data";
+import { degreeAndDeeds, hobbies, skills, socialLinks } from "@/data";
 import world from "../../app/public/home/world.gif";
 import Link from "next/link";
-import resume from "../../app/public/icons/resume_icon.ico";
 
 const SpeedySnapshot = () => {
   return (
-    <div className="w-full min-h-screen flex flex-col lg:px-8 px-4">
+    <section className="w-full min-h-screen flex flex-col lg:px-8 px-4">
       <div className="flex w-full justify-start items-center">
         <SectionHeading heading={"Speedy Snapshot"} />
       </div>
@@ -41,27 +40,21 @@ const SpeedySnapshot = () => {
           <div className="flex md:flex-row flex-col md:gap-2 gap-4">
             {/* social links */}
             <div className="bg-[#171717] rounded-[24px] drop-shadow-lg lg:w-[150px] lg:h-[130px] md:w-[120px] md:h-[90px] w-full flex-row flex md:px-2 px-4 py-3 flex-wrap md:gap-1 gap-3 justify-center items-center">
-              {footerLinks.map((fl, index) => (
+              {socialLinks.map((fl, index) => (
                 <a
-                  href={fl.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   key={index}
+                  href={
+                    fl.name === "Gmail"
+                      ? `mailto:${fl.gmail}` // 'mailto:' to open the mail client
+                      : fl.link // For other links
+                  }
+                  target={fl.name === "Gmail" ? "_self" : "_blank"}
+                  rel="noopener noreferrer"
+                  className="flex p-[5px] bg-black/30 rounded-[10px] justify-center items-center"
                 >
-                  <Image
-                    src={fl.icon}
-                    alt={fl.name}
-                    className="lg:w-8 lg:h-8 md:w-6 md:h-6 w-12 h-12"
-                  />
+                  {fl.icon}
                 </a>
               ))}
-              <a href="/CV.pdf" rel="noopener noreferrer" target="_blank">
-                <Image
-                  src={resume}
-                  alt="resume"
-                  className="lg:w-8 lg:h-8 w-12 h-12"
-                />
-              </a>
             </div>
             {/* social links */}
             {/* click me cont */}
@@ -166,7 +159,7 @@ const SpeedySnapshot = () => {
         </Link>
       </div>
       {/* second col second row */}
-    </div>
+    </section>
   );
 };
 

@@ -6,41 +6,38 @@ import hiking from "../app/public/home/hiking.jpg";
 import coding from "../app/public/home/coding.jpg";
 
 //icons imports
-import insta from "../app/public/icons/insta_icon.ico";
-import github from "../app/public/icons/github_icon.ico";
-import dribbble from "../app/public/icons/dribbble_icon.ico";
-import linkedin from "../app/public/icons/linkedin_icon_blue.ico";
-import gmail from "../app/public/icons/gmail_icon.ico";
+import { FaInstagram, FaLinkedin, FaGithub, FaDribbble } from "react-icons/fa6";
+import { MdOutlineMail } from "react-icons/md";
 
 //projects imports
 import ionarcThumbnail1 from "../app/public/home/ionarc thumbnail.png";
 import ionarcThumbnail2 from "../app/public/home/ionarc thumbnail_2.png";
 import ionarcThumbnail3 from "../app/public/home/ionarc thumbnail_3.png";
 import thumb from "../app/public/home/bike ride.jpg";
-export const footerLinks = [
+export const socialLinks = [
   {
     name: "Linkedin",
-    icon: linkedin,
+    icon: <FaLinkedin className="w-[30px] h-[30px] text-white" />,
     link: "https://www.linkedin.com/in/adnanshaik179",
   },
   {
     name: "Instagram",
-    icon: insta,
+    icon: <FaInstagram className="w-[30px] h-[30px] text-white" />,
     link: "https://www.instagram.com/_adnan179",
   },
   {
     name: "Github",
-    icon: github,
+    icon: <FaGithub className="w-[30px] h-[30px] text-white" />,
     link: "https://www.github.com/adnan179",
   },
   {
     name: "Dribbble",
-    icon: dribbble,
+    icon: <FaDribbble className="w-[30px] h-[30px] text-white" />,
     link: "https://www.dribbble.com/adnan179",
   },
   {
     name: "Gmail",
-    icon: gmail,
+    icon: <MdOutlineMail className="w-[30px] h-[30px] text-white" />,
     gmail: "adnanshaik179@gmail.com",
   },
 ];

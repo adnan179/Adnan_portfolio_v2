@@ -6,7 +6,7 @@ import hero from "../../app/public/home/hero_image_portfolio.jpg";
 
 const Hero = () => {
   return (
-    <div className="relative w-full min-h-screen flex flex-row md:justify-between items-center lg:px-16 md:px-12 px-6">
+    <section className="relative w-full min-h-screen flex flex-row md:justify-between items-center lg:px-16 md:px-12 px-6">
       <div className="bg-[#2B0CFD]/50 absolute top-[-6rem] -z-10 md:right-[8rem] right-0 h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]"></div>
 
       <div className="flex flex-col gap-5 text-white font-medium md:w-[65%] w-full h-full justify-between items-start">
@@ -57,7 +57,7 @@ const Hero = () => {
           <div className="absolute inset-0 bg-black opacity-20 rounded-[200px] z-40"></div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

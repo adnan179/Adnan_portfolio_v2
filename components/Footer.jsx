@@ -1,5 +1,5 @@
 "use client";
-import { footerLinks } from "@/data";
+import { footerLinks, socialLinks } from "@/data";
 import LoadingSpinner from "@/utils/LoadingSpinner";
 import Image from "next/image";
 import { useState } from "react";
@@ -93,7 +93,7 @@ const Footer = () => {
             below—your choice, I’m always a click away! 💻✉️
           </h2>
           <div className="flex flex-row gap-3 flex-wrap w-[250px] items-center">
-            {footerLinks.map((fl, index) => (
+            {socialLinks.map((fl, index) => (
               <a
                 key={index}
                 href={
@@ -103,12 +103,9 @@ const Footer = () => {
                 }
                 target={fl.name === "Gmail" ? "_self" : "_blank"}
                 rel="noopener noreferrer"
+                className="flex w-[40px] h-[40px] bg-[#171717] rounded-[10px] justify-center items-center"
               >
-                <Image
-                  src={fl.icon}
-                  alt={fl.name}
-                  className="w-10 h-10 object-cover"
-                />
+                {fl.icon}
               </a>
             ))}
           </div>
@@ -165,7 +162,7 @@ const Footer = () => {
             >
               <span className="absolute inset-0 bg-gradient-to-r from-[#2B0CFD] to-[#FB0D0D] transition-transform duration-300 ease-in-out transform translate-x-[-100%] group-hover:translate-x-0"></span>
               <span className="relative z-10 group-hover:text-white transition-colors duration-300 ease-in-out">
-                {loading ? <LoadingSpinner /> : "Send"}
+                {loading ? <LoadingSpinner color={"white"} /> : "Send"}
               </span>
             </button>
           </div>
