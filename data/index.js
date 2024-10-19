@@ -14,30 +14,41 @@ import ionarcThumbnail1 from "../app/public/home/ionarc thumbnail.png";
 import ionarcThumbnail2 from "../app/public/home/ionarc thumbnail_2.png";
 import ionarcThumbnail3 from "../app/public/home/ionarc thumbnail_3.png";
 import thumb from "../app/public/home/bike ride.jpg";
+
 export const socialLinks = [
   {
     name: "Linkedin",
-    icon: <FaLinkedin className="w-[30px] h-[30px] text-white" />,
+    icon: (
+      <FaLinkedin className="lg:w-[40px] lg:h-[40px] md:w-[30px] md:h-[30px] w-[40px] h-[40px] text-white" />
+    ),
     link: "https://www.linkedin.com/in/adnanshaik179",
   },
   {
     name: "Instagram",
-    icon: <FaInstagram className="w-[30px] h-[30px] text-white" />,
+    icon: (
+      <FaInstagram className="lg:w-[40px] lg:h-[40px] md:w-[30px] md:h-[30px] w-[40px] h-[40px] text-white" />
+    ),
     link: "https://www.instagram.com/_adnan179",
   },
   {
     name: "Github",
-    icon: <FaGithub className="w-[30px] h-[30px] text-white" />,
+    icon: (
+      <FaGithub className="lg:w-[40px] lg:h-[40px] md:w-[30px] md:h-[30px] w-[40px] h-[40px] text-white" />
+    ),
     link: "https://www.github.com/adnan179",
   },
   {
     name: "Dribbble",
-    icon: <FaDribbble className="w-[30px] h-[30px] text-white" />,
+    icon: (
+      <FaDribbble className="lg:w-[40px] lg:h-[40px] md:w-[30px] md:h-[30px] w-[40px] h-[40px] text-white" />
+    ),
     link: "https://www.dribbble.com/adnan179",
   },
   {
     name: "Gmail",
-    icon: <MdOutlineMail className="w-[30px] h-[30px] text-white" />,
+    icon: (
+      <MdOutlineMail className="lg:w-[40px] lg:h-[40px] md:w-[30px] md:h-[30px] w-[40px] h-[40px] text-white" />
+    ),
     gmail: "adnanshaik179@gmail.com",
   },
 ];
@@ -219,5 +230,104 @@ export const projectsData = [
       "Testing & deployment",
     ],
     projectImages: [ionarcThumbnail1, ionarcThumbnail2, ionarcThumbnail3],
+  },
+];
+
+export const feedbackData = [
+  {
+    name: "Adnan Shaik",
+    email: "adnanshaik179@gmail.com",
+    message:
+      "Wowza! 💥 This portfolio is smoother than my morning coffee ☕ (and that's saying something)! The design is chef’s kiss 👨‍🍳💋, and the functionality is like butter on a hot pancake 🥞—smooth, satisfying, and leaves me wanting more! If this portfolio were a snack, it'd be a 10/10 nacho platter 🧀. Keep it up, you're coding magic 🧙‍♂️!",
+  },
+  {
+    name: "Adnan Shaik",
+    email: "adnanshaik179@gmail.com",
+    message:
+      "Wowza! 💥 This portfolio is smoother than my morning coffee ☕ (and that's saying something)! The design is chef’s kiss 👨‍🍳💋, and the functionality is like butter on a hot pancake 🥞—smooth, satisfying, and leaves me wanting more! If this portfolio were a snack, it'd be a 10/10 nacho platter 🧀. Keep it up, you're coding magic 🧙‍♂️!",
+  },
+  {
+    name: "Adnan Shaik",
+    email: "adnanshaik179@gmail.com",
+    message:
+      "Wowza! 💥 This portfolio is smoother than my morning coffee ☕ (and that's saying something)! The design is chef’s kiss 👨‍🍳💋, and the functionality is like butter on a hot pancake 🥞—smooth, satisfying, and leaves me wanting more! If this portfolio were a snack, it'd be a 10/10 nacho platter 🧀. Keep it up, you're coding magic 🧙‍♂️!",
+  },
+  {
+    name: "Adnan Shaik",
+    email: "adnanshaik179@gmail.com",
+    message:
+      "Wowza! 💥 This portfolio is smoother than my morning coffee ☕ (and that's saying something)! The design is chef’s kiss 👨‍🍳💋, and the functionality is like butter on a hot pancake 🥞—smooth, satisfying, and leaves me wanting more! If this portfolio were a snack, it'd be a 10/10 nacho platter 🧀. Keep it up, you're coding magic 🧙‍♂️!",
+  },
+  {
+    name: "Adnan Shaik",
+    email: "adnanshaik179@gmail.com",
+    message:
+      "Wowza! 💥 This portfolio is smoother than my morning coffee ☕ (and that's saying something)! The design is chef’s kiss 👨‍🍳💋, and the functionality is like butter on a hot pancake 🥞—smooth, satisfying, and leaves me wanting more! If this portfolio were a snack, it'd be a 10/10 nacho platter 🧀. Keep it up, you're coding magic 🧙‍♂️!",
+  },
+  {
+    name: "Adnan Shaik",
+    email: "adnanshaik179@gmail.com",
+    message:
+      "Wowza! 💥 This portfolio is smoother than my morning coffee ☕ (and that's saying something)! The design is chef’s kiss 👨‍🍳💋, and the functionality is like butter on a hot pancake 🥞—smooth, satisfying, and leaves me wanting more! If this portfolio were a snack, it'd be a 10/10 nacho platter 🧀. Keep it up, you're coding magic 🧙‍♂️!",
+  },
+  {
+    name: "Adnan Shaik",
+    email: "adnanshaik179@gmail.com",
+    message:
+      "Wowza! 💥 This portfolio is smoother than my morning coffee ☕ (and that's saying something)! The design is chef’s kiss 👨‍🍳💋, and the functionality is like butter on a hot pancake 🥞—smooth, satisfying, and leaves me wanting more! If this portfolio were a snack, it'd be a 10/10 nacho platter 🧀. Keep it up, you're coding magic 🧙‍♂️!",
+  },
+  {
+    name: "Adnan Shaik",
+    email: "adnanshaik179@gmail.com",
+    message:
+      "Wowza! 💥 This portfolio is smoother than my morning coffee ☕ (and that's saying something)! The design is chef’s kiss 👨‍🍳💋, and the functionality is like butter on a hot pancake 🥞—smooth, satisfying, and leaves me wanting more! If this portfolio were a snack, it'd be a 10/10 nacho platter 🧀. Keep it up, you're coding magic 🧙‍♂️!",
+  },
+  {
+    name: "Adnan Shaik",
+    email: "adnanshaik179@gmail.com",
+    message:
+      "Wowza! 💥 This portfolio is smoother than my morning coffee ☕ (and that's saying something)! The design is chef’s kiss 👨‍🍳💋, and the functionality is like butter on a hot pancake 🥞—smooth, satisfying, and leaves me wanting more! If this portfolio were a snack, it'd be a 10/10 nacho platter 🧀. Keep it up, you're coding magic 🧙‍♂️!",
+  },
+  {
+    name: "Adnan Shaik",
+    email: "adnanshaik179@gmail.com",
+    message:
+      "Wowza! 💥 This portfolio is smoother than my morning coffee ☕ (and that's saying something)! The design is chef’s kiss 👨‍🍳💋, and the functionality is like butter on a hot pancake 🥞—smooth, satisfying, and leaves me wanting more! If this portfolio were a snack, it'd be a 10/10 nacho platter 🧀. Keep it up, you're coding magic 🧙‍♂️!",
+  },
+  {
+    name: "Adnan Shaik",
+    email: "adnanshaik179@gmail.com",
+    message:
+      "Wowza! 💥 This portfolio is smoother than my morning coffee ☕ (and that's saying something)! The design is chef’s kiss 👨‍🍳💋, and the functionality is like butter on a hot pancake 🥞—smooth, satisfying, and leaves me wanting more! If this portfolio were a snack, it'd be a 10/10 nacho platter 🧀. Keep it up, you're coding magic 🧙‍♂️!",
+  },
+  {
+    name: "Adnan Shaik",
+    email: "adnanshaik179@gmail.com",
+    message:
+      "Wowza! 💥 This portfolio is smoother than my morning coffee ☕ (and that's saying something)! The design is chef’s kiss 👨‍🍳💋, and the functionality is like butter on a hot pancake 🥞—smooth, satisfying, and leaves me wanting more! If this portfolio were a snack, it'd be a 10/10 nacho platter 🧀. Keep it up, you're coding magic 🧙‍♂️!",
+  },
+  {
+    name: "Adnan Shaik",
+    email: "adnanshaik179@gmail.com",
+    message:
+      "Wowza! 💥 This portfolio is smoother than my morning coffee ☕ (and that's saying something)! The design is chef’s kiss 👨‍🍳💋, and the functionality is like butter on a hot pancake 🥞—smooth, satisfying, and leaves me wanting more! If this portfolio were a snack, it'd be a 10/10 nacho platter 🧀. Keep it up, you're coding magic 🧙‍♂️!",
+  },
+  {
+    name: "Adnan Shaik",
+    email: "adnanshaik179@gmail.com",
+    message:
+      "Wowza! 💥 This portfolio is smoother than my morning coffee ☕ (and that's saying something)! The design is chef’s kiss 👨‍🍳💋, and the functionality is like butter on a hot pancake 🥞—smooth, satisfying, and leaves me wanting more! If this portfolio were a snack, it'd be a 10/10 nacho platter 🧀. Keep it up, you're coding magic 🧙‍♂️!",
+  },
+  {
+    name: "Adnan Shaik",
+    email: "adnanshaik179@gmail.com",
+    message:
+      "Wowza! 💥 This portfolio is smoother than my morning coffee ☕ (and that's saying something)! The design is chef’s kiss 👨‍🍳💋, and the functionality is like butter on a hot pancake 🥞—smooth, satisfying, and leaves me wanting more! If this portfolio were a snack, it'd be a 10/10 nacho platter 🧀. Keep it up, you're coding magic 🧙‍♂️!",
+  },
+  {
+    name: "Adnan Shaik",
+    email: "adnanshaik179@gmail.com",
+    message:
+      "Wowza! 💥 This portfolio is smoother than my morning coffee ☕ (and that's saying something)! The design is chef’s kiss 👨‍🍳💋, and the functionality is like butter on a hot pancake 🥞—smooth, satisfying, and leaves me wanting more! If this portfolio were a snack, it'd be a 10/10 nacho platter 🧀. Keep it up, you're coding magic 🧙‍♂️!",
   },
 ];

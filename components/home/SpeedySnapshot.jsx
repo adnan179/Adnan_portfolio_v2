@@ -5,6 +5,7 @@ import Image from "next/image";
 import { degreeAndDeeds, hobbies, skills, socialLinks } from "@/data";
 import world from "../../app/public/home/world.gif";
 import Link from "next/link";
+import { TbClick, TbHandClick } from "react-icons/tb";
 
 const SpeedySnapshot = () => {
   return (
@@ -39,7 +40,7 @@ const SpeedySnapshot = () => {
         <div className="flex flex-col gap-4">
           <div className="flex md:flex-row flex-col md:gap-2 gap-4">
             {/* social links */}
-            <div className="bg-[#171717] rounded-[24px] drop-shadow-lg lg:w-[150px] lg:h-[130px] md:w-[120px] md:h-[90px] w-full flex-row flex md:px-2 px-4 py-3 flex-wrap md:gap-1 gap-3 justify-center items-center">
+            <div className="w-full flex-row flex flex-wrap bg-[#171717] rounded-[24px] drop-shadow-lg justify-center items-center lg:w-[200px] lg:h-[150px] md:w-[120px] md:h-[90px] md:gap-1 gap-3 p-3">
               {socialLinks.map((fl, index) => (
                 <a
                   key={index}
@@ -58,21 +59,32 @@ const SpeedySnapshot = () => {
             </div>
             {/* social links */}
             {/* click me cont */}
-            <div className="lg:w-[250px] lg:h-[130px] h-[90px] w-full flex flex-col lg:gap-4 md:gap-1 gap-2 bg-gradient-to-r from-[#021EED] to-[#FB0D0D] rounded-[24px] drop-shadow-lg justify-center items-center lg:p-4 p-2">
-              <h2 className="text-white lg:text-[14px] md:text-[12px]">
+            <div className="lg:w-[250px] lg:h-[150px] h-[90px] w-full flex flex-col lg:gap-4 md:gap-1 gap-2 bg-gradient-to-r from-[#021EED] to-[#FB0D0D] rounded-[24px] drop-shadow-lg  lg:p-4 p-2">
+              <h2 className="text-white lg:text-[16px] md:text-[12px]">
                 Have a plan? Let&apos;s get started!
               </h2>
               <Link
                 href="/services"
-                className="text-white px-4 py-2 bg-black/70 rounded-2xl drop-shadow-md md:text-[12px]"
+                className="relative overflow-hidden flex items-center justify-between rounded-3xl  bg-black/70 text-white group hover:text-black transition-all duration-500 md:text-[12px] drop-shadow-md"
               >
-                Click me!
+                {/* Left side text */}
+                <span className="relative z-10 font-bold transition-all duration-500 ease-in-out group-hover:translate-x-0 pl-5">
+                  Click me!
+                </span>
+
+                {/* Right side icon */}
+                <span className="relative z-10 ml-2 w-10 h-10 flex items-center justify-center rounded-full bg-white  text-black transition-all duration-500 ease-in-out group-hover:text-white">
+                  <TbClick />
+                </span>
+
+                {/* Hover background slider */}
+                <span className="absolute inset-0 bg-white transform translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></span>
               </Link>
             </div>
             {/* click me cont */}
           </div>
           {/* hobbies */}
-          <div className="relative flex flex-row drop-shadow-lg lg:w-[400px] lg:h-[130px] md:w-[330px] sm:h-[90px] h-[150px] w-full">
+          <div className="relative flex flex-row drop-shadow-lg lg:w-[450px] lg:h-[130px] md:w-[330px] sm:h-[90px] h-[150px] w-full">
             {hobbies.map((h, index) => (
               <div
                 key={index}

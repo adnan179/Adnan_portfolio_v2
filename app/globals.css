@@ -40,6 +40,7 @@
   @apply p-4 bg-black/80 rounded-[20px] text-white/80 w-full shadow-md shadow-black;
 }
 
+/* scroll bar styles */
 /* Custom scrollbar for Chrome, Safari, and Edge */
 .custom-scrollbar::-webkit-scrollbar {
   width: 4px;
@@ -76,3 +77,4 @@
   background: linear-gradient(90deg, #021eed, #fb0d0d);
   border-radius: 10px;
 }
+/* scroll bar styles */

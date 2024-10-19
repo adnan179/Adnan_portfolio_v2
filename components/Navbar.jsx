@@ -51,18 +51,66 @@ const Navbar = () => {
     }
   }, [activePage]);
 
+  useEffect(() => {
+    const tl = gsap.timeline();
+
+    //desktop wave animation
+    tl.fromTo(
+      "#navbar-logo",
+      { y: -50, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }
+    )
+      .fromTo(
+        "#navbar-links > a",
+        { y: -50, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }
+      )
+      .fromTo(
+        "#navbar-talk",
+        { y: -50, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" },
+        "-=0.5"
+      );
+
+    //mobile wave animation
+    if (window.innerWidth < 768) {
+      gsap.fromTo(
+        "#navbar-logo, #hamburger-menu",
+        { y: -50, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8, ease: "power3.out", stagger: 0.3 }
+      );
+    }
+  }, []);
+
+  //sidebar animation
+  useEffect(() => {
+    if (sidebarOpen) {
+      gsap.fromTo(
+        "#sidebar-links a, #sidebar-talk",
+        { x: 200, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.8, ease: "power3.out", stagger: 0.2 }
+      );
+    }
+  }, [sidebarOpen]);
+
   return (
-    <div className="sticky z-50 top-0 flex flex-row justify-between items-center lg:px-10 md:px-8 px-5 w-full h-[80px]">
+    <nav className="sticky z-50 top-0 flex flex-row justify-between items-center lg:px-10 md:px-8 px-5 w-full lg:h-[80px] h-[60px]">
       {/* Logo */}
-      <h1 className="text-white font-bold font-Montserrat text-[18px] md:text-[20px]">
+      <h1
+        id="navbar-logo"
+        className="text-white font-bold font-Montserrat text-[15px] lg:text-[20px]"
+      >
         AdnanXDesign
       </h1>
 
       {/* Nav Links for Desktop */}
-      <div className="hidden md:flex flex-row gap-10 -ml-5">
+      <div
+        id="navbar-links"
+        className="hidden md:flex flex-row lg:gap-10 gap-4 -ml-5"
+      >
         {NavLinks.map((nav, index) => (
           <Link
-            className={`font-medium cursor-pointer text-[16px] ${
+            className={`font-medium cursor-pointer lg:text-[16px] text-[12px] ${
               activePage === nav.name ? "glowing-text" : "text-[#808080]"
             }`}
             onClick={() => setActivePage(nav.name)}
@@ -78,13 +126,16 @@ const Navbar = () => {
 
       {/* Let's Talk Button for Desktop */}
       <ScrollIntoView selector="#footer">
-        <button className="hidden md:flex bg-[#383838] text-white/80 font-semibold text-[16px] px-4 py-2 rounded-[16px] shadow-lg">
+        <button
+          id="navbar-talk"
+          className="hidden md:flex bg-[#383838] text-white/80 font-semibold lg:text-[16px] text-[12px] lg:px-4 lg:py-2 px-2 py-1 rounded-[16px] shadow-lg"
+        >
           Let&apos;s talk
         </button>
       </ScrollIntoView>
 
       {/* Hamburger Menu for Mobile */}
-      <div className="md:hidden">
+      <div id="hamburger-menu" className="md:hidden">
         <button
           onClick={toggleSidebar}
           className="text-white focus:outline-none z-50"
@@ -151,7 +202,10 @@ const Navbar = () => {
         </button>
 
         {/* Nav Links in Sidebar */}
-        <div className="flex flex-col gap-5 mt-10 px-5 justify-center items-center">
+        <div
+          id="sidebar-links"
+          className="flex flex-col gap-5 mt-10 px-5 justify-center items-center"
+        >
           {NavLinks.map((nav, index) => (
             <Link
               href={nav.link}
@@ -170,7 +224,10 @@ const Navbar = () => {
             </Link>
           ))}
           <ScrollIntoView selector="#footer" onClick={() => toggleSidebar()}>
-            <button className="bg-[#383838] text-white/80 font-semibold text-[15px] px-4 py-2 rounded-[16px] shadow-lg mt-4">
+            <button
+              id="sidebar-talk"
+              className="bg-[#383838] text-white/80 font-semibold text-[15px] px-4 py-2 rounded-[16px] shadow-lg mt-4"
+            >
               Let&apos;s talk
             </button>
           </ScrollIntoView>
@@ -184,7 +241,7 @@ const Navbar = () => {
           onClick={closeSidebar}
         ></div>
       )}
-    </div>
+    </nav>
   );
 };
 

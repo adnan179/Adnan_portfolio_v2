@@ -77,7 +77,7 @@ const Footer = () => {
     // main container
     <div
       id="footer"
-      className=" mt-[200px] relative bottom-0 flex flex-col w-full xl:p-10 md:p-8 p-5 bg-gradient-to-r from-[#0F0F0F] to-[#171717] md:rounded-t-[120px] rounded-t-[60px] items-center font-inter"
+      className="relative bottom-0 flex flex-col w-full xl:p-10 md:p-8 p-5 bg-gradient-to-r from-[#0F0F0F] to-[#171717] md:rounded-t-[120px] rounded-t-[60px] items-center font-inter"
     >
       {/* contact form heading */}
       <div className="absolute top-0 md:left-[115px] px-4 py-2 text-xl xl:text-2xl font-Montserrat bg-white font-bold text-black">
