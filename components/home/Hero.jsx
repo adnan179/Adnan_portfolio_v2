@@ -4,6 +4,7 @@ import { GoArrowRight } from "react-icons/go";
 import Image from "next/image";
 import hero from "../../app/public/home/hero_image_portfolio.jpg";
 import gsap from "gsap";
+import Typewriter from "typewriter-effect";
 
 const Hero = () => {
   useEffect(() => {
@@ -19,6 +20,11 @@ const Hero = () => {
         { x: 100, opacity: 0 },
         { x: 0, opacity: 1, duration: 0.8, ease: "power1.inOut" }
       )
+      .fromTo(
+        "#blue-light",
+        { opacity: 0 },
+        { opacity: 1, duration: 0.8, ease: "power4.inOut" }
+      )
       .to("#hey-text", {
         rotation: 10,
         y: 15,
@@ -31,8 +37,11 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative w-full min-h-screen flex md:flex-row md:justify-between justify-center items-center lg:px-16 md:px-8 px-6 md:-mt-[200px] lg:mt-0">
-      <div className="bg-[#2B0CFD]/50 absolute top-[-6rem] -z-10 md:right-[8rem] right-0 h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]"></div>
+    <section className="relative w-full min-h-screen flex md:flex-row md:justify-between justify-center items-center lg:px-16 md:px-8 px-6 md:-mt-[150px] lg:-mt-0">
+      <div
+        id="blue-light"
+        className="bg-[#2B0CFD]/50 absolute top-[-6rem] -z-10 md:right-[8rem] right-0 h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]"
+      ></div>
 
       <div
         id="hero-section-1"
@@ -48,17 +57,22 @@ const Hero = () => {
           Welcome to my digital living room where caffeine burns into code &
           design—
         </h2>
-        <h2 className="flex sm:flex-row md:flex-col flex-col gap-2 font-inter text-[24px]">
+        <h2 className="flex flex-col gap-2 font-inter text-[24px]">
           I&apos;m a{" "}
           <div
             id="front-end"
-            className="bg-gradient-to-r from-[#2B0CFD] to-[#FB0D0D] bg-clip-text text-transparent lg:-rotate-2 lg:text-[24px] text-[30px]"
+            className="bg-gradient-to-r from-[#2B0CFD] to-[#FB0D0D] bg-clip-text text-transparent lg:text-[40px] text-[30px]"
           >
-            front-end developer
-          </div>{" "}
-          &{" "}
-          <div className="bg-gradient-to-r from-[#2B0CFD] to-[#FB0D0D] bg-clip-text text-transparent lg:-rotate-2 lg:text-[24px] text-[30px]">
-            UI/UX Designer
+            <Typewriter
+              options={{
+                strings: ["FRONT-END DEVELOPER", "UI/UX DESIGNER"],
+                autoStart: true,
+                loop: true,
+                deleteSpeed: 70,
+                delay: 50,
+                pauseFor: 800,
+              }}
+            />
           </div>
         </h2>
         <h2 className="font-inter lg:text-[27px] text-[18px]">

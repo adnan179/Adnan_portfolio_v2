@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 import { IoIosCloseCircle } from "react-icons/io";
 import { db } from "@/utils/firebase";
 import { addDoc, collection, getDocs } from "firebase/firestore";
+import { feedbackData } from "@/data";
 
 const ShareYourThoughts = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -67,9 +68,6 @@ const ShareYourThoughts = () => {
     fetchFeedbacks();
   }, []);
 
-  const firstRowData = feedbacks.slice(0, Math.ceil(feedbacks.length / 2));
-  const secondRowData = feedbacks.slice(Math.ceil(feedbacks.length / 2));
-
   return (
     <section className="flex flex-col w-full min-h-screen lg:px-12 px-4 md:mt-0 mt-10">
       {/* Heading, sub-heading and drop your wisdom button */}
@@ -92,27 +90,11 @@ const ShareYourThoughts = () => {
         <>
           {/* Display feedback messages */}
           <div className="flex overflow-hidden w-full mt-3">
-            <div className="flex flex-row">
-              {firstRowData.map((fd, idx) => (
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
+              {feedbacks.map((fd, idx) => (
                 <div
                   key={idx}
-                  className="flex flex-col gap-1 p-4 m-2 bg-black/50 text-white rounded-lg shadow-white shadow sm:w-[500px] w-[320px]"
-                >
-                  <h3 className="font-bold text-[16px]">{fd.name}</h3>
-                  <p className="font-medium text-[#808080] text-[12px]">
-                    {fd.email}
-                  </p>
-                  <p className="font-light text-[14px]">{fd.message}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="flex overflow-hidden w-full">
-            <div className="flex flex-row">
-              {secondRowData.map((fd, idx) => (
-                <div
-                  key={idx}
-                  className="flex flex-col gap-1 p-4 m-2 bg-black/50 text-white rounded-lg shadow-white shadow sm:w-[500px] w-[320px]"
+                  className="flex flex-col gap-1 p-4 m-2 bg-black/50 text-white rounded-lg shadow-white shadow sm:w-[400px] w-[320px]"
                 >
                   <h3 className="font-bold text-[16px]">{fd.name}</h3>
                   <p className="font-medium text-[#808080] text-[12px]">

@@ -1,4 +1,4 @@
-const LoadingSpinner = ({ color }) => {
+export const LoadingSpinner = ({ color }) => {
   return (
     <div className="flex justify-center items-center">
       <svg
@@ -25,4 +25,13 @@ const LoadingSpinner = ({ color }) => {
   );
 };
 
-export default LoadingSpinner;
+export const Loading = () => {
+  return (
+    <div className="fixed inset-0 z-50 flex w-full min-h-screen items-center justify-center">
+      <h1 className="text-gradient-animation text-white font-bold font-MajorMonoDisplay">
+        Hold tight, the magic is loading... good things take time (and a little
+        bit of code)!
+      </h1>
+    </div>
+  );
+};

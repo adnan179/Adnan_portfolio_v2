@@ -33,6 +33,7 @@ const Navbar = () => {
   const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
   const closeSidebar = () => setSidebarOpen(false);
 
+  //glow animation
   useEffect(() => {
     if (activePage && navRefs.current.length > 0) {
       const activeNav = navRefs.current.find(
@@ -51,6 +52,7 @@ const Navbar = () => {
     }
   }, [activePage]);
 
+  //gsap animations
   useEffect(() => {
     const tl = gsap.timeline();
 
@@ -128,7 +130,7 @@ const Navbar = () => {
       <ScrollIntoView selector="#footer">
         <button
           id="navbar-talk"
-          className="hidden md:flex bg-[#383838] text-white/80 font-semibold lg:text-[16px] text-[12px] lg:px-4 lg:py-2 px-2 py-1 rounded-[16px] shadow-lg"
+          className="hidden md:flex bg-gradient-to-tr from-[#021EED] to-[#FB0D0D] text-white font-semibold lg:text-[16px] text-[12px] lg:px-4 lg:py-2 px-2 py-1 rounded-[16px] shadow-lg"
         >
           Let&apos;s talk
         </button>

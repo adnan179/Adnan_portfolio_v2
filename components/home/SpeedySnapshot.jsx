@@ -1,22 +1,80 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SectionHeading from "../SectionHeading";
 import closeUp from "../../app/public/home/portfolio_profile_close_up.jpg";
 import Image from "next/image";
 import { degreeAndDeeds, hobbies, skills, socialLinks } from "@/data";
 import world from "../../app/public/home/world.gif";
 import Link from "next/link";
-import { TbClick, TbHandClick } from "react-icons/tb";
+import { TbClick } from "react-icons/tb";
+import gsap from "gsap";
+import _ScrollTrigger from "gsap/ScrollTrigger";
 
 const SpeedySnapshot = () => {
+  useEffect(() => {
+    gsap.registerPlugin(_ScrollTrigger);
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#speedy-section > *",
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+    });
+    tl.fromTo(
+      "#bio-cont",
+      { x: -200, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.inOut",
+      }
+    )
+      .fromTo(
+        "#social-links",
+        { x: 300, opacity: 0 },
+        { x: 0, opacity: 1, duration: 1, ease: "power3.inOut" }
+      )
+      .fromTo(
+        "#click-me",
+        { x: 300, opacity: 0 },
+        { x: 0, opacity: 1, duration: 1, ease: "power3.inOut" }
+      )
+      .fromTo(
+        "#hobbies",
+        { x: 300, opacity: 0 },
+        { x: 0, opacity: 1, duration: 1, ease: "power3.inOut", stagger: 0.3 }
+      )
+      .fromTo(
+        "#degree-and-deeds",
+        { x: -200, opacity: 0 },
+        { x: 0, opacity: 1, duration: 1, ease: "power3.inOut" }
+      )
+      .fromTo(
+        "#skills",
+        { x: 300, opacity: 0 },
+        { x: 0, opacity: 1, duration: 1, ease: "power3.inOut" }
+      )
+      .fromTo(
+        "#world",
+        { x: 300, opacity: 0 },
+        { x: 0, opacity: 1, duration: 1, ease: "power3.inOut" }
+      );
+  }, []);
   return (
-    <section className="w-full min-h-screen flex flex-col lg:px-8 px-4">
+    <section
+      id="speedy-section"
+      className="w-full min-h-screen flex flex-col lg:px-8 px-4"
+    >
       <div className="flex w-full justify-start items-center">
-        <SectionHeading heading={"Speedy Snapshot"} />
+        <SectionHeading id="speedy" heading={"Speedy Snapshot"} />
       </div>
       {/* first row */}
       <div className="flex md:flex-row flex-col md:gap-8 gap-4 w-full justify-center items-center mt-5">
         {/* first row first col */}
-        <div className="bg-[#171717] rounded-[24px] p-4 shadow-lg flex flex-row gap-3 drop-shadow-lg sm:w-[600px] w-full">
+        <div
+          id="bio-cont"
+          className="bg-[#171717] rounded-[24px] p-4 shadow-lg flex flex-row gap-3 drop-shadow-lg sm:w-[600px] w-full"
+        >
           <Image
             src={closeUp}
             alt="another weird look of mine lol!"
@@ -40,7 +98,10 @@ const SpeedySnapshot = () => {
         <div className="flex flex-col gap-4">
           <div className="flex md:flex-row flex-col md:gap-2 gap-4">
             {/* social links */}
-            <div className="w-full flex-row flex flex-wrap bg-[#171717] rounded-[24px] drop-shadow-lg justify-center items-center lg:w-[200px] lg:h-[150px] md:w-[120px] md:h-[90px] md:gap-1 gap-3 p-3">
+            <div
+              id="social-links"
+              className="w-full flex-row flex flex-wrap bg-[#171717] rounded-[24px] drop-shadow-lg justify-center items-center lg:w-[200px] lg:h-[150px] md:w-[120px] md:h-[90px] md:gap-1 gap-3 p-3"
+            >
               {socialLinks.map((fl, index) => (
                 <a
                   key={index}
@@ -59,7 +120,10 @@ const SpeedySnapshot = () => {
             </div>
             {/* social links */}
             {/* click me cont */}
-            <div className="lg:w-[250px] lg:h-[150px] h-[90px] w-full flex flex-col lg:gap-4 md:gap-1 gap-2 bg-gradient-to-r from-[#021EED] to-[#FB0D0D] rounded-[24px] drop-shadow-lg  lg:p-4 p-2">
+            <div
+              id="click-me"
+              className="lg:w-[250px] lg:h-[150px] h-[90px] w-full flex flex-col lg:gap-4 md:gap-1 gap-2 bg-gradient-to-r from-[#021EED] to-[#FB0D0D] rounded-[24px] drop-shadow-lg  lg:p-4 p-2"
+            >
               <h2 className="text-white lg:text-[16px] md:text-[12px]">
                 Have a plan? Let&apos;s get started!
               </h2>
@@ -87,6 +151,7 @@ const SpeedySnapshot = () => {
           <div className="relative flex flex-row drop-shadow-lg lg:w-[450px] lg:h-[130px] md:w-[330px] sm:h-[90px] h-[150px] w-full">
             {hobbies.map((h, index) => (
               <div
+                id="hobbies"
                 key={index}
                 className="relative w-1/5 h-full justify-center items-center first:rounded-l-[24px] last:rounded-r-[24px] overflow-hidden"
               >
@@ -111,7 +176,10 @@ const SpeedySnapshot = () => {
       {/* second col second row */}
       <div className="flex md:flex-row flex-col gap-4 w-full justify-center items-center mt-5">
         {/* degree and deeds */}
-        <div className="lg:w-[500px] lg:h-[200px] h-[200px] w-full rounded-[24px] bg-[#171717] flex flex-col gap-2 p-4 drop-shadow-lg">
+        <div
+          id="degree-and-deeds"
+          className="lg:w-[500px] lg:h-[200px] h-[200px] w-full rounded-[24px] bg-[#171717] flex flex-col gap-2 p-4 drop-shadow-lg"
+        >
           <h3 className="text-white font-medium text-[18px]">
             Degree and deeds
           </h3>
@@ -134,7 +202,10 @@ const SpeedySnapshot = () => {
         </div>
         {/* degree and deeds */}
         {/* skills */}
-        <div className="lg:w-[360px] h-[200px] w-full rounded-[24px] bg-[#171717] flex flex-col gap-2 p-3 overflow-y-auto custom-scrollbar drop-shadow-lg">
+        <div
+          id="skills"
+          className="lg:w-[360px] h-[200px] w-full rounded-[24px] bg-[#171717] flex flex-col gap-2 p-3 overflow-y-auto custom-scrollbar drop-shadow-lg"
+        >
           {skills.map((sk, index) => (
             <div key={index} className="flex flex-col gap-1 px-2 w-full">
               <h3 className="text-[#808080] font-medium text-[14px]">
@@ -154,8 +225,9 @@ const SpeedySnapshot = () => {
         {/* skills */}
 
         <Link
+          id="world"
           href="/mystory"
-          className="lg:w-[200px] w-full h-[200px] rounded-[24px] bg-[#171717] flex flex-col items-center justify-center p-4 drop-shadow-lg"
+          className="lg:w-[200px] w-full h-[200px] rounded-[24px] bg-[#171717] flex flex-col items-center justify-center p-4 drop-shadow-lg:"
         >
           <p className="text-white font-medium text-lg md:text-sm">
             Intrigued? Let&apos;s dive into my world!{" "}

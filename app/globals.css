@@ -78,3 +78,21 @@
   border-radius: 10px;
 }
 /* scroll bar styles */
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.text-gradient-animation {
+  background: linear-gradient(270deg, #fb0d0d, #021eed);
+  background-size: 200% 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradientMove 5s ease infinite;
+}

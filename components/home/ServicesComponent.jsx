@@ -1,7 +1,7 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import SectionHeading from "../SectionHeading";
-import LoadingSpinner from "@/utils/LoadingSpinner";
+import { LoadingSpinner } from "@/utils/LoadingSpinner";
 import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 
