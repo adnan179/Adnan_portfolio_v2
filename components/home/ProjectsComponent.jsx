@@ -32,17 +32,17 @@ const ProjectsComponent = () => {
     tl.fromTo(
       "#projects-sec-heading",
       { x: -100, opacity: 0 },
-      { x: 0, opacity: 1, duration: 1, ease: "power2.inOut" }
+      { x: 0, opacity: 1, duration: 0.8, ease: "power2.inOut" }
     )
       .fromTo(
         "#project-links",
         { y: 100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1, ease: "power2.inOut" }
+        { y: 0, opacity: 1, duration: 0.8, ease: "power2.inOut" }
       )
       .fromTo(
         "#line",
         { y: 100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1, ease: "power2.inOut" }
+        { y: 0, opacity: 1, duration: 0.8, ease: "power2.inOut" }
       );
 
     // Only run animations for project details if it's not the initial render
@@ -50,42 +50,60 @@ const ProjectsComponent = () => {
       tl.fromTo(
         "#project-heading > *",
         { y: 200, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1, ease: "power2.inOut", stagger: 0.3 }
+        { y: 0, opacity: 1, duration: 0.8, ease: "power2.inOut", stagger: 0.3 }
       )
         .fromTo(
           "#project-period",
           { y: 200, opacity: 0 },
-          { y: 0, opacity: 1, duration: 1, ease: "power2.inOut" }
+          { y: 0, opacity: 1, duration: 0.8, ease: "power2.inOut" }
         )
         .fromTo(
           "#project-desc-heading",
           { y: 100, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }
+          { y: 0, opacity: 1, duration: 0.8, ease: "power2.inOut" }
         )
         .fromTo(
           "#project-desc",
           { y: 100, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }
+          { y: 0, opacity: 1, duration: 0.8, ease: "power2.inOut" }
         )
         .fromTo(
-          "#tech-stack",
+          "#tech-stack > *",
           { y: 200, opacity: 0 },
-          { y: 0, opacity: 1, duration: 1, ease: "power2.inOut", stagger: 0.3 }
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.8,
+            ease: "power2.inOut",
+            stagger: 0.3,
+          }
         )
         .fromTo(
-          "#journey",
+          "#journey > *",
           { y: 200, opacity: 0 },
-          { y: 0, opacity: 1, duration: 1, ease: "power2.inOut", stagger: 0.3 }
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.8,
+            ease: "power2.inOut",
+            stagger: 0.3,
+          }
         )
         .fromTo(
           "#project-images",
           { y: 200, opacity: 0 },
-          { y: 0, opacity: 1, duration: 1, ease: "power2.inOut", stagger: 0.3 }
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.8,
+            ease: "power2.inOut",
+            stagger: 0.3,
+          }
         )
         .fromTo(
           "#visit-the-projects-page",
           { y: 200, opacity: 0 },
-          { y: 0, opacity: 1, duration: 1, ease: "power2.inOut" }
+          { y: 0, opacity: 1, duration: 0.8, ease: "power2.inOut" }
         );
     }
   }, [isInitialRender]);
@@ -99,42 +117,60 @@ const ProjectsComponent = () => {
       tl.fromTo(
         "#project-heading > *",
         { y: 200, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1, ease: "power2.inOut", stagger: 0.3 }
+        { y: 0, opacity: 1, duration: 0.8, ease: "power2.inOut", stagger: 0.3 }
       )
         .fromTo(
           "#project-period",
           { y: 200, opacity: 0 },
-          { y: 0, opacity: 1, duration: 1, ease: "power2.inOut" }
+          { y: 0, opacity: 1, duration: 0.8, ease: "power2.inOut" }
         )
         .fromTo(
           "#project-desc-heading",
           { y: 100, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }
+          { y: 0, opacity: 1, duration: 0.8, ease: "power2.inOut" }
         )
         .fromTo(
           "#project-desc",
           { y: 100, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }
+          { y: 0, opacity: 1, duration: 0.8, ease: "power2.inOut" }
         )
         .fromTo(
-          "#tech-stack",
+          "#tech-stack > *",
           { y: 200, opacity: 0 },
-          { y: 0, opacity: 1, duration: 1, ease: "power2.inOut", stagger: 0.3 }
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.8,
+            ease: "power2.inOut",
+            stagger: 0.3,
+          }
         )
         .fromTo(
-          "#journey",
+          "#journey > *",
           { y: 200, opacity: 0 },
-          { y: 0, opacity: 1, duration: 1, ease: "power2.inOut", stagger: 0.3 }
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.8,
+            ease: "power2.inOut",
+            stagger: 0.3,
+          }
         )
         .fromTo(
           "#project-images",
           { y: 200, opacity: 0 },
-          { y: 0, opacity: 1, duration: 1, ease: "power2.inOut", stagger: 0.3 }
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.8,
+            ease: "power2.inOut",
+            stagger: 0.3,
+          }
         )
         .fromTo(
           "#visit-the-projects-page",
           { y: 200, opacity: 0 },
-          { y: 0, opacity: 1, duration: 1, ease: "power2.inOut" }
+          { y: 0, opacity: 1, duration: 0.8, ease: "power2.inOut" }
         );
     }
   }, [selectedProjectName]);

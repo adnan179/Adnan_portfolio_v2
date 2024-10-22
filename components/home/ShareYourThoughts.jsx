@@ -72,7 +72,7 @@ const ShareYourThoughts = () => {
     <section className="flex flex-col w-full min-h-screen lg:px-12 px-4 md:mt-0 mt-10">
       {/* Heading, sub-heading and drop your wisdom button */}
       <SectionHeading heading="Share Your Thoughts" />
-      <div className="flex flex-col gap-3 md:w-[40%] w-full md:pl-10 pl-5">
+      <div className="flex flex-col gap-3 lg:w-[60%] md:w-[40%] w-full md:pl-10 pl-5">
         <h2 className="font-medium text-white lg:text-[16px] text-[12px]">
           Post your thoughts 💬, make it fun 👀 (yes, add the negatives too 🤔);
           see what others think—oh, the puns 😶‍🌫️!
@@ -90,7 +90,7 @@ const ShareYourThoughts = () => {
         <>
           {/* Display feedback messages */}
           <div className="flex overflow-hidden w-full mt-3">
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
+            <div className="flex flex-row overflow-x-auto">
               {feedbacks.map((fd, idx) => (
                 <div
                   key={idx}

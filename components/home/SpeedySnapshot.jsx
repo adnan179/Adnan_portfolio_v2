@@ -14,7 +14,7 @@ const SpeedySnapshot = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#speedy-section > *",
-        start: "top 80%",
+        start: "top 90%",
         toggleActions: "play none none none",
       },
     });

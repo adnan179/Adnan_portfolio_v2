@@ -1,9 +1,33 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SectionHeading from "../SectionHeading";
 import { LoadingSpinner } from "@/utils/LoadingSpinner";
 import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
+import Link from "next/link";
+import gsap from "gsap";
+import _ScrollTrigger from "gsap/ScrollTrigger";
+
+const services = [
+  {
+    name: "Full-stack Web Development",
+    desc: "Offering complete web development services, including front-end, back-end, and database solutions tailored to your business needs.",
+    serviceList: [
+      "Front-end development",
+      "Back-end development",
+      "Database design & integration",
+    ],
+  },
+  {
+    name: "Web & App Design",
+    desc: "Providing expert web and app design services focused on creating seamless and engaging user experiences.",
+    serviceList: [
+      "Wire-framing",
+      "UI/UX Design",
+      "User Experience Optimization",
+    ],
+  },
+];
 
 const ServicesComponent = () => {
   const [name, setName] = useState("");
@@ -85,60 +109,127 @@ const ServicesComponent = () => {
     }
   };
 
+  //gsap animations
+  useEffect(() => {
+    gsap.registerPlugin(_ScrollTrigger);
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#services-section",
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+    });
+
+    tl.fromTo(
+      "#services-sec-heading",
+      {
+        x: -100,
+        opacity: 0,
+      },
+      { x: 0, opacity: 1, duration: 0.8, ease: "power3.inOut" }
+    )
+      .fromTo(
+        "#services-sub-heading",
+        {
+          x: -100,
+          opacity: 0,
+        },
+        { x: 0, opacity: 1, duration: 0.8, ease: "power3.inOut" }
+      )
+      .fromTo(
+        "#services-cont",
+        {
+          y: 100,
+          opacity: 0,
+        },
+        { y: 0, opacity: 1, duration: 0.8, ease: "power3.inOut", stagger: 0.3 }
+      )
+      .fromTo(
+        "#services-form > *",
+        {
+          y: 100,
+          opacity: 0,
+        },
+        { y: 0, opacity: 1, duration: 0.8, ease: "power3.inOut", stagger: 0.3 }
+      )
+      .fromTo(
+        "#services-notes > *",
+        {
+          x: -100,
+          opacity: 0,
+        },
+        { x: 0, opacity: 1, duration: 0.8, ease: "power3.inOut", stagger: 0.3 }
+      );
+  }, []);
+
   return (
-    <section className="flex flex-col gap-5 w-full lg:py-[50px] lg:px-12 px-4">
+    <section
+      id="services-section"
+      className="flex flex-col gap-5 w-full lg:py-[50px] lg:px-12 px-4"
+    >
       {/* heading & sub-heading */}
       <div className="flex flex-col">
-        <SectionHeading heading="Services" />
-        <h2 className="pl-6 text-white font-bold lg:text-[14px] text-[10px]">
+        <h1
+          id="services-sec-heading"
+          className="bg-gradient-to-r from-[#808080]/50 via-[#808080] to-[#808080]/50  bg-clip-text text-transparent font-Montserrat font-semibold drop-shadow-lg lg:text-[48px] text-[36px]"
+        >
+          Services
+        </h1>
+        <h2
+          id="services-sub-heading"
+          className="pl-6 text-white font-bold lg:text-[14px] sm:text-[12px] text-[10px]"
+        >
           Your Vision, My Expertise: Web Dev, App Design, and Flawless UX!
         </h2>
       </div>
       {/* heading & sub-heading */}
       {/* main container */}
-      <div className="flex gap-10 md:flex-row flex-col justify-center items-center">
+      <div className="flex xl:gap-10 gap-4 md:flex-row flex-col justify-center items-center">
         {/* services container */}
-        <div className="flex flex-col gap-2">
-          <div
-            onClick={() => toggleService("Web Development")}
-            className={` flex lg:w-[600px] w-full h-[50px] justify-start  border border-white items-center rounded-[16px] drop-shadow-lg px-4 py-2 cursor-pointer ${
-              requestedServices.includes("Web Development")
-                ? "bg-white text-black"
-                : "bg-transparent text-white"
-            }`}
-          >
-            <h2 className="font-medium lg:text-[18px] text-sm">
-              Web Development
-            </h2>
-          </div>
-          <div className="flex flex-row gap-2">
+        <div
+          id="services-cont"
+          className="flex sm:flex-row flex-col sm:gap-3 xl:gap-5 gap-2"
+        >
+          {services.map((serv, idx) => (
             <div
-              onClick={() => toggleService("Design")}
-              className={`flex flex-col justify-start lg:w-[245px] w-1/2 h-[100px] border border-white rounded-[16px] drop-shadow-lg px-4 py-2 cursor-pointer ${
-                requestedServices.includes("Design")
-                  ? "bg-white text-black"
-                  : "bg-transparent text-white"
-              }`}
+              onClick={() => toggleService(serv.name)}
+              key={idx}
+              className={`flex flex-col xl:w-[300px] lg:w-[250px] md:w-[200px] w-full gap-2 p-5 drop-shadow-lg rounded-[36px] cursor-pointer
+                ${
+                  requestedServices.includes(serv.name)
+                    ? "bg-white text-black bg-opacity-100"
+                    : "text-white bg-[#050505] bg-opacity-25"
+                }`}
             >
-              <h2 className="font-medium lg:text-[18px] text-[14px]">Design</h2>
+              <h1 className="font-medium lg:text-[20px] text-[15px]">
+                {serv.name}
+              </h1>
+              <p className="lg:text-[16px] text-[12px] font-light">
+                {serv.desc}
+              </p>
+              <p className="lg:text-[16px] text-[13px]">Includes:</p>
+              <ul className="pl-2 ">
+                {serv.serviceList.map((sl, i) => (
+                  <li key={i} className="lg:text-[14px] text-[12px]">
+                    {sl}
+                  </li>
+                ))}
+              </ul>
             </div>
-            <div
-              onClick={() => toggleService("User Experience Design")}
-              className={`flex flex-col justify-start lg:w-[345px] w-1/2 h-[100px] border border-white rounded-[16px] drop-shadow-lg px-4 py-2 cursor-pointer ${
-                requestedServices.includes("User Experience Design")
-                  ? "bg-white text-black"
-                  : "bg-transparent text-white"
-              }`}
-            >
-              <h2 className="font-medium lg:text-[18px] text-[14px]">
-                User Experience Design
-              </h2>
-            </div>
-          </div>
+          ))}
         </div>
         {/* services container */}
         {/* form */}
-        <form onSubmit={handleSubmit} className="flex flex-col gap-2">
+        <form
+          id="services-form"
+          onSubmit={handleSubmit}
+          className="flex flex-col gap-2"
+        >
+          <p className="font-medium text-[#808080] text-[14px]">
+            Please select a service from the menu by clicking on the desired
+            option
+          </p>
           <input
             required
             type="text"
@@ -193,6 +284,22 @@ const ServicesComponent = () => {
           </div>
         </form>
         {/* form */}
+      </div>
+      <div
+        id="services-notes"
+        className="flex flex-col gap-2 w-full text-[#808080] font-medium xl:text-[14px] text-[10px]"
+      >
+        <p>
+          Note: Pricing is flexible and will be tailored based on the specific
+          project requirements and services requested.
+        </p>
+        <p className="flex flex-row items-center gap-1">
+          For more details on the services I offer and the approach I take,
+          please visit the Services page by clicking here -&gt;
+          <span className="bg-gradient-to-r from-[#2B0CFD] to-[#FB0D0D] bg-clip-text text-transparent font-medium lg:text-[16px] text-[13px]">
+            <Link href="/services">Visit the services page</Link>
+          </span>
+        </p>
       </div>
       {/* main container */}
     </section>
