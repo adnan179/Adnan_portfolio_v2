@@ -1,29 +1,168 @@
 "use client";
-import React, { useState } from "react";
-import SectionHeading from "../SectionHeading";
+import React, { useEffect, useState } from "react";
 import { projectsData } from "@/data";
 import linkIcon from "../../app/public/icons/icons8-link-64.png";
 import Link from "next/link";
 import Image from "next/image";
+import _ScrollTrigger from "gsap/ScrollTrigger";
+import gsap from "gsap";
 
 const ProjectsComponent = () => {
   const [selectedProjectName, setSelectedProjectName] = useState("IonArc");
   const [selectedProject, setSelectedProject] = useState(projectsData[0]);
+  const [isInitialRender, setIsInitialRender] = useState(true);
 
-  //function to handle selection of project through links
+  // Function to handle selection of project through links
   const handleSelectProject = (project) => {
     setSelectedProject(project);
     setSelectedProjectName(project.projectName);
   };
 
+  // GSAP animations for initial load
+  useEffect(() => {
+    gsap.registerPlugin(_ScrollTrigger);
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#projects",
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+    });
+
+    tl.fromTo(
+      "#projects-sec-heading",
+      { x: -100, opacity: 0 },
+      { x: 0, opacity: 1, duration: 1, ease: "power2.inOut" }
+    )
+      .fromTo(
+        "#project-links",
+        { y: 100, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1, ease: "power2.inOut" }
+      )
+      .fromTo(
+        "#line",
+        { y: 100, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1, ease: "power2.inOut" }
+      );
+
+    // Only run animations for project details if it's not the initial render
+    if (!isInitialRender) {
+      tl.fromTo(
+        "#project-heading > *",
+        { y: 200, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1, ease: "power2.inOut", stagger: 0.3 }
+      )
+        .fromTo(
+          "#project-period",
+          { y: 200, opacity: 0 },
+          { y: 0, opacity: 1, duration: 1, ease: "power2.inOut" }
+        )
+        .fromTo(
+          "#project-desc-heading",
+          { y: 100, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }
+        )
+        .fromTo(
+          "#project-desc",
+          { y: 100, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }
+        )
+        .fromTo(
+          "#tech-stack",
+          { y: 200, opacity: 0 },
+          { y: 0, opacity: 1, duration: 1, ease: "power2.inOut", stagger: 0.3 }
+        )
+        .fromTo(
+          "#journey",
+          { y: 200, opacity: 0 },
+          { y: 0, opacity: 1, duration: 1, ease: "power2.inOut", stagger: 0.3 }
+        )
+        .fromTo(
+          "#project-images",
+          { y: 200, opacity: 0 },
+          { y: 0, opacity: 1, duration: 1, ease: "power2.inOut", stagger: 0.3 }
+        )
+        .fromTo(
+          "#visit-the-projects-page",
+          { y: 200, opacity: 0 },
+          { y: 0, opacity: 1, duration: 1, ease: "power2.inOut" }
+        );
+    }
+  }, [isInitialRender]);
+
+  // GSAP animation when the selected project changes
+  useEffect(() => {
+    // Only apply animations after the initial render
+    if (!isInitialRender) {
+      const tl = gsap.timeline();
+
+      tl.fromTo(
+        "#project-heading > *",
+        { y: 200, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1, ease: "power2.inOut", stagger: 0.3 }
+      )
+        .fromTo(
+          "#project-period",
+          { y: 200, opacity: 0 },
+          { y: 0, opacity: 1, duration: 1, ease: "power2.inOut" }
+        )
+        .fromTo(
+          "#project-desc-heading",
+          { y: 100, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }
+        )
+        .fromTo(
+          "#project-desc",
+          { y: 100, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }
+        )
+        .fromTo(
+          "#tech-stack",
+          { y: 200, opacity: 0 },
+          { y: 0, opacity: 1, duration: 1, ease: "power2.inOut", stagger: 0.3 }
+        )
+        .fromTo(
+          "#journey",
+          { y: 200, opacity: 0 },
+          { y: 0, opacity: 1, duration: 1, ease: "power2.inOut", stagger: 0.3 }
+        )
+        .fromTo(
+          "#project-images",
+          { y: 200, opacity: 0 },
+          { y: 0, opacity: 1, duration: 1, ease: "power2.inOut", stagger: 0.3 }
+        )
+        .fromTo(
+          "#visit-the-projects-page",
+          { y: 200, opacity: 0 },
+          { y: 0, opacity: 1, duration: 1, ease: "power2.inOut" }
+        );
+    }
+  }, [selectedProjectName]);
+
+  // Mark the first render as done after initial load
+  useEffect(() => {
+    setIsInitialRender(false);
+  }, []);
+
   return (
-    <section className="flex flex-col w-full min-h-screen lg:px-16 px-3">
-      <SectionHeading heading="Projects" />
+    <section
+      id="projects"
+      className="flex flex-col w-full min-h-screen lg:px-16 px-3"
+    >
+      <h1
+        id="projects-sec-heading"
+        className="bg-gradient-to-r from-[#808080]/50 via-[#808080] to-[#808080]/50  bg-clip-text text-transparent font-Montserrat font-semibold drop-shadow-lg lg:text-[48px] text-[36px]"
+      >
+        Projects
+      </h1>
       {/* main container */}
       <div className="flex md:flex-row flex-col w-full h-full justify-center items-center md:mt-0 mt-7">
         {/* links container */}
         <div className="flex md:flex-row flex-col gap-2 md:w-1/6 w-full h-full">
-          <div className="relative flex md:flex-col flex-row gap-4 md:items-end items-center md:py-16 px-6">
+          <div
+            id="project-links"
+            className="relative flex md:flex-col flex-row gap-4 md:items-end items-center md:py-16 px-6"
+          >
             {projectsData.map((project, index) => (
               <h2
                 onClick={() => handleSelectProject(project)}
@@ -38,7 +177,10 @@ const ProjectsComponent = () => {
               </h2>
             ))}
             {/* line */}
-            <div className="absolute flex md:top-0 -bottom-2 right-0 md:-right-4 md:w-[1.5px] md:h-full w-full h-[1.5px] bg-gradient-to-b from-[#808080]/50 via-[#808080] to-[#808080]/50"></div>
+            <div
+              id="line"
+              className="absolute flex md:top-0 -bottom-2 right-0 md:-right-4 md:w-[1.5px] md:h-full w-full h-[1.5px] bg-gradient-to-b from-[#808080]/50 via-[#808080] to-[#808080]/50"
+            ></div>
           </div>
         </div>
         {/* links container */}
@@ -46,7 +188,10 @@ const ProjectsComponent = () => {
         <div className="flex flex-col md:gap-4 gap-2 md:w-5/6 w-full mt-5 md:mt-0 md:px-0 px-4">
           {/* heading,link and period */}
           <div className="flex flex-col gap-1">
-            <div className="flex flex-row gap-3 items-center">
+            <div
+              id="project-heading"
+              className="flex flex-row gap-3 items-center"
+            >
               <h1 className="text-[#808080] font-medium lg:text-[36px] text-[22px]">
                 {selectedProject.projectHeading}
               </h1>
@@ -62,22 +207,34 @@ const ProjectsComponent = () => {
                 />
               </Link>
             </div>
-            <h3 className="text-white text-[14px] lg:text-[16px]">
+            <h3
+              id="project-period"
+              className="text-white text-[14px] lg:text-[16px]"
+            >
               {selectedProject.period}
             </h3>
           </div>
           {/* heading,link and period */}
           {/* description */}
-          <h3 className="text-[#808080] font-medium text-[16px]">
+          <h3
+            id="project-desc-heading"
+            className="text-[#808080] font-medium text-[16px]"
+          >
             Description:
           </h3>
-          <p className="text-white text-[12px] md:text-[14px]">
+          <p
+            id="project-desc"
+            className="text-white text-[12px] md:text-[14px]"
+          >
             {selectedProject.projectDescription}
           </p>
           {/* description */}
           {/* tech stack and the journey */}
           <div className="flex md:flex-row flex-col gap-3 w-full justify-between">
-            <div className="flex flex-col md:w-1/3 w-full md:gap-3 gap-1">
+            <div
+              id="tech-stack"
+              className="flex flex-col md:w-1/3 w-full md:gap-3 gap-1"
+            >
               <h2 className="text-[#808080] font-medium">Tech Stack:</h2>
               <div className="flex flex-row flex-wrap gap-2 pl-4">
                 {selectedProject.techStack.map((ts, index) => (
@@ -90,7 +247,10 @@ const ProjectsComponent = () => {
                 ))}
               </div>
             </div>
-            <div className="flex flex-col md:gap-3 gap-1 md:w-2/3 w-full">
+            <div
+              id="journey"
+              className="flex flex-col md:gap-3 gap-1 md:w-2/3 w-full"
+            >
               <h2 className="text-[#808080] font-medium">The Journey:</h2>
               <div className="flex items-center justify-center md:mt-4 mt-2">
                 <div className="relative flex items-center justify-between w-full">
@@ -110,7 +270,10 @@ const ProjectsComponent = () => {
           </div>
           {/* tech stack and the journey */}
           {/* images container */}
-          <div className="w-full flex flex-row gap-3 overflow-x-auto custom-scrollbar-2 md:mt-2 mt-4">
+          <div
+            id="project-images"
+            className="w-full flex flex-row gap-3 overflow-x-auto custom-scrollbar-2 md:mt-2 mt-4"
+          >
             {selectedProject.projectImages.map((i, idx) => (
               <Image
                 src={i}
@@ -125,7 +288,7 @@ const ProjectsComponent = () => {
         {/* project content container */}
       </div>
       {/* main container */}
-      <Link href="/projects" className="flex mt-5">
+      <Link id="visit-the-projects-page" href="/projects" className="flex mt-5">
         <h2 className="font-medium bg-gradient-to-r from-[#2B0CFD] to-[#FB0D0D] bg-clip-text text-transparent md:text-[20px] text-[14px]">
           Visit the projects page
         </h2>

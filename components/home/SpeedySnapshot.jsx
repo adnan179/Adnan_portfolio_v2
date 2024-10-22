@@ -1,15 +1,14 @@
 import React, { useEffect } from "react";
-import SectionHeading from "../SectionHeading";
 import closeUp from "../../app/public/home/portfolio_profile_close_up.jpg";
 import Image from "next/image";
 import { degreeAndDeeds, hobbies, skills, socialLinks } from "@/data";
 import world from "../../app/public/home/world.gif";
 import Link from "next/link";
-import { TbClick } from "react-icons/tb";
 import gsap from "gsap";
 import _ScrollTrigger from "gsap/ScrollTrigger";
 
 const SpeedySnapshot = () => {
+  //gsap animations
   useEffect(() => {
     gsap.registerPlugin(_ScrollTrigger);
     const tl = gsap.timeline({
@@ -20,44 +19,49 @@ const SpeedySnapshot = () => {
       },
     });
     tl.fromTo(
-      "#bio-cont",
+      "#speedy-heading",
       { x: -200, opacity: 0 },
-      {
-        x: 0,
-        opacity: 1,
-        duration: 1,
-        ease: "power3.inOut",
-      }
+      { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
     )
+      .fromTo(
+        "#bio-cont",
+        { x: -200, opacity: 0 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 0.5,
+          ease: "power3.inOut",
+        }
+      )
       .fromTo(
         "#social-links",
         { x: 300, opacity: 0 },
-        { x: 0, opacity: 1, duration: 1, ease: "power3.inOut" }
+        { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
       )
       .fromTo(
         "#click-me",
         { x: 300, opacity: 0 },
-        { x: 0, opacity: 1, duration: 1, ease: "power3.inOut" }
+        { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
       )
       .fromTo(
         "#hobbies",
         { x: 300, opacity: 0 },
-        { x: 0, opacity: 1, duration: 1, ease: "power3.inOut", stagger: 0.3 }
+        { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut", stagger: 0.3 }
       )
       .fromTo(
         "#degree-and-deeds",
         { x: -200, opacity: 0 },
-        { x: 0, opacity: 1, duration: 1, ease: "power3.inOut" }
+        { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
       )
       .fromTo(
         "#skills",
         { x: 300, opacity: 0 },
-        { x: 0, opacity: 1, duration: 1, ease: "power3.inOut" }
+        { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
       )
       .fromTo(
         "#world",
         { x: 300, opacity: 0 },
-        { x: 0, opacity: 1, duration: 1, ease: "power3.inOut" }
+        { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
       );
   }, []);
   return (
@@ -66,7 +70,12 @@ const SpeedySnapshot = () => {
       className="w-full min-h-screen flex flex-col lg:px-8 px-4"
     >
       <div className="flex w-full justify-start items-center">
-        <SectionHeading id="speedy" heading={"Speedy Snapshot"} />
+        <h1
+          id="speedy-heading"
+          className="bg-gradient-to-r from-[#808080]/50 via-[#808080] to-[#808080]/50  bg-clip-text text-transparent font-Montserrat font-semibold drop-shadow-lg lg:text-[48px] text-[36px]"
+        >
+          Speedy Snapshots
+        </h1>
       </div>
       {/* first row */}
       <div className="flex md:flex-row flex-col md:gap-8 gap-4 w-full justify-center items-center mt-5">
@@ -122,23 +131,18 @@ const SpeedySnapshot = () => {
             {/* click me cont */}
             <div
               id="click-me"
-              className="lg:w-[250px] lg:h-[150px] h-[90px] w-full flex flex-col lg:gap-4 md:gap-1 gap-2 bg-gradient-to-r from-[#021EED] to-[#FB0D0D] rounded-[24px] drop-shadow-lg  lg:p-4 p-2"
+              className="flex flex-col  lg:w-[250px] lg:h-[150px] md:h-[90px] w-full lg:gap-4 md:gap-1 gap-2 bg-gradient-to-r from-[#021EED] to-[#FB0D0D] rounded-[24px] drop-shadow-lg  lg:p-4 md:p-2 p-5 md:justify-between justify-center"
             >
-              <h2 className="text-white lg:text-[16px] md:text-[12px]">
+              <h2 className="text-white lg:text-[16px] md:text-[12px] text-[16px] font-medium">
                 Have a plan? Let&apos;s get started!
               </h2>
               <Link
                 href="/services"
-                className="relative overflow-hidden flex items-center justify-between rounded-3xl  bg-black/70 text-white group hover:text-black transition-all duration-500 md:text-[12px] drop-shadow-md"
+                className="relative overflow-hidden flex items-center justify-center rounded-3xl bg-black/70 text-white group hover:text-black transition-all duration-500 md:text-[12px] drop-shadow-md lg:py-4 md:py-2 py-3"
               >
                 {/* Left side text */}
-                <span className="relative z-10 font-bold transition-all duration-500 ease-in-out group-hover:translate-x-0 pl-5">
+                <span className="relative z-10 font-bold transition-all duration-500 ease-in-out group-hover:translate-x-0">
                   Click me!
-                </span>
-
-                {/* Right side icon */}
-                <span className="relative z-10 ml-2 w-10 h-10 flex items-center justify-center rounded-full bg-white  text-black transition-all duration-500 ease-in-out group-hover:text-white">
-                  <TbClick />
                 </span>
 
                 {/* Hover background slider */}

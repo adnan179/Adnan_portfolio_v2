@@ -88,31 +88,26 @@ const Footer = () => {
       { y: 100, opacity: 0 },
       { y: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
     )
-      // Contact form heading
       .fromTo(
         "#contact-heading",
         { y: 50, opacity: 0 },
         { y: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
       )
-      // Footer message text
       .fromTo(
         "#footer-message",
         { y: 50, opacity: 0 },
         { y: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
       )
-      // Social links
       .fromTo(
         "#footer-social-links > a",
         { y: 50, opacity: 0 },
         { y: 0, opacity: 1, duration: 0.5, ease: "power3.inOut", stagger: 0.2 }
       )
-      // Copyright text
       .fromTo(
         "#copy-rights",
         { y: 50, opacity: 0 },
         { y: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
-      )
-      // Form fields
+      ) // Form fields
       .fromTo(
         "#footer-form > *",
         { y: 50, opacity: 0 },
@@ -121,7 +116,7 @@ const Footer = () => {
   }, []);
   return (
     // main container
-    <div
+    <footer
       id="footer"
       className="relative bottom-0 flex flex-col w-full xl:p-10 md:p-8 p-5 bg-gradient-to-r from-[#0F0F0F] to-[#171717] md:rounded-t-[120px] rounded-t-[60px] items-center font-inter"
     >
@@ -231,7 +226,7 @@ const Footer = () => {
         {/* form */}
       </div>
       {/* inside container containing form and links */}
-    </div>
+    </footer>
     // main container
   );
 };
