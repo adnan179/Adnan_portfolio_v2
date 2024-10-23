@@ -1,11 +1,12 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import SectionHeading from "../SectionHeading";
 import { toast } from "react-toastify";
 import { IoIosCloseCircle } from "react-icons/io";
 import { db } from "@/utils/firebase";
 import { addDoc, collection, getDocs } from "firebase/firestore";
 import { feedbackData } from "@/data";
+import gsap from "gsap";
+import _ScrollTrigger from "gsap/ScrollTrigger";
 
 const ShareYourThoughts = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -68,16 +69,65 @@ const ShareYourThoughts = () => {
     fetchFeedbacks();
   }, []);
 
+  //gsap animations
+  useEffect(() => {
+    gsap.registerPlugin(_ScrollTrigger);
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#share-your-thoughts",
+        start: "top 70%",
+        toggleActions: "play none none none",
+      },
+    });
+
+    tl.fromTo(
+      "#feedbacks-sec-heading",
+      {
+        x: -100,
+        opacity: 0,
+      },
+      { x: 0, opacity: 1, duration: 0.8, ease: "power3.inOut" }
+    )
+      .fromTo(
+        "#feedbacks-sub-heading",
+        {
+          x: -100,
+          opacity: 0,
+        },
+        { x: 0, opacity: 1, duration: 0.8, ease: "power3.inOut" }
+      )
+      .fromTo(
+        "#drop-your-wisdom",
+        {
+          x: -100,
+          opacity: 0,
+        },
+        { x: 0, opacity: 1, duration: 0.8, ease: "power3.inOut" }
+      );
+  }, []);
   return (
-    <section className="flex flex-col w-full min-h-screen lg:px-12 px-4 md:mt-0 mt-10">
+    <section
+      id="share-your-thoughts"
+      className="flex flex-col w-full min-h-screen lg:px-12 px-4 md:mt-0 mt-10"
+    >
       {/* Heading, sub-heading and drop your wisdom button */}
-      <SectionHeading heading="Share Your Thoughts" />
+      <h1
+        id="feedbacks-sec-heading"
+        className="bg-gradient-to-r from-[#808080]/50 via-[#808080] to-[#808080]/50  bg-clip-text text-transparent font-Montserrat font-semibold drop-shadow-lg lg:text-[48px] text-[36px]"
+      >
+        Share Your Thoughts
+      </h1>
       <div className="flex flex-col gap-3 lg:w-[60%] md:w-[40%] w-full md:pl-10 pl-5">
-        <h2 className="font-medium text-white lg:text-[16px] text-[12px]">
+        <h2
+          id="feedbacks-sub-heading"
+          className="font-medium text-white lg:text-[16px] text-[12px]"
+        >
           Post your thoughts 💬, make it fun 👀 (yes, add the negatives too 🤔);
           see what others think—oh, the puns 😶‍🌫️!
         </h2>
         <button
+          id="drop-your-wisdom"
           className=" w-[200px] bg-transparent border-[1.5px] border-white text-white font-bold text-[14px] px-4 py-2 rounded-[24px]"
           onClick={openForm}
         >

@@ -98,12 +98,16 @@ const Navbar = () => {
   return (
     <nav className="sticky z-50 top-0 flex flex-row justify-between items-center lg:px-10 md:px-8 px-5 w-full lg:h-[80px] h-[60px]">
       {/* Logo */}
-      <h1
+      <div
         id="navbar-logo"
-        className="text-white font-bold font-Montserrat text-[15px] lg:text-[20px]"
+        className="flex flex-row gap-1 items-center text-white font-bold font-Montserrat"
       >
-        AdnanXDesign
-      </h1>
+        <h1 className=" text-[15px] lg:text-[24px]">AdnanX</h1>
+        <div className="flex flex-col">
+          <h1 className="lg:text-[12px] text-[8px]">Dev</h1>
+          <h1 className="lg:text-[12px] text-[8px] -mt-1">Design</h1>
+        </div>
+      </div>
 
       {/* Nav Links for Desktop */}
       <div
@@ -130,7 +134,7 @@ const Navbar = () => {
       <ScrollIntoView selector="#footer">
         <button
           id="navbar-talk"
-          className="hidden md:flex bg-gradient-to-tr from-[#021EED] to-[#FB0D0D] text-white font-semibold lg:text-[16px] text-[12px] lg:px-4 lg:py-2 px-2 py-1 rounded-[16px] shadow-lg"
+          className="hidden md:flex bg-gradient-to-br from-[#021EED] to-[#FB0D0D] text-white font-semibold lg:text-[16px] text-[12px] lg:px-4 lg:py-2 px-2 py-1 rounded-[16px] shadow-lg"
         >
           Let&apos;s talk
         </button>
@@ -228,7 +232,7 @@ const Navbar = () => {
           <ScrollIntoView selector="#footer" onClick={() => toggleSidebar()}>
             <button
               id="sidebar-talk"
-              className="bg-[#383838] text-white/80 font-semibold text-[15px] px-4 py-2 rounded-[16px] shadow-lg mt-4"
+              className="bg-gradient-to-br from-[#021EED] to-[#FB0D0D] text-white font-semibold text-[15px] px-4 py-2 rounded-[16px] shadow-lg mt-4"
             >
               Let&apos;s talk
             </button>

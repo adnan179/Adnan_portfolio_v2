@@ -13,7 +13,8 @@ import { MdOutlineMail } from "react-icons/md";
 import ionarcThumbnail1 from "../app/public/home/ionarc thumbnail.png";
 import ionarcThumbnail2 from "../app/public/home/ionarc thumbnail_2.png";
 import ionarcThumbnail3 from "../app/public/home/ionarc thumbnail_3.png";
-import thumb from "../app/public/home/bike ride.jpg";
+import morning1 from "../app/public/home/morning_buddy.png";
+import linkedin1 from "../app/public/home/Linkedin_revamp.png";
 
 export const socialLinks = [
   {
@@ -140,7 +141,7 @@ export const projectsData = [
     period: "July 2024 - July 2024",
     projectLink: "https://ionarc-website.vercel.app/",
     projectDescription:
-      "A dynamic and engaging digital platform designed to showcase the client’s expertise and services. The website delivers a seamless user experience with its modern, responsive design, ensuring visitors can easily navigate and access key information. Crafted to highlight industry-leading solutions, the site combines professional aesthetics with intuitive functionality, positioning the client as a trusted consultancy partner while effectively capturing the attention of potential clients.",
+      "A dynamic and engaging digital platform 🌐 designed to showcase the client’s expertise and services 💼. The website delivers a seamless user experience with its modern, responsive design 📱, ensuring visitors can easily navigate and access key information 🔍. Crafted to highlight industry-leading solutions 🏆, the site combines professional aesthetics with intuitive functionality 🎨, positioning the client as a trusted consultancy partner 🤝 while effectively capturing the attention of potential clients 👥.",
     techStack: ["React", "tailwind CSS", "Figma", "Postman"],
     thingsUsed: [],
     theJourney: [
@@ -150,12 +151,7 @@ export const projectsData = [
       "Development",
       "Testing & deployment",
     ],
-    projectImages: [
-      ionarcThumbnail1,
-      ionarcThumbnail2,
-      ionarcThumbnail3,
-      thumb,
-    ],
+    projectImages: [ionarcThumbnail1, ionarcThumbnail2, ionarcThumbnail3],
   },
   {
     projectName: "Projects Section",
@@ -164,11 +160,10 @@ export const projectsData = [
     projectLink:
       "https://dribbble.com/shots/24987554-Portfolio-s-Projects-section",
     projectDescription:
-      "A dynamic and engaging digital platform designed to showcase the client’s expertise and services. The website delivers a seamless user experience with its modern, responsive design, ensuring visitors can easily navigate and access key information. Crafted to highlight industry-leading solutions, the site combines professional aesthetics with intuitive functionality, positioning the client as a trusted consultancy partner while effectively capturing the attention of potential clients.",
-    techStack: ["React", "tailwind CSS", "Figma", "Postman"],
+      "A sleek and immersive projects section, designed with a modern color palette featuring a midnight background 🌌, white for clarity ⚪, and gray for headings and sub-headings 🌫️. This layout is crafted to showcase portfolios in a professional and visually appealing way 🎨, enhancing readability 📖 and engagement 🚀.",
+    techStack: ["Figma"],
     thingsUsed: [],
     theJourney: [
-      "Client consultation",
       "User Research",
       "Design & wire framing",
       "Development",
@@ -183,17 +178,11 @@ export const projectsData = [
     projectLink:
       "https://dribbble.com/shots/24944391-LinkedIn-Home-Page-Refresh",
     projectDescription:
-      "A dynamic and engaging digital platform designed to showcase the client’s expertise and services. The website delivers a seamless user experience with its modern, responsive design, ensuring visitors can easily navigate and access key information. Crafted to highlight industry-leading solutions, the site combines professional aesthetics with intuitive functionality, positioning the client as a trusted consultancy partner while effectively capturing the attention of potential clients.",
-    techStack: ["React", "tailwind CSS", "Figma", "Postman"],
+      "A refreshed look for LinkedIn’s homepage, focused on improving user experience through subtle yet impactful changes. ✨ The design streamlines the interface for smoother navigation 🧭, introduces tweaks to enhance visual clarity and flow 🎨, and ensures better accessibility for all users 🌐. These updates prioritize user-friendly interactions, while maintaining core functionality, resulting in a more intuitive and polished browsing experience.",
+    techStack: ["Figma"],
     thingsUsed: [],
-    theJourney: [
-      "Client consultation",
-      "User Research",
-      "Design & wire framing",
-      "Development",
-      "Testing & deployment",
-    ],
-    projectImages: [ionarcThumbnail1, ionarcThumbnail2, ionarcThumbnail3],
+    theJourney: ["User Research", "Design & wire framing"],
+    projectImages: [linkedin1],
   },
   {
     projectName: "Morning Buddy",
@@ -201,17 +190,11 @@ export const projectsData = [
     projectLink: "https://dribbble.com/shots/24895816-Morning-Buddy",
     period: "September 2024 - September 2024",
     projectDescription:
-      "A dynamic and engaging digital platform designed to showcase the client’s expertise and services. The website delivers a seamless user experience with its modern, responsive design, ensuring visitors can easily navigate and access key information. Crafted to highlight industry-leading solutions, the site combines professional aesthetics with intuitive functionality, positioning the client as a trusted consultancy partner while effectively capturing the attention of potential clients.",
-    techStack: ["React", "tailwind CSS", "Figma", "Postman"],
+      "Introducing **Morning Buddy** – your go-to app for staying updated every morning! 🌅📲 Morning Buddy is a sleek, user-friendly news app designed to keep you informed with the latest news from various categories at your fingertips. 📰✨ Whether it's world events, sports, or entertainment, it helps users effortlessly browse and stay connected with what's happening around the globe 🌍. Perfect for those who love starting their day with a quick news catch-up! ☕",
+    techStack: ["Figma"],
     thingsUsed: [],
-    theJourney: [
-      "Client consultation",
-      "User Research",
-      "Design & wire framing",
-      "Development",
-      "Testing & deployment",
-    ],
-    projectImages: [ionarcThumbnail1, ionarcThumbnail2, ionarcThumbnail3],
+    theJourney: ["User Research", "Design & wire framing"],
+    projectImages: [morning1],
   },
   {
     projectName: "Final Year Project",
@@ -219,14 +202,24 @@ export const projectsData = [
     period: "July 2023 - July 2024",
     projectLink: "https://github.com/adnan179/final_year_project",
     projectDescription:
-      "A dynamic and engaging digital platform designed to showcase the client’s expertise and services. The website delivers a seamless user experience with its modern, responsive design, ensuring visitors can easily navigate and access key information. Crafted to highlight industry-leading solutions, the site combines professional aesthetics with intuitive functionality, positioning the client as a trusted consultancy partner while effectively capturing the attention of potential clients.",
-    techStack: ["React", "tailwind CSS", "Figma", "Postman"],
+      "A comprehensive college project submission portal designed for efficient project management! 🎓✨ Students can easily upload their projects with detailed documentation 📂, track their submission status 📊, and receive valuable feedback 💬. Reviewers can evaluate projects, leave insightful comments 📝, and assign grades ⭐, while admins oversee the entire system, managing submissions, deadlines ⏰, and approvals ✅. This portal ensures smooth collaboration between students, reviewers, and administrators, making the project submission and evaluation process more organized and transparent! 🔍🌐",
+    techStack: [
+      "React",
+      "tailwind CSS",
+      "Figma",
+      "Postman",
+      "Node JS",
+      "Express JS",
+      "MongoDB",
+      "Mongoose",
+    ],
     thingsUsed: [],
     theJourney: [
-      "Client consultation",
-      "User Research",
+      "Understanding the problem",
+      "Requirement Analysis",
       "Design & wire framing",
       "Development",
+      "User Research",
       "Testing & deployment",
     ],
     projectImages: [ionarcThumbnail1, ionarcThumbnail2, ionarcThumbnail3],

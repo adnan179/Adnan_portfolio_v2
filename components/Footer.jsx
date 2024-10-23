@@ -78,8 +78,10 @@ const Footer = () => {
     gsap.registerPlugin(_ScrollTrigger);
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: "#footer > *",
-        toggleActions: "play none none none",
+        trigger: "#footer",
+        start: "top bottom",
+        end: "bottom bottom",
+        toggleActions: "play none none reset",
       },
     });
 

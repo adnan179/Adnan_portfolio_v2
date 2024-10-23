@@ -32,17 +32,17 @@ const ProjectsComponent = () => {
     tl.fromTo(
       "#projects-sec-heading",
       { x: -100, opacity: 0 },
-      { x: 0, opacity: 1, duration: 0.8, ease: "power2.inOut" }
+      { x: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }
     )
       .fromTo(
         "#project-links",
         { y: 100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, ease: "power2.inOut" }
+        { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }
       )
       .fromTo(
         "#line",
         { y: 100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, ease: "power2.inOut" }
+        { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }
       );
 
     // Only run animations for project details if it's not the initial render
@@ -50,22 +50,22 @@ const ProjectsComponent = () => {
       tl.fromTo(
         "#project-heading > *",
         { y: 200, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, ease: "power2.inOut", stagger: 0.3 }
+        { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut", stagger: 0.3 }
       )
         .fromTo(
           "#project-period",
           { y: 200, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.8, ease: "power2.inOut" }
+          { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }
         )
         .fromTo(
           "#project-desc-heading",
           { y: 100, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.8, ease: "power2.inOut" }
+          { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }
         )
         .fromTo(
           "#project-desc",
           { y: 100, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.8, ease: "power2.inOut" }
+          { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }
         )
         .fromTo(
           "#tech-stack > *",
@@ -73,7 +73,7 @@ const ProjectsComponent = () => {
           {
             y: 0,
             opacity: 1,
-            duration: 0.8,
+            duration: 0.5,
             ease: "power2.inOut",
             stagger: 0.3,
           }
@@ -84,7 +84,7 @@ const ProjectsComponent = () => {
           {
             y: 0,
             opacity: 1,
-            duration: 0.8,
+            duration: 0.5,
             ease: "power2.inOut",
             stagger: 0.3,
           }
@@ -95,7 +95,7 @@ const ProjectsComponent = () => {
           {
             y: 0,
             opacity: 1,
-            duration: 0.8,
+            duration: 0.5,
             ease: "power2.inOut",
             stagger: 0.3,
           }
@@ -103,7 +103,7 @@ const ProjectsComponent = () => {
         .fromTo(
           "#visit-the-projects-page",
           { y: 200, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.8, ease: "power2.inOut" }
+          { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }
         );
     }
   }, [isInitialRender]);
@@ -117,22 +117,22 @@ const ProjectsComponent = () => {
       tl.fromTo(
         "#project-heading > *",
         { y: 200, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, ease: "power2.inOut", stagger: 0.3 }
+        { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut", stagger: 0.3 }
       )
         .fromTo(
           "#project-period",
           { y: 200, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.8, ease: "power2.inOut" }
+          { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }
         )
         .fromTo(
           "#project-desc-heading",
           { y: 100, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.8, ease: "power2.inOut" }
+          { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }
         )
         .fromTo(
           "#project-desc",
           { y: 100, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.8, ease: "power2.inOut" }
+          { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }
         )
         .fromTo(
           "#tech-stack > *",
@@ -140,7 +140,7 @@ const ProjectsComponent = () => {
           {
             y: 0,
             opacity: 1,
-            duration: 0.8,
+            duration: 0.5,
             ease: "power2.inOut",
             stagger: 0.3,
           }
@@ -151,7 +151,7 @@ const ProjectsComponent = () => {
           {
             y: 0,
             opacity: 1,
-            duration: 0.8,
+            duration: 0.5,
             ease: "power2.inOut",
             stagger: 0.3,
           }
@@ -162,7 +162,7 @@ const ProjectsComponent = () => {
           {
             y: 0,
             opacity: 1,
-            duration: 0.8,
+            duration: 0.5,
             ease: "power2.inOut",
             stagger: 0.3,
           }
@@ -170,7 +170,7 @@ const ProjectsComponent = () => {
         .fromTo(
           "#visit-the-projects-page",
           { y: 200, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.8, ease: "power2.inOut" }
+          { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }
         );
     }
   }, [selectedProjectName]);
@@ -276,7 +276,7 @@ const ProjectsComponent = () => {
                 {selectedProject.techStack.map((ts, index) => (
                   <p
                     key={index}
-                    className="text-white font-light lg:text-[14px] text-[12px]"
+                    className="text-white font-medium lg:text-[14px] text-[12px] px-3 py-1 rounded-[36px] bg-[#A5A7A7]/10"
                   >
                     {ts}
                   </p>
@@ -288,19 +288,17 @@ const ProjectsComponent = () => {
               className="flex flex-col md:gap-3 gap-1 md:w-2/3 w-full"
             >
               <h2 className="text-[#808080] font-medium">The Journey:</h2>
-              <div className="flex items-center justify-center md:mt-4 mt-2">
-                <div className="relative flex items-center justify-between w-full">
-                  <div className="absolute md:top-3/4 top-[25px] left-0 right-0 h-[1.5px] bg-[#808080]"></div>
-
+              <div className="flex items-center justify-center mt-2">
+                <ul className="flex flex-row gap-2 items-center w-full">
                   {selectedProject.theJourney.map((step, idx) => (
-                    <div key={idx} className="flex flex-col items-center">
-                      <span className="md:text-sm text-[8px] text-center text-white">
-                        {step}
-                      </span>
-                      <div className="mt-2 relative flex items-center justify-center md:w-6 md:h-6 w-3 h-3 bg-white rounded-full"></div>
-                    </div>
+                    <li
+                      key={idx}
+                      className="md:text-sm text-[8px] text-center text-white"
+                    >
+                      {step}
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
             </div>
           </div>
