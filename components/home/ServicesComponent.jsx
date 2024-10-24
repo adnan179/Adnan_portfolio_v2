@@ -115,7 +115,7 @@ const ServicesComponent = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#services-section",
-        start: "top 80%",
+        start: "top 70%",
         toggleActions: "play none none none",
       },
     });

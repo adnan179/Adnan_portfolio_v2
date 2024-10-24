@@ -80,7 +80,7 @@ const Hero = () => {
           with a flair for creating immersive web magic!
         </h2>
         <a
-          href="/CV.pdf"
+          href="https://drive.google.com/file/d/1SLfqE5ByNnkTsBtk6Ae_Hp-Mi2sgVKxq/view?usp=drive_link"
           rel="noopener noreferrer"
           target="_blank"
           className="relative bg-transparent font-MajorMonoDisplay text-white text-[20px] flex flex-row gap-2 items-center hover:scale-105 transition ease-in-out duration-300 group"

@@ -14,7 +14,18 @@ import ionarcThumbnail1 from "../app/public/home/ionarc thumbnail.png";
 import ionarcThumbnail2 from "../app/public/home/ionarc thumbnail_2.png";
 import ionarcThumbnail3 from "../app/public/home/ionarc thumbnail_3.png";
 import morning1 from "../app/public/home/morning_buddy.png";
+import morningLaptopView from "../app/public/home/morning_buddy_laptop_view.png";
 import linkedin1 from "../app/public/home/Linkedin_revamp.png";
+import linkedinLaptopView from "../app/public/home/linkedin1-laptop-view.png";
+import projectsSection from "../app/public/projects-section-image.png";
+import projectsSectionLaptopView from "../app/public/home/projects_section_laptop_view.png";
+import final1 from "../app/public/home/final_year_project_1.png";
+import final2 from "../app/public/home/final_year_project_2.png";
+import final3 from "../app/public/home/final_year_project_3.png";
+import final4 from "../app/public/home/final_year_project_4.png";
+import final5 from "../app/public/home/final_year_project_5.png";
+import final6 from "../app/public/home/final_year_project_6.png";
+import final7 from "../app/public/home/final_year_project_7.png";
 
 export const socialLinks = [
   {
@@ -169,7 +180,7 @@ export const projectsData = [
       "Development",
       "Testing & deployment",
     ],
-    projectImages: [ionarcThumbnail1, ionarcThumbnail2, ionarcThumbnail3],
+    projectImages: [projectsSection, projectsSectionLaptopView],
   },
   {
     projectName: "LinkedIn Re-design",
@@ -181,8 +192,8 @@ export const projectsData = [
       "A refreshed look for LinkedIn’s homepage, focused on improving user experience through subtle yet impactful changes. ✨ The design streamlines the interface for smoother navigation 🧭, introduces tweaks to enhance visual clarity and flow 🎨, and ensures better accessibility for all users 🌐. These updates prioritize user-friendly interactions, while maintaining core functionality, resulting in a more intuitive and polished browsing experience.",
     techStack: ["Figma"],
     thingsUsed: [],
-    theJourney: ["User Research", "Design & wire framing"],
-    projectImages: [linkedin1],
+    theJourney: ["User Research", "Wire framing", "Design"],
+    projectImages: [linkedin1, linkedinLaptopView],
   },
   {
     projectName: "Morning Buddy",
@@ -190,11 +201,11 @@ export const projectsData = [
     projectLink: "https://dribbble.com/shots/24895816-Morning-Buddy",
     period: "September 2024 - September 2024",
     projectDescription:
-      "Introducing **Morning Buddy** – your go-to app for staying updated every morning! 🌅📲 Morning Buddy is a sleek, user-friendly news app designed to keep you informed with the latest news from various categories at your fingertips. 📰✨ Whether it's world events, sports, or entertainment, it helps users effortlessly browse and stay connected with what's happening around the globe 🌍. Perfect for those who love starting their day with a quick news catch-up! ☕",
+      "Introducing Morning Buddy – your go-to app for staying updated every morning! 🌅📲 Morning Buddy is a sleek, user-friendly news app designed to keep you informed with the latest news from various categories at your fingertips. 📰✨ Whether it's world events, sports, or entertainment, it helps users effortlessly browse and stay connected with what's happening around the globe 🌍. Perfect for those who love starting their day with a quick news catch-up! ☕",
     techStack: ["Figma"],
     thingsUsed: [],
-    theJourney: ["User Research", "Design & wire framing"],
-    projectImages: [morning1],
+    theJourney: ["User Research", "Wire framing", "Design"],
+    projectImages: [morning1, morningLaptopView],
   },
   {
     projectName: "Final Year Project",
@@ -222,7 +233,7 @@ export const projectsData = [
       "User Research",
       "Testing & deployment",
     ],
-    projectImages: [ionarcThumbnail1, ionarcThumbnail2, ionarcThumbnail3],
+    projectImages: [final1, final2, final3, final4, final5, final6, final7],
   },
 ];
 

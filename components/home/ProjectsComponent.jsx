@@ -24,7 +24,7 @@ const ProjectsComponent = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#projects",
-        start: "top 80%",
+        start: "top 70%",
         toggleActions: "play none none none",
       },
     });
@@ -192,12 +192,12 @@ const ProjectsComponent = () => {
         Projects
       </h1>
       {/* main container */}
-      <div className="flex md:flex-row flex-col w-full h-full justify-center items-center md:mt-0 mt-7">
+      <div className="flex lg:flex-row flex-col w-full h-full justify-center items-center md:mt-0 mt-5">
         {/* links container */}
-        <div className="flex md:flex-row flex-col gap-2 md:w-1/6 w-full h-full">
+        <div className="flex md:flex-row flex-col gap-2 lg:w-1/6 w-full h-full">
           <div
             id="project-links"
-            className="relative flex md:flex-col flex-row gap-4 md:items-end items-center md:py-16 px-6"
+            className="relative flex lg:flex-col flex-row md:gap-4 gap-2 md:items-end items-center md:py-16 px-6"
           >
             {projectsData.map((project, index) => (
               <h2
@@ -215,13 +215,13 @@ const ProjectsComponent = () => {
             {/* line */}
             <div
               id="line"
-              className="absolute flex md:top-0 -bottom-2 right-0 md:-right-4 md:w-[1.5px] md:h-full w-full h-[1.5px] bg-gradient-to-b from-[#808080]/50 via-[#808080] to-[#808080]/50"
+              className="absolute flex lg:top-0 md:bottom-10 -bottom-2 lg:w-[1.5px] lg:h-full w-full h-[1.5px] bg-gradient-to-b from-[#808080]/50 via-[#808080] to-[#808080]/50"
             ></div>
           </div>
         </div>
         {/* links container */}
         {/* project content container */}
-        <div className="flex flex-col md:gap-4 gap-2 md:w-5/6 w-full mt-5 md:mt-0 md:px-0 px-4">
+        <div className="flex flex-col md:gap-4 gap-2 lg:w-5/6 w-full md:mt-0 mt-5 lg:mt-0 lg:px-0 px-4">
           {/* heading,link and period */}
           <div className="flex flex-col gap-1">
             <div
@@ -313,7 +313,7 @@ const ProjectsComponent = () => {
                 src={i}
                 alt="project image"
                 key={idx}
-                className="md:w-[700px] md:h-[200px] w-[500px] h-[150px] rounded-[24px] drop-shadow-lg  object-fill"
+                className="w-[500px] h-[250px] rounded-[24px] drop-shadow-lg  object-contain"
               />
             ))}
           </div>
