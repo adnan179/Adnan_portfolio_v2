@@ -68,7 +68,7 @@ const ProjectsComponent = () => {
           { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }
         )
         .fromTo(
-          "#tech-stack > *",
+          "#tech-color",
           { y: 200, opacity: 0 },
           {
             y: 0,
@@ -79,7 +79,7 @@ const ProjectsComponent = () => {
           }
         )
         .fromTo(
-          "#journey > *",
+          "#journey",
           { y: 200, opacity: 0 },
           {
             y: 0,
@@ -135,7 +135,7 @@ const ProjectsComponent = () => {
           { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }
         )
         .fromTo(
-          "#tech-stack > *",
+          "#tech-color",
           { y: 200, opacity: 0 },
           {
             y: 0,
@@ -146,7 +146,7 @@ const ProjectsComponent = () => {
           }
         )
         .fromTo(
-          "#journey > *",
+          "#journey",
           { y: 200, opacity: 0 },
           {
             y: 0,
@@ -183,7 +183,7 @@ const ProjectsComponent = () => {
   return (
     <section
       id="projects"
-      className="flex flex-col w-full min-h-screen lg:px-16 px-3"
+      className="flex flex-col w-full min-h-screen lg:px-16 md:px-10 px-3"
     >
       <h1
         id="projects-sec-heading"
@@ -215,7 +215,7 @@ const ProjectsComponent = () => {
             {/* line */}
             <div
               id="line"
-              className="absolute flex lg:top-0 md:bottom-10 -bottom-2 lg:w-[1.5px] lg:h-full w-full h-[1.5px] bg-gradient-to-b from-[#808080]/50 via-[#808080] to-[#808080]/50"
+              className="absolute flex lg:top-0 lg:-right-2 md:bottom-10 -bottom-2 lg:w-[1.5px] lg:h-full w-full h-[1.5px] bg-gradient-to-b from-[#808080]/50 via-[#808080] to-[#808080]/50"
             ></div>
           </div>
         </div>
@@ -265,27 +265,50 @@ const ProjectsComponent = () => {
             {selectedProject.projectDescription}
           </p>
           {/* description */}
-          {/* tech stack and the journey */}
-          <div className="flex md:flex-row flex-col gap-3 w-full justify-between">
-            <div
-              id="tech-stack"
-              className="flex flex-col md:w-1/3 w-full md:gap-3 gap-1"
-            >
-              <h2 className="text-[#808080] font-medium">Tech Stack:</h2>
-              <div className="flex flex-row flex-wrap gap-2 pl-4">
-                {selectedProject.techStack.map((ts, index) => (
-                  <p
-                    key={index}
-                    className="text-white font-medium lg:text-[14px] text-[12px] px-3 py-1 rounded-[36px] bg-[#A5A7A7]/10"
-                  >
-                    {ts}
-                  </p>
-                ))}
+          {/* tech stack, color palette and the journey */}
+          <div
+            id="tech-color"
+            className="flex md:flex-row flex-col gap-6 w-full justify-between items-center"
+          >
+            {/* tech stack */}
+            <div className="flex flex-col gap-3 md:w-1/3 w-full bg-[#171717] rounded-[36px] p-5">
+              <div className="flex flex-col w-full md:gap-3 gap-1">
+                <h2 className="text-[#808080] font-medium">Tech Stack:</h2>
+                <div className="flex flex-row flex-wrap gap-2 pl-4">
+                  {selectedProject.techStack.map((ts, index) => (
+                    <p
+                      key={index}
+                      className="text-white font-medium lg:text-[14px] text-[12px] px-3 py-1 rounded-[36px] bg-[#A5A7A7]/10"
+                    >
+                      {ts}
+                    </p>
+                  ))}
+                </div>
               </div>
+              {/* tech stack */}
+              {/* color palette */}
+              <div className="flex flex-col w-full md:gap-3 gap-1">
+                <h2 className="text-[#808080] font-medium">Color Palette:</h2>
+                <div className="flex flex-row flex-wrap gap-2 pl-4">
+                  {selectedProject.colorPalette.map((cp) => (
+                    <div key={cp} className="flex flex-row gap-1">
+                      <div
+                        className="flex w-4 h-4 border border-white"
+                        style={{ backgroundColor: cp }}
+                      ></div>
+                      <p className="text-white font-medium lg:text-[14px] text-[12px]">
+                        {cp}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              {/* color palette */}
             </div>
+
             <div
               id="journey"
-              className="flex flex-col md:gap-3 gap-1 md:w-2/3 w-full"
+              className="flex flex-col md:gap-3 gap-1 md:w-2/3 w-full bg-[#171717] lg:p-8 p-5 rounded-[36px]"
             >
               <h2 className="text-[#808080] font-medium">The Journey:</h2>
               <div className="flex items-center justify-center mt-2">

@@ -6,6 +6,7 @@ import world from "../../app/public/home/world.gif";
 import Link from "next/link";
 import gsap from "gsap";
 import _ScrollTrigger from "gsap/ScrollTrigger";
+import speedyImage from "../../app/public/home/speedy_image.jpg";
 
 const SpeedySnapshot = () => {
   //gsap animations

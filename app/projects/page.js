@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import site from "../public/construction-site.gif";
 import { Loading } from "@/utils/LoadingSpinner";
+import Hero from "@/components/projects/Hero";
 
 const Projects = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -14,24 +15,15 @@ const Projects = () => {
     return () => clearTimeout(timer);
   }, []);
   return (
-    <div className="flex flex-col w-full min-h-screen text-white font-bold text-[20px] justify-center items-center gap-5">
+    <section className="flex flex-col w-full min-h-screen text-white xl:px-24 lg:px-16 md:px-10 sm:px-8 px-6">
       {isLoading ? (
         <Loading />
       ) : (
         <>
-          <Image
-            src={site}
-            alt="construction-site"
-            className="w-[250xp] h-[250px] object-contain"
-            priority
-          />
-          <h1>
-            The projects page is still under construction, hammering out the
-            details—hang tight for the grand reveal!
-          </h1>
+          <Hero />
         </>
       )}
-    </div>
+    </section>
   );
 };
 
