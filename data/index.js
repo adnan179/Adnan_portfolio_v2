@@ -353,7 +353,6 @@ export const feedbackData = [
 
 export const allProjectsData = [
   {
-    projectName: "IonArc",
     projectHeading: "IonArc Consultancy Website",
     period: "July 2024 - July 2024",
     projectLink: "https://ionarc-website.vercel.app/",
@@ -378,7 +377,6 @@ export const allProjectsData = [
     projectImages: [ionarcThumbnail1, ionarcThumbnail2, ionarcThumbnail3],
   },
   {
-    projectName: "Projects Section",
     projectHeading: "Portfolio Projects Section",
     period: "October 2024 - Present",
     projectLink:
@@ -396,7 +394,6 @@ export const allProjectsData = [
     projectImages: [projectsSection, projectsSectionLaptopView],
   },
   {
-    projectName: "LinkedIn Re-design",
     projectHeading: "LinkedIn Home Page Re-design",
     period: "September 2024 - September 2024",
     projectLink:
@@ -417,7 +414,6 @@ export const allProjectsData = [
     projectImages: [linkedin1, linkedinLaptopView],
   },
   {
-    projectName: "Morning Buddy",
     projectHeading: "Morning Buddy (Your every day instant news bud!)",
     projectLink: "https://dribbble.com/shots/24895816-Morning-Buddy",
     period: "September 2024 - September 2024",
@@ -429,7 +425,6 @@ export const allProjectsData = [
     projectImages: [morning1, morningLaptopView],
   },
   {
-    projectName: "Final Year Project",
     projectHeading: "College Project Submission Portal",
     period: "July 2023 - July 2024",
     projectLink: "https://github.com/adnan179/final_year_project",
@@ -457,7 +452,6 @@ export const allProjectsData = [
     projectImages: [final1, final2, final3, final4, final5, final6, final7],
   },
   {
-    projectName: "Final Year Project",
     projectHeading: "College Project Submission Portal",
     period: "July 2023 - July 2024",
     projectLink: "https://github.com/adnan179/final_year_project",
