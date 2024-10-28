@@ -5,9 +5,9 @@ import Link from "next/link";
 import Image from "next/image";
 import _ScrollTrigger from "gsap/ScrollTrigger";
 import gsap from "gsap";
-import { projectsData } from "@/data";
+import { allProjectsData as projectsData } from "@/data";
 
-const ProjectsComponent = () => {
+const ProjectsSection = () => {
   const [selectedProjectName, setSelectedProjectName] = useState("IonArc");
   const [selectedProject, setSelectedProject] = useState(projectsData[0]);
   const [isInitialRender, setIsInitialRender] = useState(true);
@@ -24,26 +24,20 @@ const ProjectsComponent = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#projects",
-        start: "top 70%",
+        start: "top 50%",
         toggleActions: "play none none none",
       },
     });
 
     tl.fromTo(
-      "#projects-sec-heading",
-      { x: -100, opacity: 0 },
-      { x: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }
-    )
-      .fromTo(
-        "#project-links",
-        { y: 100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }
-      )
-      .fromTo(
-        "#line",
-        { y: 100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }
-      );
+      "#project-links",
+      { y: 100, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }
+    ).fromTo(
+      "#line",
+      { y: 100, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }
+    );
 
     // Only run animations for project details if it's not the initial render
     if (!isInitialRender) {
@@ -181,16 +175,7 @@ const ProjectsComponent = () => {
   }, []);
 
   return (
-    <section
-      id="projects"
-      className="flex flex-col w-full min-h-screen lg:px-16 md:px-10 px-3"
-    >
-      <h1
-        id="projects-sec-heading"
-        className="bg-gradient-to-r from-[#808080]/50 via-[#808080] to-[#808080]/50  bg-clip-text text-transparent font-Montserrat font-semibold drop-shadow-lg lg:text-[48px] text-[36px]"
-      >
-        Projects
-      </h1>
+    <section id="projects" className="w-full min-h-screen md:px-10 px-3">
       {/* main container */}
       <div className="flex lg:flex-row flex-col w-full h-full justify-center items-center md:mt-0 mt-5">
         {/* links container */}
@@ -215,7 +200,7 @@ const ProjectsComponent = () => {
             {/* line */}
             <div
               id="line"
-              className="absolute flex lg:top-0 lg:-right-2 md:bottom-10 -bottom-2 lg:w-[1.5px] lg:h-full w-full h-[1.5px] bg-gradient-to-b from-[#808080]/50 via-[#808080] to-[#808080]/50"
+              className="absolute flex lg:top-0 lg:-right-1 md:bottom-10 -bottom-2 lg:w-[1.5px] lg:h-full w-full h-[1.5px] bg-gradient-to-b from-[#808080]/50 via-[#808080] to-[#808080]/50"
             ></div>
           </div>
         </div>
@@ -345,13 +330,8 @@ const ProjectsComponent = () => {
         {/* project content container */}
       </div>
       {/* main container */}
-      <Link id="visit-the-projects-page" href="/projects" className="flex mt-5">
-        <h2 className="font-medium bg-gradient-to-r from-[#2B0CFD] to-[#FB0D0D] bg-clip-text text-transparent md:text-[20px] text-[14px]">
-          Visit the projects page
-        </h2>
-      </Link>
     </section>
   );
 };
 
-export default ProjectsComponent;
+export default ProjectsSection;

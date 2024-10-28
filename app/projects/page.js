@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Loading } from "@/utils/LoadingSpinner";
 import Hero from "@/components/projects/Hero";
-import ProjectsPart from "@/components/projects/ProjectsPart";
+import ProjectsSection from "@/components/projects/ProjectsSection";
 
 const ProjectsPage = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -13,15 +13,16 @@ const ProjectsPage = () => {
     }, 3000);
     return () => clearTimeout(timer);
   }, []);
+
   return (
-    <section className="w-full min-h-screen text-white xl:px-24 lg:px-16 md:px-10 sm:px-8 px-6">
+    <section className="w-full min-h-screen text-white pb-[100px]">
       {isLoading ? (
         <Loading />
       ) : (
-        <div className="flex flex-col gap-2">
+        <>
           <Hero />
-          <ProjectsPart />
-        </div>
+          <ProjectsSection />
+        </>
       )}
     </section>
   );
