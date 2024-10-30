@@ -183,7 +183,7 @@ const ProjectsComponent = () => {
   return (
     <section
       id="projects"
-      className="flex flex-col w-full min-h-screen lg:px-16 md:px-10 px-3"
+      className="flex flex-col w-full min-h-screen lg:px-16 md:px-10 px-4"
     >
       <h1
         id="projects-sec-heading"
@@ -197,7 +197,7 @@ const ProjectsComponent = () => {
         <div className="flex md:flex-row flex-col gap-2 lg:w-1/6 w-full h-full">
           <div
             id="project-links"
-            className="relative flex lg:flex-col flex-row md:gap-4 gap-2 md:items-end items-center md:py-16 px-6"
+            className="relative flex lg:flex-col flex-row gap-4 md:items-end items-center md:py-16 px-3 flex-wrap"
           >
             {projectsData.map((project, index) => (
               <h2
@@ -215,7 +215,7 @@ const ProjectsComponent = () => {
             {/* line */}
             <div
               id="line"
-              className="absolute flex lg:top-0 lg:-right-2 md:bottom-10 -bottom-2 lg:w-[1.5px] lg:h-full w-full h-[1.5px] bg-gradient-to-b from-[#808080]/50 via-[#808080] to-[#808080]/50"
+              className="absolute flex lg:top-0 lg:-right-2 md:bottom-10 left-0 right-0 -bottom-2 lg:w-[1.5px] lg:h-full w-full h-[1.5px] bg-gradient-to-b from-[#808080]/50 via-[#808080] to-[#808080]/50"
             ></div>
           </div>
         </div>
@@ -268,7 +268,7 @@ const ProjectsComponent = () => {
           {/* tech stack, color palette and the journey */}
           <div
             id="tech-color"
-            className="flex md:flex-row flex-col gap-6 w-full justify-between items-center"
+            className="flex md:flex-row flex-col gap-3 w-full justify-between"
           >
             {/* tech stack */}
             <div className="flex flex-col gap-3 md:w-1/3 w-full bg-[#171717] rounded-[36px] p-5">
@@ -312,11 +312,11 @@ const ProjectsComponent = () => {
             >
               <h2 className="text-[#808080] font-medium">The Journey:</h2>
               <div className="flex items-center justify-center mt-2">
-                <ul className="flex flex-row gap-2 items-center w-full">
+                <ul className="flex flex-row gap-2 flex-wrap items-center w-full">
                   {selectedProject.theJourney.map((step, idx) => (
                     <li
                       key={idx}
-                      className="md:text-sm text-[8px] text-center text-white"
+                      className="text-sm text-white bg-black/50 p-2 rounded-[14px]"
                     >
                       {step}
                     </li>
@@ -329,14 +329,14 @@ const ProjectsComponent = () => {
           {/* images container */}
           <div
             id="project-images"
-            className="w-full flex flex-row gap-3 overflow-x-auto custom-scrollbar-2 md:mt-2 mt-4"
+            className="w-full flex flex-row gap-3 overflow-x-auto custom-scrollbar-2 mt-2"
           >
             {selectedProject.projectImages.map((i, idx) => (
               <Image
                 src={i}
                 alt="project image"
                 key={idx}
-                className="w-[500px] h-[250px] rounded-[24px] drop-shadow-lg  object-contain"
+                className="sm:w-[500px] w-full sm:h-[250px] h-[150px] rounded-[24px] drop-shadow-lg"
               />
             ))}
           </div>

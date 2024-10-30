@@ -23,7 +23,7 @@ const Hero = () => {
       );
   }, []);
   return (
-    <div
+    <section
       id="projects-hero"
       className="flex flex-col w-full min-h-screen xl:px-24 lg:px-16 md:px-10 sm:px-8 px-6"
     >
@@ -58,7 +58,7 @@ const Hero = () => {
           deliver impactful, engaging solutions.
         </p>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -37,7 +37,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative w-full min-h-screen flex flex-col md:flex-row md:justify-between justify-center items-center lg:px-16 md:px-8 px-6 md:mt-[-150px] lg:mt-0">
+    <section className="relative w-full min-h-screen flex flex-col md:flex-row md:justify-between justify-center items-center lg:px-16 md:px-8 px-6 lg:mt-0 overflow-hidden">
       <div
         id="blue-light"
         className="bg-[#2B0CFD]/50 absolute top-[-6rem] -z-10 md:right-[8rem] right-0 h-[20rem] w-[20rem] md:h-[31.25rem] md:w-[31.25rem] rounded-full blur-[10rem]"
@@ -49,11 +49,11 @@ const Hero = () => {
       >
         <h1
           id="hey-text"
-          className="font-MajorMonoDisplay lg:text-[76px] text-[48px]"
+          className="font-MajorMonoDisplay xl:text-[76px] lg:text-[60px] text-[48px]"
         >
           Hey👋
         </h1>
-        <h2 className="font-inter lg:text-[27px] text-[18px]">
+        <h2 className="font-inter xl:text-[27px] lg:text-[22px] text-[18px]">
           Welcome to my digital living room where caffeine burns into code &
           design—
         </h2>
@@ -75,7 +75,7 @@ const Hero = () => {
             />
           </div>
         </h2>
-        <h2 className="font-inter lg:text-[27px] text-[18px]">
+        <h2 className="font-inter xl:text-[27px] lg:text-[22px] text-[18px]">
           {" "}
           with a flair for creating immersive web magic!
         </h2>
@@ -92,7 +92,7 @@ const Hero = () => {
           <span className="absolute bottom-0 left-0 w-full h-[1.5px] bg-white rounded-sm"></span>
         </a>
       </div>
-      <div className="lg:w-[35%] md:w-[45%] hidden md:flex h-full justify-center items-center mt-10 md:mt-0">
+      <div className="lg:w-[35%] md:w-[45%] hidden md:flex h-full justify-center items-center md:mt-0">
         <div
           id="hero-image"
           className="flex lg:w-[300px] lg:h-[500px] md:w-[250px] md:h-[450px] w-[200px] h-[400px] rounded-[200px] shadow-lg bg-gradient-to-b from-[#685731] to-[#06040E] rotate-6"

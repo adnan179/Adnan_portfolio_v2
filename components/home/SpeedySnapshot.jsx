@@ -6,8 +6,6 @@ import world from "../../app/public/home/world.gif";
 import Link from "next/link";
 import gsap from "gsap";
 import _ScrollTrigger from "gsap/ScrollTrigger";
-import { FaArrowRightArrowLeft } from "react-icons/fa6";
-import { GoArrowRight } from "react-icons/go";
 
 gsap.registerPlugin(_ScrollTrigger);
 
@@ -17,7 +15,7 @@ const SpeedySnapshot = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#speedy-section",
-        start: "top 10px",
+        start: "top 5%",
         toggleActions: "play none none none",
       },
     });
@@ -198,14 +196,14 @@ const SpeedySnapshot = () => {
               {degreeAndDeeds.map((d, idx) => (
                 <div
                   key={idx}
-                  className="flex flex-col bg-black/50 w-1/4 sm:h-[130px] h-[90px] text-white p-3 rounded-[24px] justify-center items-center gap-1 font-bold"
+                  className="flex flex-col bg-black/50 w-1/4 sm:h-[130px] h-[90px] text-white sm:p-3 p-2 rounded-[24px] justify-center items-center gap-1 font-bold"
                 >
-                  <span className="sm:text-[10px] text-[7px] text-center">
+                  <span className="sm:text-[10px] text-[6.5px] text-center">
                     {d.period}
                   </span>
                   <div className="flex w-full h-[1.5px] bg-[#808080]"></div>
 
-                  <span className="sm:text-[10px] text-[7px] text-center font-medium">
+                  <span className="sm:text-[10px] text-[6.5px] text-center font-medium">
                     {d.name}
                   </span>
                 </div>
