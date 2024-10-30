@@ -7,6 +7,8 @@ import _ScrollTrigger from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import { allProjectsData as projectsData } from "@/data";
 
+gsap.registerPlugin(_ScrollTrigger);
+
 const ProjectsSection = () => {
   const [selectedProjectName, setSelectedProjectName] = useState("IonArc");
   const [selectedProject, setSelectedProject] = useState(projectsData[0]);
@@ -20,7 +22,6 @@ const ProjectsSection = () => {
 
   // GSAP animations for initial load
   useEffect(() => {
-    gsap.registerPlugin(_ScrollTrigger);
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#projects",
@@ -175,14 +176,17 @@ const ProjectsSection = () => {
   }, []);
 
   return (
-    <section id="projects" className="w-full min-h-screen md:px-10 px-3">
+    <section
+      id="projects"
+      className="w-full min-h-screen xl:px-10 sm:px-4 px-3"
+    >
       {/* main container */}
       <div className="flex lg:flex-row flex-col w-full h-full justify-center items-center md:mt-0 mt-5">
         {/* links container */}
-        <div className="flex md:flex-row flex-col gap-2 lg:w-1/6 w-full h-full">
+        <div className="flex md:flex-row flex-col gap-2 xl:w-1/6 lg:w-1/5 w-full h-full">
           <div
             id="project-links"
-            className="relative flex lg:flex-col flex-row md:gap-4 gap-2 md:items-end items-center md:py-16 px-6"
+            className="relative flex lg:flex-col flex-row flex-wrap md:gap-4 gap-2 md:items-end items-center md:py-16 px-6"
           >
             {projectsData.map((project, index) => (
               <h2
@@ -206,14 +210,14 @@ const ProjectsSection = () => {
         </div>
         {/* links container */}
         {/* project content container */}
-        <div className="flex flex-col md:gap-4 gap-2 lg:w-5/6 w-full md:mt-0 mt-5 lg:mt-0 lg:px-0 px-4">
+        <div className="flex flex-col md:gap-4 gap-2 xl:w-5/6 lg:w-4/5 w-full md:mt-0 mt-5 lg:mt-0 lg:px-0 px-4">
           {/* heading,link and period */}
           <div className="flex flex-col gap-1">
             <div
               id="project-heading"
               className="flex flex-row gap-3 items-center"
             >
-              <h1 className="text-[#808080] font-medium lg:text-[36px] text-[22px]">
+              <h1 className="text-[#808080] font-medium xl:text-[36px] lg:text-[32px] text-[22px]">
                 {selectedProject.projectHeading}
               </h1>
               <Link
@@ -253,10 +257,10 @@ const ProjectsSection = () => {
           {/* tech stack, color palette and the journey */}
           <div
             id="tech-color"
-            className="flex md:flex-row flex-col gap-6 w-full justify-between items-center"
+            className="flex md:flex-row flex-col gap-3 w-full justify-between items-center"
           >
             {/* tech stack */}
-            <div className="flex flex-col gap-3 md:w-1/3 w-full bg-[#171717] rounded-[36px] p-5">
+            <div className="flex flex-col gap-3 md:w-1/3 w-full bg-[#171717] rounded-[36px] xl:p-5 lg:p-3 p-3">
               <div className="flex flex-col w-full md:gap-3 gap-1">
                 <h2 className="text-[#808080] font-medium">Tech Stack:</h2>
                 <div className="flex flex-row flex-wrap gap-2 pl-4">
@@ -293,7 +297,7 @@ const ProjectsSection = () => {
 
             <div
               id="journey"
-              className="flex flex-col md:gap-3 gap-1 md:w-2/3 w-full bg-[#171717] lg:p-8 p-5 rounded-[36px]"
+              className="flex flex-col md:gap-3 gap-1 md:w-2/3 w-full bg-[#171717] xl:p-6 md:p-5 p-3 rounded-[36px]"
             >
               <h2 className="text-[#808080] font-medium">The Journey:</h2>
               <div className="flex items-center justify-center mt-2">

@@ -182,7 +182,7 @@ const Navbar = () => {
 
       {/* Sidebar for Mobile */}
       <div
-        className={`fixed inset-y-0 right-0 w-[70%] bg-[#121212] transform ${
+        className={`fixed inset-y-0 right-0 w-[80%] bg-[#121212] transform ${
           sidebarOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out z-40 md:hidden`}
       >

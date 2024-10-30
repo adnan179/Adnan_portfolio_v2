@@ -6,16 +6,18 @@ import world from "../../app/public/home/world.gif";
 import Link from "next/link";
 import gsap from "gsap";
 import _ScrollTrigger from "gsap/ScrollTrigger";
-import speedyImage from "../../app/public/home/speedy_image.jpg";
+import { FaArrowRightArrowLeft } from "react-icons/fa6";
+import { GoArrowRight } from "react-icons/go";
+
+gsap.registerPlugin(_ScrollTrigger);
 
 const SpeedySnapshot = () => {
   //gsap animations
   useEffect(() => {
-    gsap.registerPlugin(_ScrollTrigger);
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: "#speedy-section > *",
-        start: "top 90%",
+        trigger: "#speedy-section",
+        start: "top 10px",
         toggleActions: "play none none none",
       },
     });
@@ -69,8 +71,9 @@ const SpeedySnapshot = () => {
   return (
     <section
       id="speedy-section"
-      className="w-full min-h-screen flex flex-col lg:px-8 px-4"
+      className="w-full min-h-screen flex flex-col xl:px-8 md:px-6 px-4"
     >
+      {/* heading */}
       <div className="flex w-full justify-start items-center">
         <h1
           id="speedy-heading"
@@ -79,6 +82,7 @@ const SpeedySnapshot = () => {
           Speedy Snapshots
         </h1>
       </div>
+      {/* heading */}
       {/* first row */}
       <div className="flex md:flex-row flex-col md:gap-8 gap-4 w-full justify-center items-center mt-5">
         {/* first row first col */}
@@ -184,21 +188,24 @@ const SpeedySnapshot = () => {
         {/* degree and deeds */}
         <div
           id="degree-and-deeds"
-          className="lg:w-[500px] lg:h-[200px] h-[200px] w-full rounded-[24px] bg-[#171717] flex flex-col gap-2 p-4 drop-shadow-lg"
+          className="xl:w-[500px] xl:h-[200px] lg:w-[400px] sm:h-[200px] w-full rounded-[24px] bg-[#171717] flex flex-col gap-2 p-4 drop-shadow-lg"
         >
           <h3 className="text-white font-medium text-[18px]">
             Degree and deeds
           </h3>
-          <div className="flex items-center justify-center mt-6">
-            <div className="relative flex items-center justify-between w-full">
-              <div className="absolute top-[48%] left-0 right-0 h-[1.5px] bg-[#808080]"></div>
+          <div className="flex items-center justify-center mt-2">
+            <div className="flex flex-row gap-2 items-center w-full">
               {degreeAndDeeds.map((d, idx) => (
-                <div key={idx} className="flex flex-col items-center gap-2">
-                  <span className="sm:text-[10px] text-[8px] text-center text-white font-medium">
+                <div
+                  key={idx}
+                  className="flex flex-col bg-black/50 w-1/4 sm:h-[130px] h-[90px] text-white p-3 rounded-[24px] justify-center items-center gap-1 font-bold"
+                >
+                  <span className="sm:text-[10px] text-[7px] text-center">
                     {d.period}
                   </span>
-                  <div className="mt-2 relative flex items-center justify-center w-4 h-4 bg-white rounded-full"></div>
-                  <span className="sm:text-[9px] text-[8px] text-center text-white">
+                  <div className="flex w-full h-[1.5px] bg-[#808080]"></div>
+
+                  <span className="sm:text-[10px] text-[7px] text-center font-medium">
                     {d.name}
                   </span>
                 </div>
