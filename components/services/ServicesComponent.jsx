@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { LoadingSpinner } from "@/utils/LoadingSpinner";
 import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
-import Link from "next/link";
 import gsap from "gsap";
 import _ScrollTrigger from "gsap/ScrollTrigger";
 
@@ -122,19 +121,11 @@ const ServicesPage = () => {
     tl.fromTo(
       "#services-sec-heading",
       {
-        x: -100,
+        y: -100,
         opacity: 0,
       },
-      { x: 0, opacity: 1, duration: 0.8, ease: "power3.inOut" }
+      { y: 0, opacity: 1, duration: 0.8, ease: "power3.inOut" }
     )
-      .fromTo(
-        "#services-sub-heading",
-        {
-          x: -100,
-          opacity: 0,
-        },
-        { x: 0, opacity: 1, duration: 0.8, ease: "power3.inOut" }
-      )
       .fromTo(
         "#services-cont",
         {
@@ -164,24 +155,16 @@ const ServicesPage = () => {
   return (
     <section
       id="services-section"
-      className="flex flex-col gap-5 w-full lg:py-[50px] lg:px-12 px-4"
+      className="flex flex-col gap-10 lg:py-[50px] lg:px-12 px-4 w-full min-h-screen justify-center items-center mt-[80px]"
     >
-      {/* heading & sub-heading */}
-      <div className="flex flex-col">
-        <h1
-          id="services-sec-heading"
-          className="bg-gradient-to-r from-[#808080]/50 via-[#808080] to-[#808080]/50  bg-clip-text text-transparent font-Montserrat font-semibold drop-shadow-lg lg:text-[48px] text-[36px]"
-        >
-          Services
-        </h1>
-        <h2
-          id="services-sub-heading"
-          className="pl-6 text-white font-bold lg:text-[14px] sm:text-[12px] text-[10px]"
-        >
-          Your Vision, My Expertise: Web Dev, App Design, and Flawless UX!
-        </h2>
-      </div>
-      {/* heading & sub-heading */}
+      {/* headiing */}
+      <h1
+        id="services-sec-heading"
+        className="bg-gradient-to-r from-[#808080]/50 via-[#808080] to-[#808080]/50  bg-clip-text text-transparent font-Montserrat font-semibold drop-shadow-lg lg:text-[36px] flex justify-center items-center w-full"
+      >
+        Your Vision, My Expertise: Web Dev, App Design, and Flawless UX!
+      </h1>
+      {/* heading */}
       {/* main container */}
       <div className="flex xl:gap-10 gap-4 md:flex-row flex-col justify-center items-center">
         {/* services container */}
@@ -283,15 +266,13 @@ const ServicesPage = () => {
         </form>
         {/* form */}
       </div>
-      <div
+      <p
         id="services-notes"
-        className="flex flex-col gap-2 w-full text-[#808080] font-medium xl:text-[14px] text-[10px]"
+        className="text-[#808080] font-medium xl:text-[14px] text-[10px]"
       >
-        <p>
-          Note: Pricing is flexible and will be tailored based on the specific
-          project requirements and services requested.
-        </p>
-      </div>
+        Note: Pricing is flexible and will be tailored based on the specific
+        project requirements and services requested.
+      </p>
       {/* main container */}
     </section>
   );
