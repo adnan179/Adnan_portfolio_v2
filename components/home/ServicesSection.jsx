@@ -28,7 +28,8 @@ const services = [
 ];
 
 gsap.registerPlugin(_ScrollTrigger);
-const ServicesPage = () => {
+
+const ServicesSection = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -157,13 +158,19 @@ const ServicesPage = () => {
       id="services-section"
       className="flex flex-col gap-10 lg:py-[50px] lg:px-12 px-4 w-full min-h-screen justify-center items-center mt-[80px]"
     >
-      {/* headiing */}
-      <h1
-        id="services-sec-heading"
-        className="bg-gradient-to-r from-[#808080]/50 via-[#808080] to-[#808080]/50  bg-clip-text text-transparent font-Montserrat font-semibold drop-shadow-lg lg:text-[36px] flex justify-center items-center w-full"
-      >
-        Your Vision, My Expertise: Web Dev, App Design, and Flawless UX!
-      </h1>
+      {/* headiing and sub-heading */}
+      <div className="flex flex-col gap-2 justify-start w-full">
+        <h1
+          id="services-sec-heading"
+          className="bg-gradient-to-r from-[#808080]/50 via-[#808080] to-[#808080]/50  bg-clip-text text-transparent font-Montserrat font-semibold drop-shadow-lg lg:text-[48px] text-[36px]"
+        >
+          Services
+        </h1>
+        <h2 className="text-white pl-5 font-medium font-Montserrat text-[20px]">
+          Your Vision, My Expertise: Web Dev, App Design, and Flawless UX!
+        </h2>
+      </div>
+
       {/* heading */}
       {/* main container */}
       <div className="flex xl:gap-10 gap-4 md:flex-row flex-col justify-center items-center">
@@ -278,4 +285,4 @@ const ServicesPage = () => {
   );
 };
 
-export default ServicesPage;
+export default ServicesSection;

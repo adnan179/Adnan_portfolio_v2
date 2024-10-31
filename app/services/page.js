@@ -1,7 +1,7 @@
 "use client";
 import { Loading } from "@/utils/LoadingSpinner";
 import React, { useEffect, useState } from "react";
-import ServicesPage from "@/components/services/ServicesComponent";
+import ServicesPage from "@/components/services/ServicesPage";
 
 const Services = () => {
   const [isLoading, setIsLoading] = useState(true);
