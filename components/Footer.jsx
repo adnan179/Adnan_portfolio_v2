@@ -7,6 +7,7 @@ import emailjs from "@emailjs/browser";
 import gsap from "gsap";
 import _ScrollTrigger from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(_ScrollTrigger);
 const Footer = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -75,12 +76,10 @@ const Footer = () => {
   };
 
   useEffect(() => {
-    gsap.registerPlugin(_ScrollTrigger);
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#footer",
-        start: "top bottom",
-        end: "bottom bottom",
+        start: "top 90%",
         toggleActions: "play none none reset",
       },
     });
@@ -116,6 +115,7 @@ const Footer = () => {
         { y: 0, opacity: 1, duration: 0.5, ease: "power3.inOut", stagger: 0.4 }
       );
   }, []);
+
   return (
     // main container
     <footer

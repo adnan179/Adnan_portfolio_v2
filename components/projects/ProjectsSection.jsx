@@ -6,6 +6,7 @@ import Image from "next/image";
 import _ScrollTrigger from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import { allProjectsData as projectsData } from "@/data";
+import { GoArrowRight } from "react-icons/go";
 
 gsap.registerPlugin(_ScrollTrigger);
 
@@ -186,7 +187,7 @@ const ProjectsSection = () => {
         <div className="flex md:flex-row flex-col gap-2 xl:w-1/6 lg:w-1/5 w-full h-full">
           <div
             id="project-links"
-            className="relative flex lg:flex-col flex-row flex-wrap md:gap-4 gap-2 md:items-end items-center md:py-16 px-6"
+            className="flex lg:flex-col flex-row flex-wrap md:gap-4 gap-2 md:items-end items-center p-6 bg-[#171717] rounded-[36px] drop-shadow-lg"
           >
             {projectsData.map((project, index) => (
               <h2
@@ -201,11 +202,6 @@ const ProjectsSection = () => {
                 {project.projectName}
               </h2>
             ))}
-            {/* line */}
-            <div
-              id="line"
-              className="absolute flex lg:top-0 lg:-right-1 md:bottom-10 -bottom-2 lg:w-[1.5px] lg:h-full w-full h-[1.5px] bg-gradient-to-b from-[#808080]/50 via-[#808080] to-[#808080]/50"
-            ></div>
           </div>
         </div>
         {/* links container */}
@@ -257,17 +253,17 @@ const ProjectsSection = () => {
           {/* tech stack, color palette and the journey */}
           <div
             id="tech-color"
-            className="flex md:flex-row flex-col gap-3 w-full justify-between items-center"
+            className="flex md:flex-row flex-col gap-3 w-full justify-between drop-shadow-lg"
           >
             {/* tech stack */}
-            <div className="flex flex-col gap-3 md:w-1/3 w-full bg-[#171717] rounded-[36px] xl:p-5 lg:p-3 p-3">
+            <div className="flex flex-col gap-3 md:w-1/3 w-full bg-[#171717] rounded-[36px] p-5">
               <div className="flex flex-col w-full md:gap-3 gap-1">
                 <h2 className="text-[#808080] font-medium">Tech Stack:</h2>
                 <div className="flex flex-row flex-wrap gap-2 pl-4">
                   {selectedProject.techStack.map((ts, index) => (
                     <p
                       key={index}
-                      className="text-white font-medium lg:text-[14px] text-[12px] px-3 py-1 rounded-[36px] bg-[#A5A7A7]/10"
+                      className="text-white xl:text-[14px] text-[12px] px-3 py-1 rounded-[36px] bg-black/50"
                     >
                       {ts}
                     </p>
@@ -285,7 +281,7 @@ const ProjectsSection = () => {
                         className="flex w-4 h-4 border border-white"
                         style={{ backgroundColor: cp }}
                       ></div>
-                      <p className="text-white font-medium lg:text-[14px] text-[12px]">
+                      <p className="text-white xl:text-[14px] text-[12px]">
                         {cp}
                       </p>
                     </div>
@@ -297,17 +293,20 @@ const ProjectsSection = () => {
 
             <div
               id="journey"
-              className="flex flex-col md:gap-3 gap-1 md:w-2/3 w-full bg-[#171717] xl:p-6 md:p-5 p-3 rounded-[36px]"
+              className="flex flex-col md:gap-3 gap-1 md:w-2/3 w-full bg-[#171717] p-5 rounded-[36px] drop-shadow-lg"
             >
               <h2 className="text-[#808080] font-medium">The Journey:</h2>
               <div className="flex items-center justify-center mt-2">
-                <ul className="flex flex-row gap-2 items-center w-full">
+                <ul className="flex flex-row gap-2 flex-wrap items-center">
                   {selectedProject.theJourney.map((step, idx) => (
                     <li
                       key={idx}
-                      className="md:text-sm text-[8px] text-center text-white"
+                      className="flex flex-row gap-1 items-center md:text-sm text-[10px] text-white bg-black/50 p-2 rounded-[14px]"
                     >
                       {step}
+                      <span>
+                        <GoArrowRight className="text-white w-5 h-5" />
+                      </span>
                     </li>
                   ))}
                 </ul>

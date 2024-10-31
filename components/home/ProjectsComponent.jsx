@@ -6,6 +6,7 @@ import Image from "next/image";
 import _ScrollTrigger from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import { projectsData } from "@/data";
+import { GoArrowRight } from "react-icons/go";
 
 const ProjectsComponent = () => {
   const [selectedProjectName, setSelectedProjectName] = useState("IonArc");
@@ -183,7 +184,7 @@ const ProjectsComponent = () => {
   return (
     <section
       id="projects"
-      className="flex flex-col w-full min-h-screen lg:px-16 md:px-10 px-4"
+      className="flex flex-col w-full min-h-screen xl:px-16 lg:px-8 md:px-10 px-4"
     >
       <h1
         id="projects-sec-heading"
@@ -192,12 +193,12 @@ const ProjectsComponent = () => {
         Projects
       </h1>
       {/* main container */}
-      <div className="flex lg:flex-row flex-col w-full h-full justify-center items-center md:mt-0 mt-5">
+      <div className="flex lg:flex-row flex-col gap-3 w-full h-full md:mt-0 mt-5">
         {/* links container */}
         <div className="flex md:flex-row flex-col gap-2 lg:w-1/6 w-full h-full">
           <div
             id="project-links"
-            className="relative flex lg:flex-col flex-row gap-4 md:items-end items-center md:py-16 px-3 flex-wrap"
+            className="flex lg:flex-col flex-row gap-4 flex-wrap bg-[#171717] xl:p-6 lg:p-4 p-5 justify-center items-center rounded-[36px] drop-shadow-lg"
           >
             {projectsData.map((project, index) => (
               <h2
@@ -212,11 +213,6 @@ const ProjectsComponent = () => {
                 {project.projectName}
               </h2>
             ))}
-            {/* line */}
-            <div
-              id="line"
-              className="absolute flex lg:top-0 lg:-right-2 md:bottom-10 left-0 right-0 -bottom-2 lg:w-[1.5px] lg:h-full w-full h-[1.5px] bg-gradient-to-b from-[#808080]/50 via-[#808080] to-[#808080]/50"
-            ></div>
           </div>
         </div>
         {/* links container */}
@@ -228,7 +224,7 @@ const ProjectsComponent = () => {
               id="project-heading"
               className="flex flex-row gap-3 items-center"
             >
-              <h1 className="text-[#808080] font-medium lg:text-[36px] text-[22px]">
+              <h1 className="text-[#808080] font-medium xl:text-[36px] text-[22px]">
                 {selectedProject.projectHeading}
               </h1>
               <Link
@@ -245,7 +241,7 @@ const ProjectsComponent = () => {
             </div>
             <h3
               id="project-period"
-              className="text-white text-[14px] lg:text-[16px]"
+              className="text-white text-[14px] xl:text-[16px]"
             >
               {selectedProject.period}
             </h3>
@@ -268,7 +264,7 @@ const ProjectsComponent = () => {
           {/* tech stack, color palette and the journey */}
           <div
             id="tech-color"
-            className="flex md:flex-row flex-col gap-3 w-full justify-between"
+            className="flex md:flex-row flex-col gap-3 w-full justify-between drop-shadow-lg"
           >
             {/* tech stack */}
             <div className="flex flex-col gap-3 md:w-1/3 w-full bg-[#171717] rounded-[36px] p-5">
@@ -278,7 +274,7 @@ const ProjectsComponent = () => {
                   {selectedProject.techStack.map((ts, index) => (
                     <p
                       key={index}
-                      className="text-white font-medium lg:text-[14px] text-[12px] px-3 py-1 rounded-[36px] bg-[#A5A7A7]/10"
+                      className="text-white xl:text-[14px] text-[12px] px-3 py-1 rounded-[36px] bg-black/50"
                     >
                       {ts}
                     </p>
@@ -296,7 +292,7 @@ const ProjectsComponent = () => {
                         className="flex w-4 h-4 border border-white"
                         style={{ backgroundColor: cp }}
                       ></div>
-                      <p className="text-white font-medium lg:text-[14px] text-[12px]">
+                      <p className="text-white xl:text-[14px] text-[12px]">
                         {cp}
                       </p>
                     </div>
@@ -308,17 +304,20 @@ const ProjectsComponent = () => {
 
             <div
               id="journey"
-              className="flex flex-col md:gap-3 gap-1 md:w-2/3 w-full bg-[#171717] lg:p-8 p-5 rounded-[36px]"
+              className="flex flex-col md:gap-3 gap-1 md:w-2/3 w-full bg-[#171717] p-5 rounded-[36px] drop-shadow-lg"
             >
               <h2 className="text-[#808080] font-medium">The Journey:</h2>
               <div className="flex items-center justify-center mt-2">
-                <ul className="flex flex-row gap-2 flex-wrap items-center w-full">
+                <ul className="flex flex-row gap-2 flex-wrap items-center">
                   {selectedProject.theJourney.map((step, idx) => (
                     <li
                       key={idx}
-                      className="text-sm text-white bg-black/50 p-2 rounded-[14px]"
+                      className="flex flex-row gap-1 items-center md:text-sm text-[10px] text-white bg-black/50 p-2 rounded-[14px]"
                     >
                       {step}
+                      <span>
+                        <GoArrowRight className="text-white w-5 h-5" />
+                      </span>
                     </li>
                   ))}
                 </ul>

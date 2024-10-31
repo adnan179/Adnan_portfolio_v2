@@ -39,11 +39,6 @@ const Hero = () => {
   return (
     <section className="relative w-full min-h-screen flex flex-col md:flex-row md:justify-between justify-center items-center lg:px-16 md:px-8 px-6 lg:mt-0 overflow-hidden">
       <div
-        id="blue-light"
-        className="bg-[#2B0CFD]/50 absolute top-[-6rem] -z-10 md:right-[8rem] right-0 h-[20rem] w-[20rem] md:h-[31.25rem] md:w-[31.25rem] rounded-full blur-[10rem]"
-      ></div>
-
-      <div
         id="hero-section-1"
         className="flex flex-col lg:gap-5 md:gap-3 gap-5 text-white font-medium md:w-[55%] lg:w-[65%] w-full h-full items-start"
       >
