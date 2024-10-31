@@ -10,32 +10,32 @@ import { FaInstagram, FaLinkedin, FaGithub, FaDribbble } from "react-icons/fa6";
 import { MdOutlineMail } from "react-icons/md";
 
 //projects imports
-import ionarcThumbnail1 from "../app/public/home/ionarc thumbnail.png";
-import ionarcThumbnail2 from "../app/public/home/ionarc thumbnail_2.png";
-import ionarcThumbnail3 from "../app/public/home/ionarc thumbnail_3.png";
-import morning1 from "../app/public/home/morning_buddy.png";
-import morningLaptopView from "../app/public/home/morning_buddy_laptop_view.png";
-import linkedin1 from "../app/public/home/Linkedin_revamp.png";
-import linkedinLaptopView from "../app/public/home/linkedin1-laptop-view.png";
-import projectsSection from "../app/public/projects-section-image.png";
-import projectsSectionLaptopView from "../app/public/home/projects_section_laptop_view.png";
-import final1 from "../app/public/home/final_year_project_1.png";
-import final2 from "../app/public/home/final_year_project_2.png";
-import final3 from "../app/public/home/final_year_project_3.png";
-import final4 from "../app/public/home/final_year_project_4.png";
-import final5 from "../app/public/home/final_year_project_5.png";
-import final6 from "../app/public/home/final_year_project_6.png";
-import final7 from "../app/public/home/final_year_project_7.png";
-import scrapper from "../app/public/scrapper.png";
-import bite1 from "../app/public/bite_speed_1.png";
-import bite2 from "../app/public/bite_speed_2.png";
-import bite3 from "../app/public/bite_speed_3.png";
-import three1 from "../app/public/three-js-1.png";
-import three2 from "../app/public/three-js-2.png";
-import three3 from "../app/public/three-js-3.png";
-import threeGuide1 from "../app/public/three-guide-1.png";
-import threeGuide2 from "../app/public/three-guide-2.png";
-import threeGuide3 from "../app/public/three-guide-3.png";
+import ionarcThumbnail1 from "../app/public/projects/ionarc thumbnail.png";
+import ionarcThumbnail2 from "../app/public/projects/ionarc thumbnail_2.png";
+import ionarcThumbnail3 from "../app/public/projects/ionarc thumbnail_3.png";
+import morning1 from "../app/public/projects/morning_buddy.png";
+import morningLaptopView from "../app/public/projects/morning_buddy_laptop_view.png";
+import linkedin1 from "../app/public/projects/Linkedin_revamp.png";
+import linkedinLaptopView from "../app/public/projects/linkedin1-laptop-view.png";
+import projectsSection from "../app/public/projects/projects-section-image.png";
+import projectsSectionLaptopView from "../app/public/projects/projects_section_laptop_view.png";
+import final1 from "../app/public/projects/final_year_project_1.png";
+import final2 from "../app/public/projects/final_year_project_2.png";
+import final3 from "../app/public/projects/final_year_project_3.png";
+import final4 from "../app/public/projects/final_year_project_4.png";
+import final5 from "../app/public/projects/final_year_project_5.png";
+import final6 from "../app/public/projects/final_year_project_6.png";
+import final7 from "../app/public/projects/final_year_project_7.png";
+import scrapper from "../app/public/projects/scrapper.png";
+import bite1 from "../app/public/projects/bite_speed_1.png";
+import bite2 from "../app/public/projects/bite_speed_2.png";
+import bite3 from "../app/public/projects/bite_speed_3.png";
+import three1 from "../app/public/projects/three-js-1.png";
+import three2 from "../app/public/projects/three-js-2.png";
+import three3 from "../app/public/projects/three-js-3.png";
+import threeGuide1 from "../app/public/projects/three-guide-1.png";
+import threeGuide2 from "../app/public/projects/three-guide-2.png";
+import threeGuide3 from "../app/public/projects/three-guide-3.png";
 
 export const socialLinks = [
   {

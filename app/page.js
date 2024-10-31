@@ -2,7 +2,7 @@
 import Hero from "@/components/home/Hero";
 import ProjectsComponent from "@/components/home/ProjectsComponent";
 import SpeedySnapshot from "@/components/home/SpeedySnapshot";
-import ServicesComponent from "@/components/home/ServicesComponent";
+import ServicesComponent from "@/components/services/ServicesComponent";
 import ShareYourThoughts from "@/components/home/ShareYourThoughts";
 import { useEffect, useState } from "react";
 import { Loading } from "@/utils/LoadingSpinner";
