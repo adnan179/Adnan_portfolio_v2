@@ -75,6 +75,7 @@ const Footer = () => {
     }
   };
 
+  //gsap animations
   useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {

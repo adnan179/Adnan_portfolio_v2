@@ -125,7 +125,7 @@ const ServicesPage = () => {
         y: -100,
         opacity: 0,
       },
-      { y: 0, opacity: 1, duration: 0.8, ease: "power3.inOut" }
+      { y: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
     )
       .fromTo(
         "#services-cont",
@@ -133,7 +133,7 @@ const ServicesPage = () => {
           y: 100,
           opacity: 0,
         },
-        { y: 0, opacity: 1, duration: 0.8, ease: "power3.inOut", stagger: 0.3 }
+        { y: 0, opacity: 1, duration: 0.5, ease: "power3.inOut", stagger: 0.3 }
       )
       .fromTo(
         "#services-form > *",
@@ -141,7 +141,7 @@ const ServicesPage = () => {
           y: 100,
           opacity: 0,
         },
-        { y: 0, opacity: 1, duration: 0.8, ease: "power3.inOut", stagger: 0.3 }
+        { y: 0, opacity: 1, duration: 0.5, ease: "power3.inOut", stagger: 0.3 }
       )
       .fromTo(
         "#services-notes > *",
@@ -149,7 +149,7 @@ const ServicesPage = () => {
           x: -100,
           opacity: 0,
         },
-        { x: 0, opacity: 1, duration: 0.8, ease: "power3.inOut", stagger: 0.3 }
+        { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut", stagger: 0.3 }
       );
   }, []);
 

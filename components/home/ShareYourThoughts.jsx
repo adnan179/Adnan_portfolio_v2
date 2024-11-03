@@ -7,7 +7,7 @@ import { addDoc, collection, getDocs } from "firebase/firestore";
 import { feedbackData } from "@/data";
 import gsap from "gsap";
 import _ScrollTrigger from "gsap/ScrollTrigger";
-
+gsap.registerPlugin(_ScrollTrigger);
 const ShareYourThoughts = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [feedbacks, setFeedbacks] = useState([]);
@@ -71,8 +71,6 @@ const ShareYourThoughts = () => {
 
   //gsap animations
   useEffect(() => {
-    gsap.registerPlugin(_ScrollTrigger);
-
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#share-your-thoughts",
@@ -87,7 +85,7 @@ const ShareYourThoughts = () => {
         x: -100,
         opacity: 0,
       },
-      { x: 0, opacity: 1, duration: 0.8, ease: "power3.inOut" }
+      { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
     )
       .fromTo(
         "#feedbacks-sub-heading",
@@ -95,7 +93,7 @@ const ShareYourThoughts = () => {
           x: -100,
           opacity: 0,
         },
-        { x: 0, opacity: 1, duration: 0.8, ease: "power3.inOut" }
+        { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
       )
       .fromTo(
         "#drop-your-wisdom",
@@ -103,7 +101,7 @@ const ShareYourThoughts = () => {
           x: -100,
           opacity: 0,
         },
-        { x: 0, opacity: 1, duration: 0.8, ease: "power3.inOut" }
+        { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
       );
   }, []);
   return (

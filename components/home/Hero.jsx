@@ -13,17 +13,12 @@ const Hero = () => {
     tl.fromTo(
       "#hero-section-1 > *",
       { x: "-150%" },
-      { x: "0%", duration: 1, ease: "power1.inOut", delay: 0.7, stagger: 0.4 }
+      { x: "0%", duration: 0.5, ease: "power1.inOut", stagger: 0.4 }
     )
       .fromTo(
         "#hero-image",
         { x: 100, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.8, ease: "power1.inOut" }
-      )
-      .fromTo(
-        "#blue-light",
-        { opacity: 0 },
-        { opacity: 1, duration: 0.8, ease: "power4.inOut" }
+        { x: 0, opacity: 1, duration: 0.5, ease: "power1.inOut" }
       )
       .to("#hey-text", {
         rotation: 10,

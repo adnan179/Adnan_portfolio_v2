@@ -60,17 +60,17 @@ const Navbar = () => {
     tl.fromTo(
       "#navbar-logo",
       { y: -50, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }
+      { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }
     )
       .fromTo(
         "#navbar-links > a",
         { y: -50, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }
+        { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }
       )
       .fromTo(
         "#navbar-talk",
         { y: -50, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" },
+        { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" },
         "-=0.5"
       );
 
@@ -79,7 +79,7 @@ const Navbar = () => {
       gsap.fromTo(
         "#navbar-logo, #hamburger-menu",
         { y: -50, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, ease: "power3.out", stagger: 0.3 }
+        { y: 0, opacity: 1, duration: 0.5, ease: "power3.out", stagger: 0.3 }
       );
     }
   }, []);
@@ -90,7 +90,7 @@ const Navbar = () => {
       gsap.fromTo(
         "#sidebar-links a, #sidebar-talk",
         { x: 200, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.8, ease: "power3.out", stagger: 0.2 }
+        { x: 0, opacity: 1, duration: 0.5, ease: "power3.out", stagger: 0.2 }
       );
     }
   }, [sidebarOpen]);

@@ -3,23 +3,24 @@ import _ScrollTrigger from "gsap/ScrollTrigger";
 import React, { useEffect } from "react";
 
 const Hero = () => {
+  //gsap animations
   useEffect(() => {
     const tl = gsap.timeline();
 
     tl.fromTo(
       "#main-heading",
       { x: -100, opacity: 0 },
-      { x: 0, opacity: 1, duration: 0.8, ease: "power3.inOut" }
+      { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
     )
       .fromTo(
         "#sub-heading",
         { x: -100, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.8, ease: "power3.inOut" }
+        { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
       )
       .fromTo(
         "#desc",
         { x: 100, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.8, ease: "power3.inOut" }
+        { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
       );
   }, []);
   return (
