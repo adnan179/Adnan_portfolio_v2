@@ -114,7 +114,7 @@ const ServicesSection = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#services-section",
-        start: "top 70%",
+        start: "top 50%",
         toggleActions: "play none none none",
       },
     });
@@ -122,11 +122,19 @@ const ServicesSection = () => {
     tl.fromTo(
       "#services-sec-heading",
       {
-        y: -100,
+        x: -100,
         opacity: 0,
       },
-      { y: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
+      { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
     )
+      .fromTo(
+        "#services-sub-heading",
+        {
+          x: -100,
+          opacity: 0,
+        },
+        { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
+      )
       .fromTo(
         "#services-cont",
         {
@@ -156,7 +164,7 @@ const ServicesSection = () => {
   return (
     <section
       id="services-section"
-      className="flex flex-col gap-10 lg:py-[50px] lg:px-12 px-4 w-full min-h-screen justify-center items-center mt-[80px]"
+      className="flex flex-col gap-10 lg:py-[50px] lg:px-12 px-4 w-full min-h-screen justify-center items-center mt-[80px] pb-[100px]"
     >
       {/* headiing and sub-heading */}
       <div className="flex flex-col gap-2 justify-start w-full">
@@ -166,7 +174,10 @@ const ServicesSection = () => {
         >
           Services
         </h1>
-        <h2 className="text-white pl-5 font-medium font-Montserrat text-[20px]">
+        <h2
+          id="services-sub-heading"
+          className="text-white pl-5 font-medium font-Montserrat text-[20px]"
+        >
           Your Vision, My Expertise: Web Dev, App Design, and Flawless UX!
         </h2>
       </div>

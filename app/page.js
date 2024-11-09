@@ -28,7 +28,6 @@ export default function Home() {
           <SpeedySnapshot />
           <ProjectsComponent />
           <ServicesSection />
-          <ShareYourThoughts />
         </>
       )}
     </div>

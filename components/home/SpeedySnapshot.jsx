@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import closeUp from "../../app/public/home/portfolio_profile_close_up.jpg";
+import catAndBoy from "../../app/public/home/cat and boy.jpg";
 import Image from "next/image";
 import { degreeAndDeeds, hobbies, skills, socialLinks } from "@/data";
 import world from "../../app/public/home/world.gif";
@@ -16,7 +17,6 @@ const SpeedySnapshot = () => {
       scrollTrigger: {
         trigger: "#speedy-section",
         start: "top 80%",
-        end: "bottom 50%",
         toggleActions: "play none none none",
       },
     });
@@ -90,11 +90,15 @@ const SpeedySnapshot = () => {
           className="bg-[#171717] rounded-[24px] p-4 shadow-lg flex flex-row gap-3 drop-shadow-lg sm:w-[600px] w-full"
         >
           <Image
-            src={closeUp}
-            alt="another weird look of mine lol!"
-            className="lg:w-[250px] lg:h-[250px] md:w-[150px] md:h-[150px] w-[130px] h-[130px] md:rounded-bl-[64px] md:rounded-tr-[64px] rounded-bl-[36px] rounded-tr-[36px] shadow-lg"
+            src={catAndBoy}
+            alt="just a bit-emoji of me and my cat!"
+            className="xl:w-[250px] xl:h-[250px] md:w-[150px] md:h-[150px] w-[130px] h-[130px] md:rounded-bl-[64px] md:rounded-tr-[64px] rounded-bl-[36px] rounded-tr-[36px] shadow-lg"
           />
           <div className="flex flex-col gap-2 justify-center">
+            <p className=" text-[#808080] font-bold text-[10px]">
+              Behold! It’s me hanging out with my tiny black sidekick—watch out,
+              mischief in progress! 🐾👻{" "}
+            </p>
             <h2 className="text-white lg:text-[20px] md:text-[16px] text-[14px] font-bold">
               Adnan Shaik
             </h2>

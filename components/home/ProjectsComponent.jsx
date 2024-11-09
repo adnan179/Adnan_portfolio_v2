@@ -241,7 +241,7 @@ const ProjectsComponent = () => {
             </div>
             <h3
               id="project-period"
-              className="text-white text-[14px] xl:text-[16px]"
+              className="text-white  text-[14px] xl:text-[16px]"
             >
               {selectedProject.period}
             </h3>
@@ -256,7 +256,7 @@ const ProjectsComponent = () => {
           </h3>
           <p
             id="project-desc"
-            className="text-white text-[12px] md:text-[14px]"
+            className="text-white text-[12px] xl:text-[14px]"
           >
             {selectedProject.projectDescription}
           </p>
@@ -267,10 +267,10 @@ const ProjectsComponent = () => {
             className="flex md:flex-row flex-col gap-3 w-full justify-between drop-shadow-lg"
           >
             {/* tech stack */}
-            <div className="flex flex-col gap-3 md:w-1/3 w-full bg-[#171717] rounded-[36px] p-5">
+            <div className="flex flex-col gap-3 md:w-1/3 w-full bg-[#171717] rounded-[36px] xl:p-5 lg:p-3 p-5">
               <div className="flex flex-col w-full md:gap-3 gap-1">
                 <h2 className="text-[#808080] font-medium">Tech Stack:</h2>
-                <div className="flex flex-row flex-wrap gap-2 pl-4">
+                <div className="flex flex-row flex-wrap gap-2 pl-2">
                   {selectedProject.techStack.map((ts, index) => (
                     <p
                       key={index}

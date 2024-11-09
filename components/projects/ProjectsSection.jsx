@@ -179,21 +179,21 @@ const ProjectsSection = () => {
   return (
     <section
       id="projects"
-      className="w-full min-h-screen xl:px-10 sm:px-4 px-3"
+      className="w-full min-h-screen xl:px-10 sm:px-4 px-3 mt-0 lg:mt-10 xl:mt-0"
     >
       {/* main container */}
-      <div className="flex lg:flex-row flex-col w-full h-full justify-center items-center md:mt-0 mt-5">
+      <div className="flex lg:flex-row flex-col w-full h-full justify-center items-center ">
         {/* links container */}
         <div className="flex md:flex-row flex-col gap-2 xl:w-1/6 lg:w-1/5 w-full h-full">
           <div
             id="project-links"
-            className="flex lg:flex-col flex-row flex-wrap md:gap-4 gap-2 md:items-end items-center p-6 bg-[#171717] rounded-[36px] drop-shadow-lg"
+            className="flex lg:flex-col flex-row flex-wrap md:gap-4 gap-2 md:items-end items-center xl:p-6 lg:p-4 p-6 bg-[#171717] rounded-[36px] drop-shadow-lg"
           >
             {projectsData.map((project, index) => (
               <h2
                 onClick={() => handleSelectProject(project)}
                 key={index}
-                className={`flex font-inter font-medium md:text-sm text-[12px] cursor-pointer ${
+                className={`flex font-inter font-medium text-[12px] cursor-pointer ${
                   selectedProjectName === project.projectName
                     ? "glowing-text "
                     : "text-[#808080]/80"
@@ -230,7 +230,7 @@ const ProjectsSection = () => {
             </div>
             <h3
               id="project-period"
-              className="text-white text-[14px] lg:text-[16px]"
+              className="text-white text-[14px] xl:text-[16px]"
             >
               {selectedProject.period}
             </h3>
@@ -245,7 +245,7 @@ const ProjectsSection = () => {
           </h3>
           <p
             id="project-desc"
-            className="text-white text-[12px] md:text-[14px]"
+            className="text-white text-[12px] xl:text-[14px]"
           >
             {selectedProject.projectDescription}
           </p>
@@ -256,10 +256,10 @@ const ProjectsSection = () => {
             className="flex md:flex-row flex-col gap-3 w-full justify-between drop-shadow-lg"
           >
             {/* tech stack */}
-            <div className="flex flex-col gap-3 md:w-1/3 w-full bg-[#171717] rounded-[36px] p-5">
+            <div className="flex flex-col gap-3 md:w-1/3 w-full bg-[#171717] rounded-[36px] xl:p-5 lg:p-4 p-5">
               <div className="flex flex-col w-full md:gap-3 gap-1">
                 <h2 className="text-[#808080] font-medium">Tech Stack:</h2>
-                <div className="flex flex-row flex-wrap gap-2 pl-4">
+                <div className="flex flex-row flex-wrap gap-2 pl-2">
                   {selectedProject.techStack.map((ts, index) => (
                     <p
                       key={index}
