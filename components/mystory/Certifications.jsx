@@ -4,6 +4,7 @@ import _ScrollTrigger from "gsap/ScrollTrigger";
 import React, { useEffect } from "react";
 gsap.registerPlugin(_ScrollTrigger);
 const Certifications = () => {
+  //gsap animations
   useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -27,7 +28,7 @@ const Certifications = () => {
   return (
     <div
       id="certificates-cont"
-      className="flex flex-col gap-2 p-4 bg-[#040404]/80 border border-gray-600/50 drop-shadow-lg rounded-[36px] sm:w-[320px] w-full"
+      className="flex flex-col gap-2 p-4 bg-[#040404]/80 border border-gray-600/50 drop-shadow-lg rounded-[36px] md:w-[320px] w-full"
     >
       <h1 className="text-white font-bold font-Montserrat text-[20px]">
         Certifications

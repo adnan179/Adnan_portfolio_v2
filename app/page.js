@@ -2,8 +2,6 @@
 import Hero from "@/components/home/Hero";
 import ProjectsComponent from "@/components/home/ProjectsComponent";
 import SpeedySnapshot from "@/components/home/SpeedySnapshot";
-
-import ShareYourThoughts from "@/components/home/ShareYourThoughts";
 import { useEffect, useState } from "react";
 import { Loading } from "@/utils/LoadingSpinner";
 import ServicesSection from "@/components/home/ServicesSection";
@@ -14,7 +12,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 3000);
+    }, 1500);
     return () => clearTimeout(timer);
   }, []);
 

@@ -16,7 +16,7 @@ const MyStory = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 3000);
+    }, 1500);
     return () => clearTimeout(timer);
   }, []);
 
@@ -35,6 +35,23 @@ const MyStory = () => {
           <div className="sm:mt-5 mt-2 flex md:flex-row flex-col-reverse gap-3">
             <Certifications />
             <MyJourneySoFar />
+          </div>
+          <div
+            className="mt-5 relative w-full"
+            style={{
+              paddingTop: "50%",
+              borderRadius: "12px",
+              overflow: "hidden",
+            }}
+          >
+            <iframe
+              src="https://open.spotify.com/embed/playlist/3zZcyMPiylDnjboqLWldGY?utm_source=generator"
+              className="absolute top-0 left-0 w-full h-[300px]"
+              frameBorder="0"
+              allowFullScreen
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
           </div>
         </>
       )}

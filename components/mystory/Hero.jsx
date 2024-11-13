@@ -27,7 +27,7 @@ const Hero = () => {
         <h1>Welcome to my</h1>
         <h1>World</h1>
         <h1>I&apos;m</h1>
-        <h1 className="font-bold font-Montserrat">Adnan Shaik</h1>
+        <h1>Adnan Shaik</h1>
       </div>
       <div className="flex sm:w-[400px] sm:h-[400px] w-[250px] h-[250px]">
         <Image
