@@ -6,7 +6,13 @@ import hiking from "../app/public/home/hiking.jpg";
 import coding from "../app/public/home/coding.jpg";
 
 //icons imports
-import { FaInstagram, FaLinkedin, FaGithub, FaDribbble } from "react-icons/fa6";
+import {
+  FaInstagram,
+  FaLinkedin,
+  FaGithub,
+  FaDribbble,
+  FaFilePdf,
+} from "react-icons/fa6";
 import { MdOutlineMail } from "react-icons/md";
 
 //projects imports
@@ -36,6 +42,11 @@ import three3 from "../app/public/projects/three-js-3.png";
 import threeGuide1 from "../app/public/projects/three-guide-1.png";
 import threeGuide2 from "../app/public/projects/three-guide-2.png";
 import threeGuide3 from "../app/public/projects/three-guide-3.png";
+
+//experience imports
+import githubLogo from "../app/public/mystory/github_logo.jpg";
+import reverrLogo from "../app/public/mystory/reverr_logo.jpeg";
+import gitamLogo from "../app/public/mystory/gitam_logo.jpg";
 
 export const socialLinks = [
   {
@@ -73,8 +84,59 @@ export const socialLinks = [
     ),
     gmail: "adnanshaik179@gmail.com",
   },
+  {
+    name: "Resume",
+    icon: (
+      <FaFilePdf className="lg:w-[40px] lg:h-[40px] md:w-[30px] md:h-[30px] w-[40px] h-[40px] text-white" />
+    ),
+    link: "https://drive.google.com/file/d/1cHq_RCbCle6DfiVqpkmY1UeOfZwTTQYp/view?usp=drivesdk",
+  },
 ];
 
+export const storySocialLinks = [
+  {
+    name: "Linkedin",
+    icon: (
+      <FaLinkedin className="w-[25px] h-[25px] text-white hover:scale-125 transition duration-200 ease-in-out" />
+    ),
+    link: "https://www.linkedin.com/in/adnanshaik179",
+  },
+  {
+    name: "Instagram",
+    icon: (
+      <FaInstagram className="w-[25px] h-[25px] text-white hover:scale-125 transition duration-200 ease-in-out" />
+    ),
+    link: "https://www.instagram.com/_adnan179",
+  },
+  {
+    name: "Github",
+    icon: (
+      <FaGithub className="w-[25px] h-[25px] text-white hover:scale-125 transition duration-200 ease-in-out" />
+    ),
+    link: "https://www.github.com/adnan179",
+  },
+  {
+    name: "Dribbble",
+    icon: (
+      <FaDribbble className="w-[25px] h-[25px] text-white hover:scale-125 transition duration-200 ease-in-out" />
+    ),
+    link: "https://www.dribbble.com/adnan179",
+  },
+  {
+    name: "Gmail",
+    icon: (
+      <MdOutlineMail className="w-[25px] h-[25px] text-white hover:scale-125 transition duration-200 ease-in-out" />
+    ),
+    gmail: "adnanshaik179@gmail.com",
+  },
+  {
+    name: "Resume",
+    icon: (
+      <FaFilePdf className="w-[25px] h-[25px] text-white hover:scale-125 transition duration-200 ease-in-out" />
+    ),
+    link: "https://drive.google.com/file/d/1cHq_RCbCle6DfiVqpkmY1UeOfZwTTQYp/view?usp=drivesdk",
+  },
+];
 export const hobbies = [
   {
     name: "Gym",
@@ -556,5 +618,86 @@ export const allProjectsData = [
       "Testing & deployment",
     ],
     projectImages: [three1, three2, three3],
+  },
+];
+
+export const certificationsData = [
+  {
+    provider: "HackerRank",
+    name: "Front-end developer (React)",
+    link: "https://www.hackerrank.com/certificates/3f9631f15804",
+    colors: ["#0D141E", "#00EA63", "#FFFFFF"],
+  },
+  {
+    provider: "Coursera",
+    name: "Advanced React",
+    link: "https://www.coursera.org/account/accomplishments/certificate/FH7YZDAPADM7",
+    colors: ["#0055D2", "#FFFFFF"],
+  },
+  {
+    provider: "Coursera",
+    name: "Object-oriented Design",
+    link: "https://www.coursera.org/account/accomplishments/certificate/FDVYJBKSB6P7",
+    colors: ["#0055D2", "#FFFFFF"],
+  },
+  {
+    provider: "Coursera",
+    name: "HTML & CSS in depth",
+    link: "https://www.coursera.org/account/accomplishments/certificate/865QEC4JNQDG",
+    colors: ["#0055D2", "#FFFFFF"],
+  },
+  {
+    provider: "Coursera",
+    name: "Identifying security vunerabilities",
+    link: "https://www.coursera.org/account/accomplishments/certificate/HV6ZWTRHHQPQ",
+    colors: ["#0055D2", "#FFFFFF"],
+  },
+  {
+    provider: "Coursera",
+    name: "Version Control",
+    link: "https://www.coursera.org/account/accomplishments/certificate/5BZ4KN26XT8K",
+    colors: ["#0055D2", "#FFFFFF"],
+  },
+  {
+    provider: "Coursera",
+    name: "Design Patterns",
+    link: "https://www.coursera.org/account/accomplishments/certificate/ULFLPQA7HEAM",
+    colors: ["#0055D2", "#FFFFFF"],
+  },
+  {
+    provider: "Coursera",
+    name: "Programming with javaScript",
+    link: "https://www.coursera.org/account/accomplishments/certificate/GWZWEE6RYGHF",
+    colors: ["#0055D2", "#FFFFFF"],
+  },
+];
+export const experienceData = [
+  {
+    position: "Freelancer",
+    company: "",
+    period: "Present",
+    desc: "I'm a freelance web developer and designer, providing tailored digital solutions—and I'm currently exploring new job opportunities to bring my expertise to a dedicated team.",
+    icon: "",
+  },
+  {
+    position: "UI/UX Designer",
+    company: "Github Community GITAM",
+    period: "Nov 2023 - Apr 2024",
+    desc: "UI/UX designer and event manager for GitHub Community GITAM, where I crafted engaging designs and organized impactful events to foster student collaboration and learning.",
+    icon: githubLogo,
+  },
+  {
+    position: "Quality Assurance Intern",
+    company: "Reverr",
+    period: "Jul 2023 - Nov 2023",
+    desc: "Quality Assurance Intern at Reverr, responsible for code reviews, utilizing tools like Jira, Postman, Google Analytics, and Jest for application testing, ensuring clean, standardized code, and maintaining thorough documentation.",
+    icon: reverrLogo,
+  },
+  {
+    position: "Under-graduate Student",
+    company: "GITAM University,Bengaluru",
+    period: "Oct 2020 - Apr 2024",
+    desc: "B.Tech Computer Science (Cyber Security) graduate from GITAM University, where I developed a strong foundation in tech and soft skills, gained invaluable lessons, and experienced a transformative journey that became a pivotal stepping stone in my life.",
+    icon: gitamLogo,
   },
 ];

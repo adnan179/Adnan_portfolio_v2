@@ -1,5 +1,5 @@
 "use client";
-import { socialLinks } from "@/data";
+import { storySocialLinks } from "@/data";
 import { LoadingSpinner } from "@/utils/LoadingSpinner";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
@@ -137,7 +137,7 @@ const Footer = () => {
         <div className="flex flex-col gap-7 md:w-1/2 md:mt-10 items-stretch h-full">
           <h2
             id="footer-message"
-            className="text-white/80 text-[16px] xl:text-xl font-medium"
+            className="text-white/80 text-[14px] xl:text-xl font-medium"
           >
             You can either drop me a message here or reach out through the links
             below—your choice, I’m always a click away! 💻✉️
@@ -146,7 +146,7 @@ const Footer = () => {
             id="footer-social-links"
             className="flex flex-row gap-3 flex-wrap w-[250px] items-center"
           >
-            {socialLinks.map((fl, index) => (
+            {storySocialLinks.map((fl, index) => (
               <a
                 key={index}
                 href={
@@ -156,13 +156,13 @@ const Footer = () => {
                 }
                 target={fl.name === "Gmail" ? "_self" : "_blank"}
                 rel="noopener noreferrer"
-                className="flex w-[40px] h-[40px] bg-[#171717] rounded-[10px] justify-center items-center"
+                className="flex w-[30px] h-[30px] bg-[#171717] rounded-[10px] justify-center items-center"
               >
                 {fl.icon}
               </a>
             ))}
           </div>
-          <p id="copy-rights" className="text-white/90 text-sm md:text-lg">
+          <p id="copy-rights" className="text-white/90 text-sm lg:text-lg">
             Copy rights @Adnan Shaik{" "}
             <span className="font-light text-[10px] md:text-sm text-white/60">
               (front-end developer & UI/UX designer)

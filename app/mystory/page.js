@@ -3,6 +3,12 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { Loading } from "@/utils/LoadingSpinner";
 import coffee from "../public/coffee-brewing-gif.gif";
+import Hero from "@/components/mystory/Hero";
+import LinksContainer from "@/components/mystory/LinksContainer";
+import TheResume from "@/components/mystory/TheResume";
+import MyTechStack from "@/components/mystory/MyTechStack";
+import Certifications from "@/components/mystory/Certifications";
+import MyJourneySoFar from "@/components/mystory/MyJourneySoFar";
 
 const MyStory = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -15,25 +21,24 @@ const MyStory = () => {
   }, []);
 
   return (
-    <div className="flex flex-col w-full min-h-screen  justify-center items-center gap-5 mt-[-80px]">
+    <section className="relative flex flex-col w-full min-h-screen justify-center items-center pb-[100px] xl:px-20 lg:px-14 md:px-14 sm:px-12 px-5">
       {isLoading ? (
         <Loading />
       ) : (
         <>
-          <Image
-            src={coffee}
-            alt="brewing-coffee"
-            className="object-contain w-[300px] h-[200px]"
-            priority
-          />
-
-          <h1 className="text-white font-bold text-[16px] font-MajorMonoDisplay">
-            My story’s still brewing—pouring in the details for the perfect cup!
-            ☕ Hang tight for the full flavor reveal!
-          </h1>
+          <Hero />
+          <LinksContainer />
+          <div className="flex md:flex-row flex-col gap-3 mt-14">
+            <MyTechStack />
+            <TheResume />
+          </div>
+          <div className="sm:mt-5 mt-2 flex md:flex-row flex-col-reverse gap-3">
+            <Certifications />
+            <MyJourneySoFar />
+          </div>
         </>
       )}
-    </div>
+    </section>
   );
 };
 

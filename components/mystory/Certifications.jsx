@@ -1,0 +1,58 @@
+import { certificationsData } from "@/data";
+import gsap from "gsap";
+import _ScrollTrigger from "gsap/ScrollTrigger";
+import React, { useEffect } from "react";
+gsap.registerPlugin(_ScrollTrigger);
+const Certifications = () => {
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#certificates-cont",
+        start: "top 100%",
+      },
+    });
+    tl.fromTo(
+      "#certificates-cont > h1",
+      { y: 100, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
+    ).fromTo(
+      "#certificates > a",
+      {
+        y: 100,
+        opacity: 0,
+      },
+      { y: 0, opacity: 1, duration: 1.5, stagger: 0.3, ease: "power3.inOut" }
+    );
+  }, []);
+  return (
+    <div
+      id="certificates-cont"
+      className="flex flex-col gap-2 p-4 bg-[#040404]/80 border border-gray-600/50 drop-shadow-lg rounded-[36px] sm:w-[320px] w-full"
+    >
+      <h1 className="text-white font-bold font-Montserrat text-[20px]">
+        Certifications
+      </h1>
+      <div id="certificates" className="flex flex-wrap flex-row gap-2">
+        {certificationsData.map((cer, idx) => (
+          <a
+            target="_blank"
+            href={cer.link}
+            key={idx}
+            className="flex flex-col rounded-[16px] p-3"
+            style={{ backgroundColor: cer.colors[0] }}
+          >
+            <h2
+              style={{ color: cer.colors[1] ? cer.colors[1] : "white" }}
+              className="text-sm font-medium"
+            >
+              {cer.provider}
+            </h2>
+            <h3 className="text-white text-[10px]">{cer.name}</h3>
+          </a>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Certifications;
