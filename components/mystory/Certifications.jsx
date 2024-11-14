@@ -9,7 +9,7 @@ const Certifications = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#certificates-cont",
-        start: "top 100%",
+        start: "top 70%",
       },
     });
     tl.fromTo(
@@ -25,10 +25,11 @@ const Certifications = () => {
       { y: 0, opacity: 1, duration: 1.5, stagger: 0.3, ease: "power3.inOut" }
     );
   }, []);
+
   return (
     <div
       id="certificates-cont"
-      className="flex flex-col gap-2 p-4 bg-[#040404]/80 border border-gray-600/50 drop-shadow-lg rounded-[36px] md:w-[320px] w-full"
+      className="flex flex-col gap-2 md:p-4 p-3 bg-[#040404]/80 border border-gray-600/50 drop-shadow-lg rounded-[36px] md:w-[450px] w-full"
     >
       <h1 className="text-white font-bold font-Montserrat text-[20px]">
         Certifications

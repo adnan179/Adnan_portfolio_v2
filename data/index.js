@@ -673,31 +673,27 @@ export const certificationsData = [
 ];
 export const experienceData = [
   {
-    position: "Freelancer",
+    position: "Freelancer/Actively Looking for job opportunities",
     company: "",
     period: "Present",
-    desc: "I'm a freelance web developer and designer, providing tailored digital solutions—and I'm currently exploring new job opportunities to bring my expertise to a dedicated team.",
     icon: "",
   },
   {
     position: "UI/UX Designer",
     company: "Github Community GITAM",
     period: "Nov 2023 - Apr 2024",
-    desc: "UI/UX designer and event manager for GitHub Community GITAM, where I crafted engaging designs and organized impactful events to foster student collaboration and learning.",
     icon: githubLogo,
   },
   {
     position: "Quality Assurance Intern",
     company: "Reverr",
     period: "Jul 2023 - Nov 2023",
-    desc: "Quality Assurance Intern at Reverr, responsible for code reviews, utilizing tools like Jira, Postman, Google Analytics, and Jest for application testing, ensuring clean, standardized code, and maintaining thorough documentation.",
     icon: reverrLogo,
   },
   {
     position: "Under-graduate Student",
     company: "GITAM University,Bengaluru",
     period: "Oct 2020 - Apr 2024",
-    desc: "B.Tech Computer Science (Cyber Security) graduate from GITAM University, where I developed a strong foundation in tech and soft skills, gained invaluable lessons, and experienced a transformative journey that became a pivotal stepping stone in my life.",
     icon: gitamLogo,
   },
 ];

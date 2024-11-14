@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import curveArrow from "../public/mystory/curve-down-arrow.png";
 import { Loading } from "@/utils/LoadingSpinner";
-import coffee from "../public/coffee-brewing-gif.gif";
 import Hero from "@/components/mystory/Hero";
 import LinksContainer from "@/components/mystory/LinksContainer";
 import TheResume from "@/components/mystory/TheResume";
@@ -36,22 +36,13 @@ const MyStory = () => {
             <Certifications />
             <MyJourneySoFar />
           </div>
-          <div
-            className="mt-5 relative w-full"
-            style={{
-              paddingTop: "50%",
-              borderRadius: "12px",
-              overflow: "hidden",
-            }}
-          >
-            <iframe
-              src="https://open.spotify.com/embed/playlist/3zZcyMPiylDnjboqLWldGY?utm_source=generator"
-              className="absolute top-0 left-0 w-full h-[300px]"
-              frameBorder="0"
-              allowFullScreen
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-            ></iframe>
+          <div className="flex flex-col gap-2 justify-center items-center w-full">
+            <h1 className="font-Montez text-[96px] text-white">My Universe</h1>
+            <Image
+              src={curveArrow}
+              alt="curve-down-arrow"
+              className="w-32 h-32 object-contain"
+            />
           </div>
         </>
       )}
