@@ -42,6 +42,8 @@ import three3 from "../app/public/projects/three-js-3.png";
 import threeGuide1 from "../app/public/projects/three-guide-1.png";
 import threeGuide2 from "../app/public/projects/three-guide-2.png";
 import threeGuide3 from "../app/public/projects/three-guide-3.png";
+import formGenerator from "../app/public/projects/form_generator_1.png";
+import formGenerator2 from "../app/public/projects/form_generator_2.png";
 
 //experience imports
 import githubLogo from "../app/public/mystory/github_logo.jpg";
@@ -51,48 +53,35 @@ import gitamLogo from "../app/public/mystory/gitam_logo.jpg";
 export const socialLinks = [
   {
     name: "Linkedin",
-    icon: (
-      <FaLinkedin className="lg:w-[40px] lg:h-[40px] md:w-[30px] md:h-[30px] w-[40px] h-[40px] text-white" />
-    ),
+    icon: <FaLinkedin className="w-[30px] h-[30px] text-white" />,
     link: "https://www.linkedin.com/in/adnanshaik179",
   },
   {
     name: "Instagram",
-    icon: (
-      <FaInstagram className="lg:w-[40px] lg:h-[40px] md:w-[30px] md:h-[30px] w-[40px] h-[40px] text-white" />
-    ),
+    icon: <FaInstagram className="w-[30px] h-[30px] text-white" />,
     link: "https://www.instagram.com/_adnan179",
   },
   {
     name: "Github",
-    icon: (
-      <FaGithub className="lg:w-[40px] lg:h-[40px] md:w-[30px] md:h-[30px] w-[40px] h-[40px] text-white" />
-    ),
+    icon: <FaGithub className="w-[30px] h-[30px] text-white" />,
     link: "https://www.github.com/adnan179",
   },
   {
     name: "Dribbble",
-    icon: (
-      <FaDribbble className="lg:w-[40px] lg:h-[40px] md:w-[30px] md:h-[30px] w-[40px] h-[40px] text-white" />
-    ),
+    icon: <FaDribbble className="w-[30px] h-[30px] text-white" />,
     link: "https://www.dribbble.com/adnan179",
   },
   {
     name: "Gmail",
-    icon: (
-      <MdOutlineMail className="lg:w-[40px] lg:h-[40px] md:w-[30px] md:h-[30px] w-[40px] h-[40px] text-white" />
-    ),
+    icon: <MdOutlineMail className="w-[30px] h-[30px] text-white" />,
     gmail: "adnanshaik179@gmail.com",
   },
   {
     name: "Resume",
-    icon: (
-      <FaFilePdf className="lg:w-[40px] lg:h-[40px] md:w-[30px] md:h-[30px] w-[40px] h-[40px] text-white" />
-    ),
+    icon: <FaFilePdf className="w-[30px] h-[30px] text-white" />,
     link: "https://drive.google.com/file/d/1cHq_RCbCle6DfiVqpkmY1UeOfZwTTQYp/view?usp=drivesdk",
   },
 ];
-
 export const storySocialLinks = [
   {
     name: "Linkedin",
@@ -218,6 +207,32 @@ export const skills = [
 ];
 
 export const projectsData = [
+  {
+    projectName: "Form Generator",
+    projectHeading: "Dynamic Form Generator using JSON Schema",
+    period: "November 2024",
+    projectLink: "https://dynamic-form-generator-flmq.vercel.app/",
+    projectDescription:
+      "A Dynamic Form Generator is a robust React-based project that allows users to generate dynamic forms based on predefined schemas. Real-time previews, customizable validation, and a clean UI make form creation seamless and efficient. Perfect for developers and businesses who need dynamic form rendering on the fly!",
+    techStack: [
+      "React",
+      "tailwind CSS",
+      "Next.JS",
+      "typeScript",
+      "React-hook-form",
+      "Playwright",
+      "monaco-editor",
+    ],
+    colorPalette: ["#040404", "#111827", "#FFFFFF", "#00000"],
+    theJourney: [
+      "Requirement Analysis",
+      "Development phase-1:Defining JSON schema interface and using textarea as an editor",
+      "Development phase-2: passing the schema from textarea to formPreview to generate form",
+      "Development phase-3: using monaco-editor as an editor and adding functionality to form like download and copy code/JSON",
+      "Testing & deployment",
+    ],
+    projectImages: [formGenerator, formGenerator2],
+  },
   {
     projectName: "IonArc",
     projectHeading: "IonArc Consultancy Website",
@@ -424,6 +439,32 @@ export const feedbackData = [
 ];
 
 export const allProjectsData = [
+  {
+    projectName: "Form Generator",
+    projectHeading: "Dynamic Form Generator using JSON Schema",
+    period: "November 2024",
+    projectLink: "https://dynamic-form-generator-flmq.vercel.app/",
+    projectDescription:
+      "A Dynamic Form Generator is a robust React-based project that allows users to generate dynamic forms based on predefined schemas. Real-time previews, customizable validation, and a clean UI make form creation seamless and efficient. Perfect for developers and businesses who need dynamic form rendering on the fly!",
+    techStack: [
+      "React",
+      "tailwind CSS",
+      "Next.JS",
+      "typeScript",
+      "React-hook-form",
+      "Playwright",
+      "monaco-editor",
+    ],
+    colorPalette: ["#040404", "#111827", "#FFFFFF", "#00000"],
+    theJourney: [
+      "Requirement Analysis",
+      "Development phase-1:Defining JSON schema interface and using textarea as an editor",
+      "Development phase-2: passing the schema from textarea to formPreview to generate form",
+      "Development phase-3: using monaco-editor as an editor and adding functionality to form like download and copy code/JSON",
+      "Testing & deployment",
+    ],
+    projectImages: [formGenerator, formGenerator2],
+  },
   {
     projectName: "IonArc",
     projectHeading: "IonArc Consultancy Website",

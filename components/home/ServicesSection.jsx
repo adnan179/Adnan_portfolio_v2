@@ -164,7 +164,7 @@ const ServicesSection = () => {
   return (
     <section
       id="services-section"
-      className="flex flex-col gap-10 lg:py-[50px] lg:px-12 px-4 w-full min-h-screen justify-center items-center mt-[80px] pb-[100px]"
+      className="flex flex-col gap-10 lg:py-[50px] lg:px-12 px-4 w-full min-h-screen justify-center items-center mt-[50px] pb-[100px]"
     >
       {/* headiing and sub-heading */}
       <div className="flex flex-col gap-2 justify-start w-full">

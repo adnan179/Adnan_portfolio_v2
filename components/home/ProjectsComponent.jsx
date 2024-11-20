@@ -9,7 +9,8 @@ import { projectsData } from "@/data";
 import { GoArrowRight } from "react-icons/go";
 
 const ProjectsComponent = () => {
-  const [selectedProjectName, setSelectedProjectName] = useState("IonArc");
+  const [selectedProjectName, setSelectedProjectName] =
+    useState("Form Generator");
   const [selectedProject, setSelectedProject] = useState(projectsData[0]);
   const [isInitialRender, setIsInitialRender] = useState(true);
 
@@ -33,17 +34,17 @@ const ProjectsComponent = () => {
     tl.fromTo(
       "#projects-sec-heading",
       { x: -100, opacity: 0 },
-      { x: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }
+      { x: 0, opacity: 1, duration: 0.3, ease: "power2.inOut" }
     )
       .fromTo(
         "#project-links",
         { y: 100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }
+        { y: 0, opacity: 1, duration: 0.3, ease: "power2.inOut" }
       )
       .fromTo(
         "#line",
         { y: 100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }
+        { y: 0, opacity: 1, duration: 0.3, ease: "power2.inOut" }
       );
 
     // Only run animations for project details if it's not the initial render
@@ -51,22 +52,22 @@ const ProjectsComponent = () => {
       tl.fromTo(
         "#project-heading > *",
         { y: 200, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut", stagger: 0.3 }
+        { y: 0, opacity: 1, duration: 0.3, ease: "power2.inOut", stagger: 0.3 }
       )
         .fromTo(
           "#project-period",
           { y: 200, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }
+          { y: 0, opacity: 1, duration: 0.3, ease: "power2.inOut" }
         )
         .fromTo(
           "#project-desc-heading",
           { y: 100, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }
+          { y: 0, opacity: 1, duration: 0.3, ease: "power2.inOut" }
         )
         .fromTo(
           "#project-desc",
           { y: 100, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }
+          { y: 0, opacity: 1, duration: 0.3, ease: "power2.inOut" }
         )
         .fromTo(
           "#tech-color",
@@ -74,7 +75,7 @@ const ProjectsComponent = () => {
           {
             y: 0,
             opacity: 1,
-            duration: 0.5,
+            duration: 0.3,
             ease: "power2.inOut",
             stagger: 0.3,
           }
@@ -85,7 +86,7 @@ const ProjectsComponent = () => {
           {
             y: 0,
             opacity: 1,
-            duration: 0.5,
+            duration: 0.3,
             ease: "power2.inOut",
             stagger: 0.3,
           }
@@ -96,7 +97,7 @@ const ProjectsComponent = () => {
           {
             y: 0,
             opacity: 1,
-            duration: 0.5,
+            duration: 0.3,
             ease: "power2.inOut",
             stagger: 0.3,
           }
@@ -104,7 +105,7 @@ const ProjectsComponent = () => {
         .fromTo(
           "#visit-the-projects-page",
           { y: 200, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }
+          { y: 0, opacity: 1, duration: 0.3, ease: "power2.inOut" }
         );
     }
   }, [isInitialRender]);
@@ -118,22 +119,22 @@ const ProjectsComponent = () => {
       tl.fromTo(
         "#project-heading > *",
         { y: 200, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut", stagger: 0.3 }
+        { y: 0, opacity: 1, duration: 0.3, ease: "power2.inOut", stagger: 0.3 }
       )
         .fromTo(
           "#project-period",
           { y: 200, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }
+          { y: 0, opacity: 1, duration: 0.3, ease: "power2.inOut" }
         )
         .fromTo(
           "#project-desc-heading",
           { y: 100, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }
+          { y: 0, opacity: 1, duration: 0.3, ease: "power2.inOut" }
         )
         .fromTo(
           "#project-desc",
           { y: 100, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }
+          { y: 0, opacity: 1, duration: 0.3, ease: "power2.inOut" }
         )
         .fromTo(
           "#tech-color",
@@ -141,9 +142,9 @@ const ProjectsComponent = () => {
           {
             y: 0,
             opacity: 1,
-            duration: 0.5,
+            duration: 0.3,
             ease: "power2.inOut",
-            stagger: 0.3,
+            stagger: 0.2,
           }
         )
         .fromTo(
@@ -152,9 +153,9 @@ const ProjectsComponent = () => {
           {
             y: 0,
             opacity: 1,
-            duration: 0.5,
+            duration: 0.3,
             ease: "power2.inOut",
-            stagger: 0.3,
+            stagger: 0.2,
           }
         )
         .fromTo(
@@ -163,15 +164,15 @@ const ProjectsComponent = () => {
           {
             y: 0,
             opacity: 1,
-            duration: 0.5,
+            duration: 0.3,
             ease: "power2.inOut",
-            stagger: 0.3,
+            stagger: 0.2,
           }
         )
         .fromTo(
           "#visit-the-projects-page",
           { y: 200, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }
+          { y: 0, opacity: 1, duration: 0.3, ease: "power2.inOut" }
         );
     }
   }, [selectedProjectName]);
@@ -307,7 +308,7 @@ const ProjectsComponent = () => {
               className="flex flex-col md:gap-3 gap-1 md:w-2/3 w-full bg-[#171717] p-5 rounded-[36px] drop-shadow-lg"
             >
               <h2 className="text-[#808080] font-medium">The Journey:</h2>
-              <div className="flex items-center justify-center mt-2">
+              <div className="flex items-center mt-2">
                 <ul className="flex flex-row gap-2 flex-wrap items-center">
                   {selectedProject.theJourney.map((step, idx) => (
                     <li

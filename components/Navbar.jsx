@@ -108,7 +108,7 @@ const Navbar = () => {
           <h1 className="lg:text-[12px] text-[8px] -mt-1">Design</h1>
         </div>
       </div>
-
+      {/* Logo */}
       {/* Nav Links for Desktop */}
       <div
         id="navbar-links"

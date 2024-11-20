@@ -9,6 +9,7 @@ import TheResume from "@/components/mystory/TheResume";
 import MyTechStack from "@/components/mystory/MyTechStack";
 import Certifications from "@/components/mystory/Certifications";
 import MyJourneySoFar from "@/components/mystory/MyJourneySoFar";
+import MyUniverse from "@/components/mystory/myUniverse";
 
 const MyStory = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -44,6 +45,7 @@ const MyStory = () => {
               className="w-32 h-32 object-contain"
             />
           </div>
+          <MyUniverse />
         </>
       )}
     </section>

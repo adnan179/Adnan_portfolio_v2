@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import closeUp from "../../app/public/home/portfolio_profile_close_up.jpg";
+"use client";
+import React, { useEffect, useState } from "react";
 import catAndBoy from "../../app/public/home/cat and boy.jpg";
 import Image from "next/image";
 import { degreeAndDeeds, hobbies, skills, socialLinks } from "@/data";
@@ -11,6 +11,7 @@ import _ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(_ScrollTrigger);
 
 const SpeedySnapshot = () => {
+  const [isWorldClicked, setIsWorldClicked] = useState(false);
   //gsap animations
   useEffect(() => {
     const tl = gsap.timeline({
@@ -118,7 +119,7 @@ const SpeedySnapshot = () => {
             {/* social links */}
             <div
               id="social-links"
-              className="w-full flex-row flex flex-wrap bg-[#171717] rounded-[24px] drop-shadow-lg justify-center items-center lg:w-[200px] lg:h-[150px] md:w-[120px] md:h-[90px] md:gap-1 gap-3 p-3"
+              className="w-full flex-row flex flex-wrap bg-[#171717] rounded-[24px] drop-shadow-lg justify-center items-center lg:w-[200px] lg:h-[150px] md:w-[120px] md:h-[90px] gap-2 p-3"
             >
               {socialLinks.map((fl, index) => (
                 <a
@@ -130,7 +131,7 @@ const SpeedySnapshot = () => {
                   }
                   target={fl.name === "Gmail" ? "_self" : "_blank"}
                   rel="noopener noreferrer"
-                  className="flex p-[5px] bg-black/30 rounded-[10px] justify-center items-center"
+                  className="flex p-[5px] bg-black/30 rounded-[10px] justify-center items-center hover:scale-125 transition duration-200 ease-in-out"
                 >
                   {fl.icon}
                 </a>
@@ -249,11 +250,13 @@ const SpeedySnapshot = () => {
             Intrigued? Let&apos;s dive into my world!{" "}
           </p>
           <Image
+            onClick={() => setIsWorldClicked(true)}
             src={world}
             alt="world"
             width={120}
             height={120}
-            className="object-cover"
+            className={`object-cover hover:scale-150 transition duration-300 ease-in-out
+              ${isWorldClicked ? "animate-world-ping" : ""}`}
             priority
           />
         </Link>

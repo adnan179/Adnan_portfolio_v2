@@ -11,7 +11,8 @@ import { GoArrowRight } from "react-icons/go";
 gsap.registerPlugin(_ScrollTrigger);
 
 const ProjectsSection = () => {
-  const [selectedProjectName, setSelectedProjectName] = useState("IonArc");
+  const [selectedProjectName, setSelectedProjectName] =
+    useState("Form Generator");
   const [selectedProject, setSelectedProject] = useState(projectsData[0]);
   const [isInitialRender, setIsInitialRender] = useState(true);
 
