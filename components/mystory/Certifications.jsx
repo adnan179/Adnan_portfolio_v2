@@ -9,7 +9,7 @@ const Certifications = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#certificates-cont",
-        start: "top 70%",
+        start: "top 80%",
       },
     });
     tl.fromTo(

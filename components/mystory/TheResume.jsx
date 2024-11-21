@@ -15,14 +15,28 @@ const TheResume = () => {
       "#the-resume",
       { y: 100, opacity: 0 },
       { y: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
-    );
+    )
+      .fromTo(
+        "#the-resume-heading",
+        { y: 100, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
+      )
+      .fromTo(
+        "#the-resume > p",
+        { y: 100, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
+      );
   }, []);
+
   return (
     <div
       id="the-resume"
       className="flex flex-col sm:w-[700px] md:w-[400px] lg:w-[450px] w-full gap-2 p-5 md:p-3 lg:p-5 bg-[#040404]/80 border border-gray-600/50 text-pretty rounded-[36px] drop-shadow-lg"
     >
-      <h1 className="xl:text-[48px] text-[36px] font-Montez text-[#0055D2]">
+      <h1
+        id="the-resume-heading"
+        className="xl:text-[48px] text-[36px] font-Montez text-[#0055D2]"
+      >
         the resume
       </h1>
       <p className="text-[18px] font-medium text-gray-600">
