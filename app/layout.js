@@ -13,9 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`antialiased w-full min-h-screen font-inter custom-scrollbar-3`}
-      >
+      <body className={`antialiased w-full min-h-screen font-inter`}>
         <NavProviderWrapper>
           <Navbar />
           <ToastContainer position="top-right" />
