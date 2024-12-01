@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import coffee from "../public/coffee-brewing-gif.gif";
 import curveArrow from "../public/mystory/curve-down-arrow.png";
 import { Loading } from "@/utils/LoadingSpinner";
 import Hero from "@/components/mystory/Hero";
@@ -27,25 +28,16 @@ const MyStory = () => {
         <Loading />
       ) : (
         <>
-          <Hero />
-          <LinksContainer />
-          <div className="flex md:flex-row flex-col gap-3 mt-14">
-            <MyTechStack />
-            <TheResume />
-          </div>
-          <div className="sm:mt-5 mt-2 flex md:flex-row flex-col-reverse gap-3">
-            <Certifications />
-            <MyJourneySoFar />
-          </div>
-          <div className="flex flex-col gap-2 justify-center items-center w-full">
-            <h1 className="font-Montez text-[96px] text-white">My Universe</h1>
-            <Image
-              src={curveArrow}
-              alt="curve-down-arrow"
-              className="w-32 h-32 object-contain"
-            />
-            <h1>Coming soon!</h1>
-          </div>
+          <Image
+            src={coffee}
+            alt="brewing coffee"
+            className="w-[600px] h-[300px] object-cover rounded-lg shadow-md shadow-blue-600"
+          />
+          <h1 className="font-QwitcherGrypen font-medium text-white sm:text-[3rem] text-[2rem] mt-4">
+            Whipping up some experimental coffee magic—because why settle for
+            good when you can have{" "}
+            <span className="text-blue-700">legendary</span>&quot;
+          </h1>
         </>
       )}
     </section>

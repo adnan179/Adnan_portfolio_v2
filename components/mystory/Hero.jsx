@@ -19,24 +19,25 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="w-full h-full flex md:flex-row flex-col justify-start items-center">
+    <section className="relative w-full h-screen flex flex-col">
+      <div className="absolute bottom-0 left-0 w-[20vw] h-[20vw] bg-lightBlue blur-lg glowing-ball"></div>
+      <div className="absolute bottom-0 right-0 w-[20vw] h-[20vw] bg-babyPink blur-lg glowing-ball"></div>
       <div
         id="my-story-hero"
-        className="flex flex-col text-white font-MajorMonoDisplay xl:text-[84px] lg:text-[64px] text-[48px]"
+        className="flex flex-col text-white font-bold font-QwitcherGrypen xl:text-[9rem] lg:text-[64px] text-[48px] text-center"
       >
-        <h1>Welcome to my</h1>
-        <h1>World</h1>
+        <h1>Welcome to my World</h1>
         <h1>I&apos;m</h1>
         <h1>Adnan Shaik</h1>
       </div>
-      <div className="flex sm:w-[400px] sm:h-[400px] w-[250px] h-[250px]">
+      {/* <div className="flex sm:w-[400px] sm:h-[400px] w-[250px] h-[250px]">
         <Image
           id="world"
           src={world}
           className="w-full h-full object-contain"
           alt="my world"
         />
-      </div>
+      </div> */}
     </section>
   );
 };

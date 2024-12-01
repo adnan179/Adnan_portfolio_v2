@@ -80,7 +80,7 @@ const Footer = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#footer",
-        start: "top 90%",
+        start: "top 0%",
         toggleActions: "play none none reset",
       },
     });
