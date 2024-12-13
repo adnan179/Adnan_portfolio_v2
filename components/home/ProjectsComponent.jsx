@@ -10,7 +10,7 @@ import { GoArrowRight } from "react-icons/go";
 
 const ProjectsComponent = () => {
   const [selectedProjectName, setSelectedProjectName] =
-    useState("Form Generator");
+    useState("Neural Nexus");
   const [selectedProject, setSelectedProject] = useState(projectsData[0]);
   const [isInitialRender, setIsInitialRender] = useState(true);
 

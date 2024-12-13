@@ -12,7 +12,7 @@ gsap.registerPlugin(_ScrollTrigger);
 
 const ProjectsSection = () => {
   const [selectedProjectName, setSelectedProjectName] =
-    useState("Form Generator");
+    useState("Neural Nexus");
   const [selectedProject, setSelectedProject] = useState(projectsData[0]);
   const [isInitialRender, setIsInitialRender] = useState(true);
 
@@ -294,10 +294,10 @@ const ProjectsSection = () => {
 
             <div
               id="journey"
-              className="flex flex-col md:gap-3 gap-1 md:w-2/3 w-full bg-[#171717] p-5 rounded-[36px] drop-shadow-lg"
+              className="flex flex-col md:gap-3 gap-1 md:w-2/3 w-full h-auto bg-[#171717] p-5 rounded-[36px] drop-shadow-lg"
             >
               <h2 className="text-[#808080] font-medium">The Journey:</h2>
-              <div className="flex items-center justify-center mt-2">
+              <div className="flex items-center justify-start mt-2">
                 <ul className="flex flex-row gap-2 flex-wrap items-center">
                   {selectedProject.theJourney.map((step, idx) => (
                     <li

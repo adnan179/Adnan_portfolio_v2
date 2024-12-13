@@ -10,8 +10,8 @@ import {
   FaInstagram,
   FaLinkedin,
   FaGithub,
-  FaDribbble,
   FaFilePdf,
+  FaBehance,
 } from "react-icons/fa6";
 import { MdOutlineMail } from "react-icons/md";
 
@@ -44,6 +44,10 @@ import threeGuide2 from "../app/public/projects/three-guide-2.png";
 import threeGuide3 from "../app/public/projects/three-guide-3.png";
 import formGenerator from "../app/public/projects/form_generator_1.png";
 import formGenerator2 from "../app/public/projects/form_generator_2.png";
+import nexus1 from "../app/public/projects/neural_nexus_1.png";
+import nexus2 from "../app/public/projects/neural_nexus_2.png";
+import nexus3 from "../app/public/projects/neural_nexus_3.png";
+import nexus4 from "../app/public/projects/neural_nexus_4.png";
 
 //experience imports
 import githubLogo from "../app/public/mystory/github_logo.jpg";
@@ -67,9 +71,9 @@ export const socialLinks = [
     link: "https://www.github.com/adnan179",
   },
   {
-    name: "Dribbble",
-    icon: <FaDribbble className="w-[30px] h-[30px] text-white" />,
-    link: "https://www.dribbble.com/adnan179",
+    name: "Behance",
+    icon: <FaBehance className="w-[30px] h-[30px] text-white" />,
+    link: "https://www.behance.net/adnanshaik4",
   },
   {
     name: "Gmail",
@@ -105,11 +109,11 @@ export const storySocialLinks = [
     link: "https://www.github.com/adnan179",
   },
   {
-    name: "Dribbble",
+    name: "Behance",
     icon: (
-      <FaDribbble className="w-[25px] h-[25px] text-white hover:scale-125 transition duration-200 ease-in-out" />
+      <FaBehance className="w-[25px] h-[25px] text-white hover:scale-125 transition duration-200 ease-in-out" />
     ),
-    link: "https://www.dribbble.com/adnan179",
+    link: "https://www.behance.net/adnanshaik4",
   },
   {
     name: "Gmail",
@@ -207,6 +211,19 @@ export const skills = [
 ];
 
 export const projectsData = [
+  {
+    projectName: "Neural Nexus",
+    projectHeading: "Neural Nexus Landing Page",
+    period: "December 2024",
+    projectLink:
+      "https://www.behance.net/gallery/214525755/Neural-Nexus-Landing-Page",
+    projectDescription:
+      "I created a minimalistic and modern landing page for Neural Nexus, a fictional tech company specializing in AI, web dev, and data pipelines. Inspired by the sleek style of Minimal, this design showcases:🎨 Clean UI with a focus on readability, 🖥️ Intuitive layout for seamless navigation, ✨ Bold storytelling to highlight services & client success. This mock design reflects my passion for crafting user-friendly websites that are both functional and visually striking. 🌟",
+    techStack: ["Figma"],
+    colorPalette: ["#040404", "#808080", "#FFFFFF", "#00000", "#171717"],
+    theJourney: ["Requirement Analysis", "Wireframing", "Design"],
+    projectImages: [nexus1, nexus2, nexus3, nexus4],
+  },
   {
     projectName: "Form Generator",
     projectHeading: "Dynamic Form Generator using JSON Schema",
@@ -439,6 +456,19 @@ export const feedbackData = [
 ];
 
 export const allProjectsData = [
+  {
+    projectName: "Neural Nexus",
+    projectHeading: "Neural Nexus Landing Page",
+    period: "December 2024",
+    projectLink:
+      "https://www.behance.net/gallery/214525755/Neural-Nexus-Landing-Page",
+    projectDescription:
+      "I created a minimalistic and modern landing page for Neural Nexus, a fictional tech company specializing in AI, web dev, and data pipelines. Inspired by the sleek style of Minimal, this design showcases:🎨 Clean UI with a focus on readability, 🖥️ Intuitive layout for seamless navigation, ✨ Bold storytelling to highlight services & client success. This mock design reflects my passion for crafting user-friendly websites that are both functional and visually striking. 🌟",
+    techStack: ["Figma"],
+    colorPalette: ["#040404", "#808080", "#FFFFFF", "#00000", "#171717"],
+    theJourney: ["Requirement Analysis", "Wireframing", "Design"],
+    projectImages: [nexus1, nexus2, nexus3, nexus4],
+  },
   {
     projectName: "Form Generator",
     projectHeading: "Dynamic Form Generator using JSON Schema",
