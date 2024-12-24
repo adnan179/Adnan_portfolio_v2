@@ -83,7 +83,7 @@ export const socialLinks = [
   {
     name: "Resume",
     icon: <FaFilePdf className="w-[30px] h-[30px] text-white" />,
-    link: "https://drive.google.com/file/d/1cHq_RCbCle6DfiVqpkmY1UeOfZwTTQYp/view?usp=drivesdk",
+    link: "https://drive.google.com/file/d/1HfQWTnUM4qprd6LlIWtHmn85UKL6MWtH/view?usp=sharing",
   },
 ];
 export const storySocialLinks = [
@@ -127,7 +127,7 @@ export const storySocialLinks = [
     icon: (
       <FaFilePdf className="w-[25px] h-[25px] text-white hover:scale-125 transition duration-200 ease-in-out" />
     ),
-    link: "https://drive.google.com/file/d/1cHq_RCbCle6DfiVqpkmY1UeOfZwTTQYp/view?usp=drivesdk",
+    link: "https://drive.google.com/file/d/1HfQWTnUM4qprd6LlIWtHmn85UKL6MWtH/view?usp=sharing",
   },
 ];
 export const hobbies = [

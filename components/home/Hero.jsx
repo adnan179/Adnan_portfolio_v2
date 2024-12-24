@@ -71,7 +71,7 @@ const Hero = () => {
           with a flair for creating immersive web magic!
         </h2>
         <a
-          href="https://drive.google.com/file/d/1w5zjdd45SN8KgNQbcn6seO7UdjgPL40f/view?usp=sharing"
+          href="https://drive.google.com/file/d/1HfQWTnUM4qprd6LlIWtHmn85UKL6MWtH/view?usp=sharing"
           rel="noopener noreferrer"
           target="_blank"
           className="relative bg-transparent font-MajorMonoDisplay text-white text-[20px] flex flex-row gap-2 items-center hover:scale-105 transition ease-in-out duration-300 group"
