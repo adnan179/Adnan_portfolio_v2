@@ -70,18 +70,6 @@ const Hero = () => {
           {" "}
           with a flair for creating immersive web magic!
         </h2>
-        <a
-          href="https://drive.google.com/file/d/1HfQWTnUM4qprd6LlIWtHmn85UKL6MWtH/view?usp=sharing"
-          rel="noopener noreferrer"
-          target="_blank"
-          className="relative bg-transparent font-MajorMonoDisplay text-white text-[20px] flex flex-row gap-2 items-center hover:scale-105 transition ease-in-out duration-300 group"
-        >
-          View Resume
-          <span>
-            <GoArrowRight color="white" className="w-9 h-9" />
-          </span>
-          <span className="absolute bottom-0 left-0 w-full h-[1.5px] bg-white rounded-sm"></span>
-        </a>
       </div>
       <div className="lg:w-[35%] md:w-[45%] hidden md:flex h-full justify-center items-center md:mt-0">
         <div

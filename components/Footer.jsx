@@ -80,7 +80,7 @@ const Footer = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#footer",
-        start: "top 0%",
+        start: "top 100%",
         toggleActions: "play none none reset",
       },
     });
@@ -139,8 +139,13 @@ const Footer = () => {
             id="footer-message"
             className="text-white/80 text-[14px] xl:text-xl font-medium"
           >
-            You can either drop me a message here or reach out through the links
-            below—your choice, I’m always a click away! 💻✉️
+            The best way to predict the future is to create it. – Peter Drucker
+          </h2>
+          <h2
+            id="footer-message"
+            className="glowing-text text-[14px] xl:text-xl font-medium"
+          >
+            Let’s shape the future together!
           </h2>
           <div
             id="footer-social-links"

@@ -9,12 +9,13 @@ export const NavProvider = ({ children }) => {
   const [activePage, setActivePage] = useState("Home");
   const pathname = usePathname(); // Get the current path
 
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     const routeToNameMap = {
       "/": "Home",
       "/mystory": "My Story",
       "/projects": "Projects",
-      "/services": "Services",
     };
 
     // Update active page based on the current path
@@ -24,7 +25,9 @@ export const NavProvider = ({ children }) => {
   }, [pathname]);
 
   return (
-    <NavContext.Provider value={{ activePage, setActivePage }}>
+    <NavContext.Provider
+      value={{ activePage, setActivePage, isLoading, setIsLoading }}
+    >
       {children}
     </NavContext.Provider>
   );

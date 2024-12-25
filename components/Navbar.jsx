@@ -19,8 +19,8 @@ const NavLinks = [
     link: "/projects",
   },
   {
-    name: "Services",
-    link: "/services",
+    name: "Resume",
+    link: "https://drive.google.com/file/d/1HfQWTnUM4qprd6LlIWtHmn85UKL6MWtH/view?usp=sharing",
   },
 ];
 
@@ -116,6 +116,8 @@ const Navbar = () => {
       >
         {NavLinks.map((nav, index) => (
           <Link
+            target={nav.name === "Resume" ? "_blank" : "_self"}
+            rel="noopener noreferrer"
             className={`font-medium cursor-pointer lg:text-[16px] text-[12px] ${
               activePage === nav.name ? "glowing-text" : "text-[#808080]"
             }`}
@@ -134,7 +136,7 @@ const Navbar = () => {
       <ScrollIntoView selector="#footer">
         <button
           id="navbar-talk"
-          className="hidden md:flex bg-gradient-to-br from-[#021EED] to-[#FB0D0D] text-white font-semibold lg:text-[16px] text-[12px] lg:px-4 lg:py-2 px-2 py-1 rounded-[16px] shadow-lg"
+          className="hidden md:flex bg-white text-[#0D0D0F] font-semibold lg:text-[16px] text-[12px] lg:px-4 lg:py-2 px-2 py-1 rounded-[16px] shadow-lg"
         >
           Let&apos;s talk
         </button>
@@ -231,8 +233,8 @@ const Navbar = () => {
           ))}
           <ScrollIntoView selector="#footer" onClick={() => toggleSidebar()}>
             <button
-              id="sidebar-talk"
-              className="bg-gradient-to-br from-[#021EED] to-[#FB0D0D] text-white font-semibold text-[15px] px-4 py-2 rounded-[16px] shadow-lg mt-4"
+              id="navbar-talk"
+              className="hidden md:flex bg-white text-[#0D0D0F] font-semibold lg:text-[16px] text-[12px] lg:px-4 lg:py-2 px-2 py-1 rounded-[16px] shadow-lg"
             >
               Let&apos;s talk
             </button>

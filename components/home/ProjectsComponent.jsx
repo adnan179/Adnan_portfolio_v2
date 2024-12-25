@@ -194,7 +194,7 @@ const ProjectsComponent = () => {
         Projects
       </h1>
       {/* main container */}
-      <div className="flex lg:flex-row flex-col gap-3 w-full h-full md:mt-0 mt-5">
+      <div className="flex lg:flex-row flex-col gap-3 w-full h-full md:mt-0 mt-5 justify-center items-center">
         {/* links container */}
         <div className="flex md:flex-row flex-col gap-2 lg:w-1/6 w-full h-full">
           <div
