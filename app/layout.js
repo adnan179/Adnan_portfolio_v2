@@ -18,7 +18,9 @@ export default function RootLayout({ children }) {
           <Navbar />
           <ToastContainer position="top-right" />
           {children}
-          <Footer />
+          <div className="lg:px-10 px-3 pb-10">
+            <Footer />
+          </div>
         </NavProviderWrapper>
       </body>
     </html>

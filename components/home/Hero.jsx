@@ -1,10 +1,8 @@
-"use client";
-import React, { useEffect } from "react";
-import { GoArrowRight } from "react-icons/go";
 import Image from "next/image";
-import hero from "../../app/public/home/hero_image_portfolio.jpg";
-import gsap from "gsap";
+import React, { useEffect } from "react";
+import heroImage from "../../app/public/home/hero_image_portfolio.jpg";
 import Typewriter from "typewriter-effect";
+import gsap from "gsap";
 
 const Hero = () => {
   //gsap animations
@@ -12,78 +10,89 @@ const Hero = () => {
     const tl = gsap.timeline();
 
     tl.fromTo(
-      "#hero-section-1 > *",
-      { x: "-150%" },
-      { x: "0%", duration: 0.5, ease: "power1.inOut", stagger: 0.4 }
+      "#intro-cont",
+      { y: 100, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.3, ease: "power3.inOut" }
     )
       .fromTo(
-        "#hero-image",
-        { x: 100, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.5, ease: "power1.inOut" }
+        "#intro-cont > *",
+        { y: 100, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.3, ease: "power3.inOut", stagger: 0.3 }
       )
-      .to("#hey-text", {
-        rotation: 10,
-        y: 15,
-        yoyo: true,
-        repeat: -1,
-        duration: 0.8,
-        ease: "power1.inOut",
-        delay: 0.5,
-      });
+      .fromTo(
+        "#hero-heading",
+        { y: 200, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.3, ease: "power3.inOut" }
+      )
+      .fromTo(
+        "#little-intro",
+        { y: 200, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.3, ease: "power3.inOut" }
+      )
+      .fromTo(
+        "#hero-btn",
+        { y: 100, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.3, ease: "power3.inOut" }
+      );
   }, []);
 
   return (
-    <section className="relative w-full min-h-screen flex flex-col md:flex-row md:justify-between justify-center items-center lg:px-16 md:px-8 px-6 lg:mt-0 overflow-hidden">
+    <section
+      id
+      className="w-full h-screen flex flex-col justify-center items-center gap-5"
+    >
       <div
-        id="hero-section-1"
-        className="flex flex-col lg:gap-5 md:gap-3 gap-5 text-white font-medium md:w-[55%] lg:w-[65%] w-full h-full items-start"
+        id="intro-cont"
+        className="flex gap-4 items-center p-2 md:p-3 rounded-[64px] border border-[#808080]/50 bg-[#101012]"
       >
-        <h1
-          id="hey-text"
-          className="font-MajorMonoDisplay xl:text-[76px] lg:text-[60px] text-[48px]"
-        >
-          Hey👋
+        <Image
+          src={heroImage}
+          alt="just me!"
+          className="rounded-full md:w-[50px] md:h-[50px] w-[30px] h-[30px]"
+        />
+        <h1 className="font-Montez text-white md:text-[2rem] text-[1rem] md:pr-5 pr-3">
+          I&apos;m Adnan Shaik
         </h1>
-        <h2 className="font-inter xl:text-[27px] lg:text-[22px] text-[18px]">
-          Welcome to my digital living room where caffeine burns into code &
-          design—
-        </h2>
-        <h2 className="flex flex-col gap-2 font-inter text-[24px]">
-          I&apos;m a{" "}
-          <div
-            id="front-end"
-            className="bg-gradient-to-r from-[#2B0CFD] to-[#FB0D0D] bg-clip-text text-transparent lg:text-[40px] text-[30px]"
-          >
-            <Typewriter
-              options={{
-                strings: ["FRONT-END DEVELOPER", "UI/UX DESIGNER"],
-                autoStart: true,
-                loop: true,
-                deleteSpeed: 70,
-                delay: 50,
-                pauseFor: 800,
-              }}
-            />
-          </div>
-        </h2>
-        <h2 className="font-inter xl:text-[27px] lg:text-[22px] text-[18px]">
-          {" "}
-          with a flair for creating immersive web magic!
-        </h2>
       </div>
-      <div className="lg:w-[35%] md:w-[45%] hidden md:flex h-full justify-center items-center md:mt-0">
-        <div
-          id="hero-image"
-          className="flex lg:w-[300px] lg:h-[500px] md:w-[250px] md:h-[450px] w-[200px] h-[400px] rounded-[200px] shadow-lg bg-gradient-to-b from-[#685731] to-[#06040E] rotate-6"
-        >
-          <Image
-            src={hero}
-            alt="my handsome face lol!"
-            className="z-30 w-full h-full p-[10px] rounded-[200px] object-cover"
-          />
-          <div className="absolute inset-0 bg-black opacity-20 rounded-[200px] z-40"></div>
-        </div>
+      <div
+        id="typewriter"
+        className="font-robot text-white font-medium md:text-[4rem] sm:text-[2rem] text-[1.5rem]"
+      >
+        <Typewriter
+          options={{
+            strings: ["FRONT-END DEVELOPER", "UI/UX DESIGNER"],
+            autoStart: true,
+            loop: true,
+            deleteSpeed: 70,
+            delay: 50,
+            pauseFor: 800,
+          }}
+        />
       </div>
+      <h1
+        id="hero-heading"
+        className="bg-gradient-to-r from-[#808080]/50 via-[#808080] to-[#808080]/50  bg-clip-text text-transparent font-Montserrat font-semibold drop-shadow-lg lg:text-[4.5rem] md:text-[4rem] sm:text-[3rem] text-[1.7rem]"
+      >
+        Design. Develop. Deliver.
+      </h1>
+      <p
+        id="little-intro"
+        className="text-white font-inter md:text-[22px] text-[8px] text-center font-light"
+      >
+        Self-taught{" "}
+        <span className="text-blue-900 font-bold">front-end developer</span>{" "}
+        from <span className="text-blue-900 font-bold">Bengaluru</span>,
+        crafting immersive websites while <br /> diving deep into{" "}
+        <span className="text-blue-900 font-bold">UI/UX</span> and
+        <span className="text-blue-900 font-bold">Product Design</span>—where
+        creativity meets code!
+      </p>
+      <button
+        id="hero-btn"
+        className="bg-white text-[#040404] font-semibold font-robot px-4 py-2 rounded-[36px] shadow-[0_0_15px_2px_rgba(255,255,255,0.5)]"
+      >
+        Dive Into My Projects
+      </button>
     </section>
   );
 };

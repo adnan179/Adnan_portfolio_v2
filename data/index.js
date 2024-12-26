@@ -6,13 +6,7 @@ import hiking from "../app/public/home/hiking.jpg";
 import coding from "../app/public/home/coding.jpg";
 
 //icons imports
-import {
-  FaInstagram,
-  FaLinkedin,
-  FaGithub,
-  FaFilePdf,
-  FaBehance,
-} from "react-icons/fa6";
+import { FaInstagram, FaLinkedin, FaGithub, FaBehance } from "react-icons/fa6";
 import { MdOutlineMail } from "react-icons/md";
 
 //projects imports
@@ -80,11 +74,6 @@ export const socialLinks = [
     icon: <MdOutlineMail className="w-[30px] h-[30px] text-white" />,
     gmail: "adnanshaik179@gmail.com",
   },
-  {
-    name: "Resume",
-    icon: <FaFilePdf className="w-[30px] h-[30px] text-white" />,
-    link: "https://drive.google.com/file/d/1HfQWTnUM4qprd6LlIWtHmn85UKL6MWtH/view?usp=sharing",
-  },
 ];
 export const storySocialLinks = [
   {
@@ -121,13 +110,6 @@ export const storySocialLinks = [
       <MdOutlineMail className="w-[25px] h-[25px] text-white hover:scale-125 transition duration-200 ease-in-out" />
     ),
     gmail: "adnanshaik179@gmail.com",
-  },
-  {
-    name: "Resume",
-    icon: (
-      <FaFilePdf className="w-[25px] h-[25px] text-white hover:scale-125 transition duration-200 ease-in-out" />
-    ),
-    link: "https://drive.google.com/file/d/1HfQWTnUM4qprd6LlIWtHmn85UKL6MWtH/view?usp=sharing",
   },
 ];
 export const hobbies = [

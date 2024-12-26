@@ -11,7 +11,7 @@ import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 
 gsap.registerPlugin(_ScrollTrigger);
-const Footer = () => {
+const Footer2 = () => {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -108,7 +108,7 @@ const Footer = () => {
   return (
     <footer
       id="footer"
-      className="flex sm:flex-row flex-col-reverse gap-5 p-3 md:p-5 md:pl-6 lg:pl-10 justify-between items-center w-full bg-[#101012] rounded-[36px] shadow-[inset_0_4px_4px_rgba(0,0,0,0.2),_inset_0_4px_4px_rgba(0,0,0,0.1),_0_4px_4px_rgba(0,0,0,0.25)]"
+      className="flex sm:flex-row flex-col-reverse gap-5 p-3 md:p-5 md:pl-6 lg:pl-10 justify-between items-center w-full bg-[#101012] rounded-[36px]"
     >
       <div className="w-auto flex flex-col md:gap-7 gap-5">
         <h1
@@ -171,4 +171,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default Footer2;

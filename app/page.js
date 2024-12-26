@@ -22,7 +22,7 @@ export default function Home() {
   }, [setIsLoading]);
 
   return (
-    <div className="w-full min-h-screen -mt-[80px] pb-[50px]">
+    <div className="w-full min-h-screen -mt-[80px] pb-[50px] overflow-hidden">
       {isLoading ? (
         <Loading />
       ) : (
