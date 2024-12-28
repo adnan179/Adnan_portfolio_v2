@@ -19,13 +19,6 @@ import linkedin1 from "../app/public/projects/Linkedin_revamp.png";
 import linkedinLaptopView from "../app/public/projects/linkedin1-laptop-view.png";
 import projectsSection from "../app/public/projects/projects-section-image.png";
 import projectsSectionLaptopView from "../app/public/projects/projects_section_laptop_view.png";
-import final1 from "../app/public/projects/final_year_project_1.png";
-import final2 from "../app/public/projects/final_year_project_2.png";
-import final3 from "../app/public/projects/final_year_project_3.png";
-import final4 from "../app/public/projects/final_year_project_4.png";
-import final5 from "../app/public/projects/final_year_project_5.png";
-import final6 from "../app/public/projects/final_year_project_6.png";
-import final7 from "../app/public/projects/final_year_project_7.png";
 import scrapper from "../app/public/projects/scrapper.png";
 import bite1 from "../app/public/projects/bite_speed_1.png";
 import bite2 from "../app/public/projects/bite_speed_2.png";
@@ -42,11 +35,6 @@ import nexus1 from "../app/public/projects/neural_nexus_1.png";
 import nexus2 from "../app/public/projects/neural_nexus_2.png";
 import nexus3 from "../app/public/projects/neural_nexus_3.png";
 import nexus4 from "../app/public/projects/neural_nexus_4.png";
-
-//experience imports
-import githubLogo from "../app/public/mystory/github_logo.jpg";
-import reverrLogo from "../app/public/mystory/reverr_logo.jpeg";
-import gitamLogo from "../app/public/mystory/gitam_logo.jpg";
 
 //essential tools imports
 import figmaIcon from "../app/public/icons/figma-icon.jpg";
@@ -332,34 +320,6 @@ export const projectsData = [
     theJourney: ["User Research", "Wire framing", "Design"],
     projectImages: [morning1, morningLaptopView],
   },
-  {
-    projectName: "Final Year Project",
-    projectHeading: "College Project Submission Portal",
-    period: "July 2023 - July 2024",
-    projectLink: "https://github.com/adnan179/final_year_project",
-    projectDescription:
-      "A comprehensive college project submission portal designed for efficient project management! 🎓✨ Students can easily upload their projects with detailed documentation 📂, track their submission status 📊, and receive valuable feedback 💬. Reviewers can evaluate projects, leave insightful comments 📝, and assign grades ⭐, while admins oversee the entire system, managing submissions, deadlines ⏰, and approvals ✅. This portal ensures smooth collaboration between students, reviewers, and administrators, making the project submission and evaluation process more organized and transparent! 🔍🌐",
-    techStack: [
-      "React",
-      "tailwind CSS",
-      "Figma",
-      "Postman",
-      "Node JS",
-      "Express JS",
-      "MongoDB",
-      "Mongoose",
-    ],
-    colorPalette: ["#981F2A", "#FFFFFF", "#1E1E1E", "#E5DFDF"],
-    theJourney: [
-      "Understanding the problem",
-      "Requirement Analysis",
-      "Design & wire framing",
-      "Development",
-      "User Research",
-      "Testing & deployment",
-    ],
-    projectImages: [final1, final2, final3, final4, final5, final6, final7],
-  },
 ];
 
 export const feedbackData = [
@@ -578,34 +538,6 @@ export const allProjectsData = [
     projectImages: [morning1, morningLaptopView],
   },
   {
-    projectName: "Final Year Project",
-    projectHeading: "College Project Submission Portal",
-    period: "July 2023 - July 2024",
-    projectLink: "https://github.com/adnan179/final_year_project",
-    projectDescription:
-      "A comprehensive college project submission portal designed for efficient project management! 🎓✨ Students can easily upload their projects with detailed documentation 📂, track their submission status 📊, and receive valuable feedback 💬. Reviewers can evaluate projects, leave insightful comments 📝, and assign grades ⭐, while admins oversee the entire system, managing submissions, deadlines ⏰, and approvals ✅. This portal ensures smooth collaboration between students, reviewers, and administrators, making the project submission and evaluation process more organized and transparent! 🔍🌐",
-    techStack: [
-      "React",
-      "tailwind CSS",
-      "Figma",
-      "Postman",
-      "Node JS",
-      "Express JS",
-      "MongoDB",
-      "Mongoose",
-    ],
-    colorPalette: ["#981F2A", "#FFFFFF", "#1E1E1E", "#E5DFDF"],
-    theJourney: [
-      "Understanding the problem",
-      "Requirement Analysis",
-      "Design & wire framing",
-      "Development",
-      "User Research",
-      "Testing & deployment",
-    ],
-    projectImages: [final1, final2, final3, final4, final5, final6, final7],
-  },
-  {
     projectName: "Scrapper/Summarizer",
     projectHeading: "Web Scraper & Summarizer Project",
     period: "June 2024 - June 2024",
@@ -746,31 +678,5 @@ export const certificationsData = [
     name: "Programming with javaScript",
     link: "https://www.coursera.org/account/accomplishments/certificate/GWZWEE6RYGHF",
     colors: ["#0055D2", "#FFFFFF"],
-  },
-];
-export const experienceData = [
-  {
-    position: "Freelancer/Actively Looking for job opportunities",
-    company: "",
-    period: "Present",
-    icon: "",
-  },
-  {
-    position: "UI/UX Designer",
-    company: "Github Community GITAM",
-    period: "Nov 2023 - Apr 2024",
-    icon: githubLogo,
-  },
-  {
-    position: "Quality Assurance Intern",
-    company: "Reverr",
-    period: "Jul 2023 - Nov 2023",
-    icon: reverrLogo,
-  },
-  {
-    position: "Under-graduate Student",
-    company: "GITAM University,Bengaluru",
-    period: "Oct 2020 - Apr 2024",
-    icon: gitamLogo,
   },
 ];

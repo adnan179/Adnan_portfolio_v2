@@ -2,40 +2,33 @@ import { certificationsData } from "@/data";
 import gsap from "gsap";
 import _ScrollTrigger from "gsap/ScrollTrigger";
 import React, { useEffect } from "react";
-gsap.registerPlugin(_ScrollTrigger);
 const Certifications = () => {
   //gsap animations
   useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#certificates-cont",
-        start: "top 80%",
+        start: "top 70%",
       },
     });
     tl.fromTo(
       "#certificates-cont",
       { y: 100, opacity: 0 },
       { y: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
-    )
-      .fromTo(
-        "#certificates-cont > h1",
-        { y: 100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
-      )
-      .fromTo(
-        "#certificates > a",
-        {
-          y: 100,
-          opacity: 0,
-        },
-        { y: 0, opacity: 1, duration: 1.5, stagger: 0.3, ease: "power3.inOut" }
-      );
+    ).fromTo(
+      "#certificates > a",
+      {
+        y: 100,
+        opacity: 0,
+      },
+      { y: 0, opacity: 1, duration: 1.5, stagger: 0.3, ease: "power3.inOut" }
+    );
   }, []);
 
   return (
     <div
       id="certificates-cont"
-      className="flex flex-col gap-2 md:p-4 p-3 bg-[#040404]/80 border border-gray-600/50 drop-shadow-lg rounded-[36px] md:w-[450px] w-full"
+      className="flex flex-col gap-2 md:p-4 p-3 bg-[#101012] border border-[#808080]/10 drop-shadow-lg rounded-[24px] md:w-[320px] w-full"
     >
       <h1 className="text-white font-bold font-Montserrat text-[20px]">
         Certifications
