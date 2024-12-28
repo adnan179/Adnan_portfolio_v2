@@ -1,8 +1,14 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import catAndBoy from "../../app/public/home/cat and boy.jpg";
 import Image from "next/image";
-import { degreeAndDeeds, hobbies, skills, socialLinks } from "@/data";
+import {
+  degreeAndDeeds,
+  essentialToolsIcons,
+  hobbies,
+  skills,
+  socialLinks,
+} from "@/data";
 import world from "../../app/public/home/world.gif";
 import Link from "next/link";
 import gsap from "gsap";
@@ -11,7 +17,6 @@ import _ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(_ScrollTrigger);
 
 const SpeedySnapshot = () => {
-  const [isWorldClicked, setIsWorldClicked] = useState(false);
   //gsap animations
   useEffect(() => {
     const tl = gsap.timeline({
@@ -42,7 +47,7 @@ const SpeedySnapshot = () => {
         { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
       )
       .fromTo(
-        "#click-me",
+        "#essential-tools",
         { x: 300, opacity: 0 },
         { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
       )
@@ -84,11 +89,11 @@ const SpeedySnapshot = () => {
       </div>
       {/* heading */}
       {/* first row */}
-      <div className="flex md:flex-row flex-col md:gap-8 gap-4 w-full justify-center items-center mt-5">
+      <div className="flex md:flex-row flex-col md:gap-6 gap-4 w-full justify-center items-center mt-5">
         {/* first row first col */}
         <div
           id="bio-cont"
-          className="bg-[#171717] rounded-[24px] p-4 shadow-lg flex flex-row gap-3 drop-shadow-lg sm:w-[600px] w-full"
+          className="bg-[#101012]  rounded-[24px] p-4 shadow-lg flex flex-row gap-3 drop-shadow-lg sm:w-[600px] w-full"
         >
           <Image
             src={catAndBoy}
@@ -114,12 +119,12 @@ const SpeedySnapshot = () => {
         </div>
         {/* first row first col */}
         {/* first col second col */}
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-3">
           <div className="flex md:flex-row flex-col md:gap-2 gap-4">
             {/* social links */}
             <div
               id="social-links"
-              className="w-full flex-row flex flex-wrap bg-[#171717] rounded-[24px] drop-shadow-lg justify-center items-center lg:w-[200px] lg:h-[150px] md:w-[120px] md:h-[90px] gap-2 p-3"
+              className="w-full flex-row flex flex-wrap bg-[#101012] rounded-[24px] drop-shadow-lg justify-center items-center lg:w-[200px] lg:h-[150px] md:w-[120px] md:h-[90px] gap-2 p-3"
             >
               {socialLinks.map((fl, index) => (
                 <a
@@ -138,28 +143,30 @@ const SpeedySnapshot = () => {
               ))}
             </div>
             {/* social links */}
-            {/* click me cont */}
+            {/* essential tools icons */}
             <div
-              id="click-me"
-              className="flex flex-col  lg:w-[250px] lg:h-[150px] md:h-[90px] w-full lg:gap-4 md:gap-1 gap-2 bg-gradient-to-r from-[#021EED] to-[#FB0D0D] rounded-[24px] drop-shadow-lg  lg:p-4 md:p-2 p-5 md:justify-between justify-center"
+              id="essential-tools"
+              className="flex flex-col gap-2 w-full md:w-[300px] p-4 rounded-[24px] bg-[#101012] drop-shadow-md"
             >
-              <h2 className="text-white lg:text-[16px] md:text-[12px] text-[16px] font-medium">
-                Have a plan? Let&apos;s get started!
-              </h2>
-              <Link
-                href="/services"
-                className="relative overflow-hidden flex items-center justify-center rounded-3xl bg-black/70 text-white group hover:text-black transition-all duration-500 md:text-[12px] drop-shadow-md lg:py-4 md:py-2 py-3"
-              >
-                {/* Left side text */}
-                <span className="relative z-10 font-bold transition-all duration-500 ease-in-out group-hover:translate-x-0">
-                  Click me!
-                </span>
-
-                {/* Hover background slider */}
-                <span className="absolute inset-0 bg-white transform translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></span>
-              </Link>
+              <h1 className="text-white font-bold font-robot text-[20px]">
+                Essential Tools
+              </h1>
+              <p className="text-[#808080] text-[10px] font-inter">
+                A Comprehensive Collection of Useful Tools to Support and
+                Optimize My Workflow
+              </p>
+              <div className="flex flex-wrap gap-3">
+                {essentialToolsIcons.map((i, idx) => (
+                  <Image
+                    src={i.icon}
+                    alt={i.name}
+                    key={idx}
+                    className="w-[30px] h-[30px] object-fill rounded-md"
+                  />
+                ))}
+              </div>
             </div>
-            {/* click me cont */}
+            {/* essential tools icons */}
           </div>
           {/* hobbies */}
           <div className="relative flex flex-row drop-shadow-lg lg:w-[450px] lg:h-[130px] md:w-[330px] sm:h-[90px] h-[150px] w-full">
@@ -192,7 +199,7 @@ const SpeedySnapshot = () => {
         {/* degree and deeds */}
         <div
           id="degree-and-deeds"
-          className="xl:w-[500px] xl:h-[200px] lg:w-[400px] sm:h-[200px] w-full rounded-[24px] bg-[#171717] flex flex-col gap-2 p-4 drop-shadow-lg"
+          className="xl:w-[500px] xl:h-[200px] lg:w-[400px] sm:h-[200px] w-full rounded-[24px] bg-[#101012]  flex flex-col gap-2 p-4 drop-shadow-lg"
         >
           <h3 className="text-white font-medium text-[18px]">
             Degree and deeds
@@ -221,7 +228,7 @@ const SpeedySnapshot = () => {
         {/* skills */}
         <div
           id="skills"
-          className="lg:w-[360px] h-[200px] w-full rounded-[24px] bg-[#171717] flex flex-col gap-2 p-3 overflow-y-auto custom-scrollbar drop-shadow-lg"
+          className="lg:w-[360px] h-[200px] w-full rounded-[24px] bg-[#101012]  flex flex-col gap-2 p-3 overflow-y-auto custom-scrollbar drop-shadow-lg"
         >
           {skills.map((sk, index) => (
             <div key={index} className="flex flex-col gap-1 px-2 w-full">
@@ -244,19 +251,17 @@ const SpeedySnapshot = () => {
         <Link
           id="world"
           href="/mystory"
-          className="lg:w-[200px] w-full h-[200px] rounded-[24px] bg-[#171717] flex flex-col items-center justify-center p-4 drop-shadow-lg:"
+          className="lg:w-[200px] w-full h-[200px] rounded-[24px] bg-[#101012]  flex flex-col items-center justify-center p-4 drop-shadow-lg:"
         >
           <p className="text-white font-medium text-lg md:text-sm">
             Intrigued? Let&apos;s dive into my world!{" "}
           </p>
           <Image
-            onClick={() => setIsWorldClicked(true)}
             src={world}
             alt="world"
             width={120}
             height={120}
-            className={`object-cover hover:scale-150 transition duration-300 ease-in-out
-              ${isWorldClicked ? "animate-world-ping" : ""}`}
+            className="object-cover hover:scale-150 transition duration-300 ease-in-out"
             priority
           />
         </Link>
