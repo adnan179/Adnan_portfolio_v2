@@ -1,6 +1,7 @@
 import gsap from "gsap";
-import _ScrollTrigger from "gsap/ScrollTrigger";
+import Image from "next/image";
 import React, { useEffect } from "react";
+import blackCatLaptop from "../../app/public/projects/black-cat-laptop.jpg";
 
 const Hero = () => {
   //gsap animations
@@ -18,31 +19,48 @@ const Hero = () => {
         { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
       )
       .fromTo(
+        "#black-cat-image",
+        { z: -200, opacity: 0, scale: 0.5 },
+        { z: 0, opacity: 1, scale: 1.2, duration: 1, ease: "power3.inOut" }
+      )
+      .fromTo(
         "#desc",
         { x: 100, opacity: 0 },
         { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
       );
   }, []);
+
   return (
     <section
       id="projects-hero"
-      className="flex flex-col w-full min-h-screen xl:px-24 lg:px-16 md:px-10 sm:px-8 px-6"
+      className="flex flex-col w-full xl:px-24 lg:px-16 md:px-10 sm:px-8 px-6 pt-10 pb-20"
     >
       <div className="flex flex-col font-Montserrat justify-start">
-        <h1
-          id="main-heading"
-          className="xl:text-[120px] lg:text-[84px] md:text-[76px] sm:text-[56px] text-[48px]"
-        >
-          PROJECTS
-        </h1>
-        <h1
-          id="sub-heading"
-          className="font-medium xl:text-[64px] lg:text-[56px] md:text-[48px] sm:text-[36px] text-[32px] md:-mt-6 -mt-2"
-        >
-          selection
-        </h1>
+        <div className="w-full flex flex-row justify-between items-center">
+          <div className="flex flex-col">
+            <h1
+              id="main-heading"
+              className="xl:text-[120px] lg:text-[84px] md:text-[76px] sm:text-[56px] text-[48px]"
+            >
+              PROJECTS
+            </h1>
+            <h1
+              id="sub-heading"
+              className="font-medium xl:text-[64px] lg:text-[56px] md:text-[48px] sm:text-[36px] text-[32px] md:-mt-6 -mt-2"
+            >
+              selection
+            </h1>
+          </div>
+
+          <Image
+            id="black-cat-image"
+            src={blackCatLaptop}
+            alt="Buddy working on a new project!"
+            className="flex object-cover sm:w-[200px] sm:h-[200px] w-28 h-28 rounded-lg shadow-inner"
+          />
+        </div>
       </div>
-      <div className="flex w-full justify-end lg:-mt-8 md:-mt-4 sm:-mt-2 mt-4">
+      <div className="flex w-full justify-end mt-4">
         <p
           id="desc"
           className="xl:w-[500px] lg:w-[450px] md:w-[400px] font-inter font-medium xl:text-[22px] lg:text-[20px] text-[16px] text-justify"

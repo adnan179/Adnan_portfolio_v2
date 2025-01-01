@@ -6,7 +6,6 @@ import { socialLinks } from "@/data";
 import Link from "next/link";
 import _ScrollTrigger from "gsap/ScrollTrigger";
 import gsap from "gsap";
-import { LoadingSpinner } from "@/utils/LoadingSpinner";
 import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 
@@ -18,45 +17,37 @@ const Footer = () => {
   //function to send email message
   const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true);
+    if (!email) {
+      toast.error(`Please enter a proper email`);
+      return;
+    }
+
+    setLoading(true); // Activate loading animation immediately
 
     const serviceKey = process.env.NEXT_PUBLIC_SERVICE_KEY;
     const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID;
     const publicKey = process.env.NEXT_PUBLIC_PUBLICKEY;
-
-    if (!email) {
-      toast.error(`Please enter a proper email`);
-      setLoading(false);
-      return;
-    }
 
     const templateParams = {
       from_email: email,
       to_name: "Adnan Shaik",
     };
 
-    // Proceed with sending email
-    try {
-      emailjs
-        .send(serviceKey, templateId, templateParams, publicKey)
-        .then((response) => {
-          console.log("Email sent successfully", response);
-          setEmail("");
-          toast.success("Email sent successfully");
-          setLoading(false);
-        })
-        .catch((error) => {
-          console.log("Error sending email", error);
-          toast.error(`Error sending email: ${error}`);
-          setLoading(false);
-        });
-    } catch (error) {
-      console.log(error);
-      toast.error("Unexpected error sending email!");
-      setLoading(false);
-    } finally {
-      setLoading(false);
-    }
+    // Send email
+    emailjs
+      .send(serviceKey, templateId, templateParams, publicKey)
+      .then((response) => {
+        console.log("Email sent successfully", response);
+        setEmail(""); // Reset email input
+        toast.success("Email sent successfully");
+      })
+      .catch((error) => {
+        console.error("Error sending email", error);
+        toast.error(`Error sending email: ${error}`);
+      })
+      .finally(() => {
+        setLoading(false); // Deactivate loading animation after completion
+      });
   };
 
   //gsap animations
@@ -119,7 +110,7 @@ const Footer = () => {
         </h1>
         <div
           id="footer-input"
-          className="sm:w-[450px] flex items-center bg-[#171717] border border-[#808080]/50 rounded-[64px] overflow-hidden"
+          className="sm:w-[450px] flex items-center bg-[#171717] border border-[#808080]/50 rounded-[64px] overflow-hidden focus-within:shadow-[0_0_5px_1px_rgba(255,255,255,0.8)] focus-within:border-white"
         >
           <input
             type="email"
@@ -133,7 +124,7 @@ const Footer = () => {
             disabled={loading}
             onClick={handleSubmit}
           >
-            {loading ? <LoadingSpinner color={"white"} /> : "Send"}
+            {loading ? "Loading..." : "Send"}
           </button>
         </div>
         <div id="footer-links" className="flex gap-5 flex-wrap">

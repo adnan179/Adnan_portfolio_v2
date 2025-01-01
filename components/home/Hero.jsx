@@ -11,23 +11,23 @@ const Hero = () => {
     const tl = gsap.timeline();
     tl.fromTo(
       "#intro-cont",
-      { y: 100, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.3, ease: "power3.inOut" }
+      { z: 200, opacity: 0, scale: 0.8 },
+      { z: 0, opacity: 1, scale: 1, duration: 1, ease: "power3.out" }
     )
       .fromTo(
         "#hero-heading",
-        { y: 200, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.3, ease: "power3.inOut" }
+        { z: 200, opacity: 0, scale: 0.8 },
+        { z: 0, opacity: 1, scale: 1, duration: 0.7, ease: "power3.out" }
       )
       .fromTo(
         "#little-intro",
-        { y: 200, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.3, ease: "power3.inOut" }
+        { z: 200, opacity: 0, scale: 0.8 },
+        { z: 0, opacity: 1, scale: 1, duration: 0.7, ease: "power3.out" }
       )
       .fromTo(
         "#hero-btn",
-        { y: 100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.3, ease: "power3.inOut" }
+        { z: 200, opacity: 0, scale: 0.8 },
+        { z: 0, opacity: 1, scale: 1, duration: 0.7, ease: "power3.out" }
       );
   }, []);
 
