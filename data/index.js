@@ -98,43 +98,7 @@ export const essentialToolsIcons = [
     icon: pininterestIcon,
   },
 ];
-export const storySocialLinks = [
-  {
-    name: "Linkedin",
-    icon: (
-      <FaLinkedin className="w-[25px] h-[25px] text-white hover:scale-125 transition duration-200 ease-in-out" />
-    ),
-    link: "https://www.linkedin.com/in/adnanshaik179",
-  },
-  {
-    name: "Instagram",
-    icon: (
-      <FaInstagram className="w-[25px] h-[25px] text-white hover:scale-125 transition duration-200 ease-in-out" />
-    ),
-    link: "https://www.instagram.com/_adnan179",
-  },
-  {
-    name: "Github",
-    icon: (
-      <FaGithub className="w-[25px] h-[25px] text-white hover:scale-125 transition duration-200 ease-in-out" />
-    ),
-    link: "https://www.github.com/adnan179",
-  },
-  {
-    name: "Behance",
-    icon: (
-      <FaBehance className="w-[25px] h-[25px] text-white hover:scale-125 transition duration-200 ease-in-out" />
-    ),
-    link: "https://www.behance.net/adnanshaik4",
-  },
-  {
-    name: "Gmail",
-    icon: (
-      <MdOutlineMail className="w-[25px] h-[25px] text-white hover:scale-125 transition duration-200 ease-in-out" />
-    ),
-    gmail: "adnanshaik179@gmail.com",
-  },
-];
+
 export const hobbies = [
   {
     name: "Gym",
