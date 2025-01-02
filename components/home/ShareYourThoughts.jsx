@@ -82,28 +82,29 @@ const ShareYourThoughts = () => {
     tl.fromTo(
       "#feedbacks-sec-heading",
       {
-        x: -100,
+        y: -100,
         opacity: 0,
       },
-      { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
+      { y: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
     )
       .fromTo(
         "#feedbacks-sub-heading",
         {
-          x: -100,
+          y: -100,
           opacity: 0,
         },
-        { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
+        { y: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
       )
       .fromTo(
         "#drop-your-wisdom",
         {
-          x: -100,
+          y: -100,
           opacity: 0,
         },
-        { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
+        { y: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
       );
   }, []);
+
   return (
     <section
       id="share-your-thoughts"
@@ -142,13 +143,13 @@ const ShareYourThoughts = () => {
               {feedbacks.map((fd, idx) => (
                 <div
                   key={idx}
-                  className="flex flex-col gap-1 p-4 m-2 bg-black/50 text-white rounded-lg shadow-white shadow sm:w-[400px] w-[320px]"
+                  className="flex flex-col gap-1 p-4 m-2 bg-[#101012] text-white rounded-lg drop-shadow-md border border-[#808080]/20 sm:w-[400px] w-[320px]"
                 >
                   <h3 className="font-bold text-[16px]">{fd.name}</h3>
                   <p className="font-medium text-[#808080] text-[12px]">
                     {fd.email}
                   </p>
-                  <p className="font-light text-[14px]">{fd.message}</p>
+                  <p className="font-normal text-[14px]">{fd.message}</p>
                 </div>
               ))}
             </div>

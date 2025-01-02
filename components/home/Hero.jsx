@@ -12,22 +12,22 @@ const Hero = () => {
     tl.fromTo(
       "#intro-cont",
       { z: 200, opacity: 0, scale: 0.8 },
-      { z: 0, opacity: 1, scale: 1, duration: 1, ease: "power3.out" }
+      { z: 0, opacity: 1, scale: 1, duration: 1.2, ease: "power3.inOut" }
     )
       .fromTo(
         "#hero-heading",
         { z: 200, opacity: 0, scale: 0.8 },
-        { z: 0, opacity: 1, scale: 1, duration: 0.7, ease: "power3.out" }
+        { z: 0, opacity: 1, scale: 1, duration: 0.7, ease: "power3.inOut" }
       )
       .fromTo(
         "#little-intro",
         { z: 200, opacity: 0, scale: 0.8 },
-        { z: 0, opacity: 1, scale: 1, duration: 0.7, ease: "power3.out" }
+        { z: 0, opacity: 1, scale: 1, duration: 0.7, ease: "power3.inOut" }
       )
       .fromTo(
         "#hero-btn",
         { z: 200, opacity: 0, scale: 0.8 },
-        { z: 0, opacity: 1, scale: 1, duration: 0.7, ease: "power3.out" }
+        { z: 0, opacity: 1, scale: 1, duration: 0.7, ease: "power3.inOut" }
       );
   }, []);
 
@@ -42,7 +42,7 @@ const Hero = () => {
       >
         <Image
           src={catCoffee}
-          alt="just me!"
+          alt="cat and coffee!"
           className="rounded-full md:w-[60px] md:h-[60px] w-[30px] h-[30px]"
         />
         <h1 className="font-Montez text-white md:text-[2rem] text-[1rem] md:pr-5 pr-3">
