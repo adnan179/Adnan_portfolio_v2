@@ -234,7 +234,7 @@ const Navbar = () => {
           <ScrollIntoView selector="#footer" onClick={() => toggleSidebar()}>
             <button
               id="sidebar-talk"
-              className="hidden md:flex bg-white text-[#0D0D0F] font-semibold lg:text-[16px] text-[12px] lg:px-4 lg:py-2 px-2 py-1 rounded-[16px] shadow-lg"
+              className="flex md:hidden bg-white text-[#0D0D0F] font-semibold lg:text-[16px] text-[12px] lg:px-4 lg:py-2 px-2 py-1 rounded-[16px] shadow-lg"
             >
               Let&apos;s talk
             </button>

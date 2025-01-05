@@ -36,17 +36,17 @@ const Hero = () => {
       className="flex flex-col w-full xl:px-24 lg:px-16 md:px-10 sm:px-8 px-6 pt-10 pb-20"
     >
       <div className="flex flex-col font-Montserrat justify-start">
-        <div className="w-full flex flex-row justify-between items-center">
+        <div className="w-full flex flex-row justify-between md:items-center">
           <div className="flex flex-col">
             <h1
               id="main-heading"
-              className="xl:text-[120px] lg:text-[84px] md:text-[76px] sm:text-[56px] text-[48px]"
+              className="xl:text-[120px] lg:text-[84px] md:text-[76px] sm:text-[54px] text-[36px]"
             >
               PROJECTS
             </h1>
             <h1
               id="sub-heading"
-              className="font-medium xl:text-[64px] lg:text-[56px] md:text-[48px] sm:text-[36px] text-[32px] md:-mt-6 -mt-2"
+              className="font-medium xl:text-[64px] lg:text-[56px] md:text-[48px] sm:text-[30px] text-[28px] md:-mt-6 -mt-2"
             >
               selection
             </h1>
@@ -56,11 +56,11 @@ const Hero = () => {
             id="black-cat-image"
             src={blackCatLaptop}
             alt="Buddy working on a new project!"
-            className="flex object-cover sm:w-[200px] sm:h-[200px] w-28 h-28 rounded-lg shadow-inner"
+            className="flex object-cover lg:w-[200px] lg:h-[200px] md:w-[150px] md:h-[150px] w-[75px] h-[75px] rounded-lg shadow-inner"
           />
         </div>
       </div>
-      <div className="flex w-full justify-end mt-4">
+      <div className="flex w-full justify-end mt-10">
         <p
           id="desc"
           className="xl:w-[500px] lg:w-[450px] md:w-[400px] font-inter font-medium xl:text-[22px] lg:text-[20px] text-[16px] text-justify"

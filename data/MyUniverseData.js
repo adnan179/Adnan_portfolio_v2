@@ -46,12 +46,14 @@ import mallOfAsia from "../app/public/my universe photos/mall_of_asia.jpg";
 import fields from "../app/public/my universe photos/fields.jpg";
 import eveningSky from "../app/public/my universe photos/evening_sky.jpg";
 import smokeyDokey from "../app/public/my universe photos/smokey_dokey.jpg";
+import catInCraddle from "../app/public/my universe photos/cat_in_craddle.jpg";
 
 export const ImagesArray = [
   {
     title: "Pizza🍕",
     img: pizzas2,
   },
+  { title: "Kalu in craddle", img: catInCraddle },
   { title: "Smokey Dokey, Bengaluru", img: smokeyDokey },
   { title: "Somewhere in some village😍", img: fields },
   { title: "Evening Sky", img: eveningSky },
