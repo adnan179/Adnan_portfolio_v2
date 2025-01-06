@@ -4,6 +4,8 @@ import React, { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import { useNav } from "@/context/NavContext";
 import ScrollIntoView from "react-scroll-into-view";
+import logo from "../app/public/home/black_cat_stare.png";
+import Image from "next/image";
 
 const NavLinks = [
   {
@@ -96,12 +98,17 @@ const Navbar = () => {
   }, [sidebarOpen]);
 
   return (
-    <nav className="sticky z-50 top-0 flex flex-row justify-between items-center lg:px-10 md:px-8 px-5 w-full lg:h-[80px] h-[60px]">
+    <nav className="sticky z-50 top-0 flex flex-row justify-between items-center lg:px-10 md:px-8 px-5 py-4 w-full lg:h-[80px] h-[60px]">
       {/* Logo */}
       <div
         id="navbar-logo"
-        className="flex flex-row gap-1 items-center text-white font-bold font-Montserrat"
+        className="flex flex-row gap-1 items-center text-[#040404] bg-white p-2 rounded-lg font-bold font-Montserrat"
       >
+        <Image
+          src={logo}
+          alt="black-cat stare"
+          className="flex  w-7 sm:w-10 h-7 sm:h-10 object-contain"
+        />
         <h1 className=" text-[15px] lg:text-[24px]">AdnanX</h1>
         <div className="flex flex-col">
           <h1 className="lg:text-[12px] text-[8px]">Dev</h1>
@@ -234,7 +241,7 @@ const Navbar = () => {
           <ScrollIntoView selector="#footer" onClick={() => toggleSidebar()}>
             <button
               id="sidebar-talk"
-              className="flex md:hidden bg-white text-[#0D0D0F] font-semibold lg:text-[16px] text-[12px] lg:px-4 lg:py-2 px-2 py-1 rounded-[16px] shadow-lg"
+              className="flex md:hidden bg-white text-[#0D0D0F] font-semibold lg:text-[16px] text-[12px] px-4 py-2 rounded shadow-lg"
             >
               Let&apos;s talk
             </button>
