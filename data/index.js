@@ -35,6 +35,11 @@ import nexus1 from "../app/public/projects/neural_nexus_1.png";
 import nexus2 from "../app/public/projects/neural_nexus_2.png";
 import nexus3 from "../app/public/projects/neural_nexus_3.png";
 import nexus4 from "../app/public/projects/neural_nexus_4.png";
+import dash1 from "../app/public/projects/veggie_dashboard_1.png";
+import dash2 from "../app/public/projects/veggie_dashboard_2.png";
+import dash3 from "../app/public/projects/veggie_dashboard_3.png";
+import dash4 from "../app/public/projects/veggie_dashboard_4.png";
+import dash5 from "../app/public/projects/veggie_dashboard_5.png";
 
 //essential tools imports
 import figmaIcon from "../app/public/icons/figma-icon.jpg";
@@ -136,7 +141,7 @@ export const degreeAndDeeds = [
     period: "Nov 2023 - Apr 2024",
   },
   {
-    name: "Freelancing with eyes open for exciting roles",
+    name: "Dev Trainee at TechnoIdentity",
     period: "Present",
   },
 ];
@@ -169,6 +174,18 @@ export const skills = [
 ];
 
 export const projectsData = [
+  {
+    projectName: "Store Dashboard",
+    projectHeading: "Retail Vegetable store Dashboard",
+    period: "January 2025",
+    projectLink:"",
+    projectDescription:
+      "Built a full-featured MERN stack dashboard to manage sales, customers, and inventory. Integrated real-time updates via WebSockets, role-based access control, and audit logs for secure and efficient operations. Features include credit tracking, bill generation via WhatsApp, and sales recovery for enhanced usability and data integrity.",
+    techStack: ["Figma","React","Tailwind CSS","Node JS","Express JS","MongoDB","WhatsApp API","Socket.io","Material UI","Mongoose"],
+    colorPalette: ["#808080", "#FFFFFF", "#00000", "#6B7280","#DC2626","#059669","#3B82F6"],
+    theJourney: ["Requirement Analysis", "Wireframing", "Design","Development","Testing","Deployment"],
+    projectImages: [dash1, dash2, dash3, dash4, dash5],
+  },
   {
     projectName: "Neural Nexus",
     projectHeading: "Neural Nexus Landing Page",
@@ -386,6 +403,18 @@ export const feedbackData = [
 ];
 
 export const allProjectsData = [
+  {
+    projectName: "Store Dashboard",
+    projectHeading: "Retail Vegetable store Dashboard",
+    period: "January 2025",
+    projectLink:"",
+    projectDescription:
+      "Built a full-featured MERN stack dashboard to manage sales, customers, and inventory. Integrated real-time updates via WebSockets, role-based access control, and audit logs for secure and efficient operations. Features include credit tracking, bill generation via WhatsApp, and sales recovery for enhanced usability and data integrity.",
+    techStack: ["Figma","React","Tailwind CSS","Node JS","Express JS","MongoDB","WhatsApp API","Socket.io","Material UI","Mongoose"],
+    colorPalette: ["#808080", "#FFFFFF", "#00000", "#6B7280","#DC2626","#059669","#3B82F6"],
+    theJourney: ["Requirement Analysis", "Wireframing", "Design","Development","Testing","Deployment"],
+    projectImages: [dash1, dash2, dash3, dash4, dash5],
+  },
   {
     projectName: "Neural Nexus",
     projectHeading: "Neural Nexus Landing Page",

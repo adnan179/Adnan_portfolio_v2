@@ -22,7 +22,7 @@ const NavLinks = [
   },
   {
     name: "Resume",
-    link: "https://drive.google.com/file/d/1EaJ9-2DAO6GFwiyH-hPl7nHny1noQkK4/view?usp=sharing",
+    link: "https://drive.google.com/file/d/1xAjWKZk2u_PDhixRkTdtz9KP-gfdbDlV/view?usp=drive_link",
   },
 ];
 

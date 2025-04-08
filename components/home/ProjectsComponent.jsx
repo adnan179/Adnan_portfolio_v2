@@ -10,7 +10,7 @@ import { GoArrowRight } from "react-icons/go";
 
 const ProjectsComponent = () => {
   const [selectedProjectName, setSelectedProjectName] =
-    useState("Neural Nexus");
+    useState("Store Dashboard");
   const [selectedProject, setSelectedProject] = useState(projectsData[0]);
   const [isInitialRender, setIsInitialRender] = useState(true);
 
@@ -268,7 +268,7 @@ const ProjectsComponent = () => {
             className="flex md:flex-row flex-col gap-3 w-full justify-between drop-shadow-lg"
           >
             {/* tech stack */}
-            <div className="flex flex-col gap-3 md:w-1/3 w-full bg-[#171717] rounded-[36px] xl:p-5 lg:p-3 p-5">
+            <div className="flex flex-col gap-3 md:w-1/2 w-full bg-[#171717] rounded-[36px] xl:p-5 lg:p-3 p-5">
               <div className="flex flex-col w-full md:gap-3 gap-1">
                 <h2 className="text-[#808080] font-medium">Tech Stack:</h2>
                 <div className="flex flex-row flex-wrap gap-2 pl-2">
@@ -305,7 +305,7 @@ const ProjectsComponent = () => {
 
             <div
               id="journey"
-              className="flex flex-col md:gap-3 gap-1 md:w-2/3 w-full bg-[#171717] p-5 rounded-[36px] drop-shadow-lg"
+              className="flex flex-col md:gap-3 gap-1 md:w-1/2 w-full bg-[#171717] p-5 rounded-[36px] drop-shadow-lg"
             >
               <h2 className="text-[#808080] font-medium">The Journey:</h2>
               <div className="flex items-center mt-2">
