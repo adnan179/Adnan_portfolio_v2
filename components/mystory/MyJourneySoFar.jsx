@@ -13,8 +13,8 @@ import React, { useEffect } from "react";
 //data for timeline
 const timelineItems = [
   {
-    period: "Present",
-    desc: "Freelancing with eyes wide open for full opportunities.",
+    period: "Feb 2025 - Present",
+    desc: "Dev Trainee at TechnoIdentity.",
   },
   {
     period: "NOV 2023 - APR 2024",

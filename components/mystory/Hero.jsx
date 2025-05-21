@@ -78,12 +78,12 @@ const Hero = () => {
       {/* greeting */}
       {/* Heading */}
       <h1 id="story-heading" className="text-white md:text-[24px] text-justify">
-        I&apos;m Adnan Shaik, a 22-year-old front-end developer, passionate
+        I&apos;m Adnan Shaik, a 23-year-old front-end developer, passionate
         about crafting user-centric, immersive websites.
       </h1>
       {/* Heading */}
-      <h2 id="story-location" className="md:text-[20px] text-gray-800">
-        Based in Bengaluru
+      <h2 id="story-location" className="md:text-[20px] text-gray-400">
+        Based in Hyderabad
       </h2>
       {/* Image Carousel */}
       <div
@@ -128,7 +128,7 @@ const Hero = () => {
       {/* Image Carousel */}
       <h2
         id="story-heading-2"
-        className="text-gray-700 md:text-[20px] text-justify font-bold"
+        className="text-gray-400 md:text-[20px] text-justify font-bold"
       >
         🌐✨ When I&apos;m not building digital experiences, you’ll find me 🍳
         experimenting in the kitchen, 🏍️ hitting the open road on my bike, ⛰️

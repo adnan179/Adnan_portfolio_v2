@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect } from "react";
 import catAndBoy from "../../app/public/home/cat and boy.jpg";
+import profileImage from "../../app/public/home/Media.jpeg";
 import Image from "next/image";
 import {
   degreeAndDeeds,
@@ -96,9 +97,9 @@ const SpeedySnapshot = () => {
           className="bg-[#101012]  rounded-[24px] p-4 shadow-lg flex flex-row gap-3 drop-shadow-lg sm:w-[600px] w-full"
         >
           <Image
-            src={catAndBoy}
+            src={profileImage}
             alt="just a bit-emoji of me and my cat!"
-            className="xl:w-[250px] xl:h-[250px] md:w-[150px] md:h-[150px] w-[130px] h-[130px] md:rounded-bl-[64px] md:rounded-tr-[64px] rounded-bl-[36px] rounded-tr-[36px] shadow-lg"
+            className="xl:w-[250px] xl:h-[250px] md:w-[150px] md:h-[150px] w-[130px] h-[130px] md:rounded-bl-[64px] md:rounded-tr-[64px] rounded-bl-[24px] rounded-tr-[24px] shadow-lg object-contain"
           />
           <div className="flex flex-col gap-2 justify-center">
             <p className=" text-[#808080] font-bold text-[10px]">
