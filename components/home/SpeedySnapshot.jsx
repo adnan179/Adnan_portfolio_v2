@@ -104,10 +104,6 @@ const SpeedySnapshot = () => {
             className="xl:w-[250px] xl:h-[250px] md:w-[150px] md:h-[150px] w-[130px] h-[130px] md:rounded-bl-[64px] md:rounded-tr-[64px] rounded-bl-[24px] rounded-tr-[24px] shadow-lg object-contain"
           />
           <div className="flex flex-col gap-2 justify-center">
-            <p className=" text-[#808080] font-bold text-[10px]">
-              Behold! It’s me hanging out with my tiny black sidekick—watch out,
-              mischief in progress! 🐾👻{" "}
-            </p>
             <h2 className="text-white lg:text-[20px] md:text-[16px] text-[14px] font-bold">
               Adnan Shaik
             </h2>
@@ -115,8 +111,7 @@ const SpeedySnapshot = () => {
               A Front-end developer & UI/UX designer
             </p>
             <p className="text-white font-light lg:text-sm md:text-[12px] text-[10px]">
-              Crafting pixels and code into seamless, eye-catching experiences—
-              guess who’s behind your next favorite website?
+            <strong>Need a website that looks stunning and actually works for you?</strong> That’s where I come in — crafting <strong>seamless, user-friendly solutions</strong> that <strong>save time</strong> and <strong>grow your business</strong>.
             </p>
           </div>
         </div>

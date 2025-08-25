@@ -1,54 +1,17 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import cat from "../app/public/home/black-cat-on-book.jpg";
 import { socialLinks } from "@/data/socialLinksData";
 import Link from "next/link";
 import _ScrollTrigger from "gsap/ScrollTrigger";
 import gsap from "gsap";
-import { toast } from "react-toastify";
-import emailjs from "@emailjs/browser";
 
 gsap.registerPlugin(_ScrollTrigger);
 
 const Footer = () => {
-  const [email, setEmail] = useState("");
-  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!email) {
-      toast.error(`Please enter a proper email`);
-      return;
-    }
-
-    setLoading(true);
-
-    const serviceKey = process.env.NEXT_PUBLIC_SERVICE_KEY;
-    const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID;
-    const publicKey = process.env.NEXT_PUBLIC_PUBLICKEY;
-
-    const templateParams = {
-      from_email: email,
-      to_name: "Adnan Shaik",
-    };
-
-    emailjs
-      .send(serviceKey, templateId, templateParams, publicKey)
-      .then((response) => {
-        console.log("Email sent successfully", response);
-        setEmail("");
-        toast.success("Email sent successfully");
-      })
-      .catch((error) => {
-        console.error("Error sending email", error);
-        toast.error(`Error sending email: ${error}`);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  };
-
+  //gsap animations
   useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -112,22 +75,9 @@ const Footer = () => {
         </h1>
         <div
           id="footer-input"
-          className="sm:w-[450px] flex items-center bg-[#171717] border border-[#808080]/50 rounded-[64px] overflow-hidden focus-within:shadow-[0_0_5px_1px_rgba(255,255,255,0.8)] focus-within:border-white"
         >
-          <input
-            type="email"
-            placeholder="name@gmail.com"
-            className="bg-[#171717] text-white flex-1 sm:p-4 p-3 focus:outline-none"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <button
-            className="bg-white text-[#040404] flex items-center justify-center font-bold sm:px-5 sm:py-[10px] px-3 py-[8px] rounded-[64px] focus:outline-none sm:mr-2 mr-1 hover:scale-125 duration-300 ease-in-out"
-            disabled={loading}
-            onClick={handleSubmit}
-          >
-            {loading ? "Loading..." : "Send"}
-          </button>
+          <p className="text-white/90 font-medium text-[1rem]">Reach out to me on my mail: adnanshaik179@gmail.com</p>
+          
         </div>
         <div id="footer-links" className="flex gap-5 flex-wrap">
           {socialLinks.map((sl, idx) => (
