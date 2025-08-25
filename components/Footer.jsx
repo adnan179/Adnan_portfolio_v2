@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import cat from "../app/public/home/black-cat-on-book.jpg";
-import { socialLinks } from "@/data";
+import { socialLinks } from "@/data/socialLinksData";
 import Link from "next/link";
 import _ScrollTrigger from "gsap/ScrollTrigger";
 import gsap from "gsap";
@@ -10,11 +10,11 @@ import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 
 gsap.registerPlugin(_ScrollTrigger);
+
 const Footer = () => {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
 
-  //function to send email message
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!email) {
@@ -22,7 +22,7 @@ const Footer = () => {
       return;
     }
 
-    setLoading(true); // Activate loading animation immediately
+    setLoading(true);
 
     const serviceKey = process.env.NEXT_PUBLIC_SERVICE_KEY;
     const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID;
@@ -33,12 +33,11 @@ const Footer = () => {
       to_name: "Adnan Shaik",
     };
 
-    // Send email
     emailjs
       .send(serviceKey, templateId, templateParams, publicKey)
       .then((response) => {
         console.log("Email sent successfully", response);
-        setEmail(""); // Reset email input
+        setEmail("");
         toast.success("Email sent successfully");
       })
       .catch((error) => {
@@ -46,11 +45,10 @@ const Footer = () => {
         toast.error(`Error sending email: ${error}`);
       })
       .finally(() => {
-        setLoading(false); // Deactivate loading animation after completion
+        setLoading(false);
       });
   };
 
-  //gsap animations
   useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -58,41 +56,45 @@ const Footer = () => {
         start: "top 100%",
         toggleActions: "play none none reset",
       },
+      defaults: { ease: "power4.out" },
     });
-    tl.fromTo(
-      "#footer",
-      { y: 100, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
-    )
+
+    tl.fromTo("#footer", { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4 })
       .fromTo(
         "#footer-heading",
-        { y: 100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
+        { y: 50, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.35 },
+        "<0.1"
       )
       .fromTo(
         "#footer-input",
-        { y: 100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.5, stagger: 0.3, ease: "power3.inOut" }
+        { y: 30, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.35 },
+        "<0.1"
       )
       .fromTo(
         "#footer-input > *",
-        { y: 100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.5, stagger: 0.3, ease: "power3.inOut" }
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.3, stagger: 0.1 },
+        "<0.05"
       )
       .fromTo(
         "#footer-links > *",
-        { y: 100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.5, stagger: 0.3, ease: "power3.inOut" }
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.3, stagger: 0.1 },
+        "<0.05"
       )
       .fromTo(
         "#black-cat",
-        { y: 100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.3, ease: "power3.inOut" }
+        { y: 30, opacity: 0, scale: 0.8 },
+        { y: 0, opacity: 1, scale: 1, duration: 0.5 },
+        "<0.1"
       )
       .fromTo(
         "#copy-rights",
-        { y: 100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.5, stagger: 0.3, ease: "power3.inOut" }
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.3 },
+        "<0.05"
       );
   }, []);
 
@@ -120,7 +122,7 @@ const Footer = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
           <button
-            className="bg-white text-[#040404] flex items-center justify-center  font-bold sm:px-5 sm:py-[10px] px-3 py-[8px] rounded-[64px] focus:outline-none sm:mr-2 mr-1 hover:scale-125 duration-300 ease-in-out"
+            className="bg-white text-[#040404] flex items-center justify-center font-bold sm:px-5 sm:py-[10px] px-3 py-[8px] rounded-[64px] focus:outline-none sm:mr-2 mr-1 hover:scale-125 duration-300 ease-in-out"
             disabled={loading}
             onClick={handleSubmit}
           >
@@ -133,8 +135,8 @@ const Footer = () => {
               key={idx}
               href={
                 sl.name === "Gmail"
-                  ? `mailto:${sl.gmail}` // 'mailto:' to open the mail client
-                  : sl.link // For other links
+                  ? `mailto:${sl.gmail}`
+                  : sl.link
               }
               target={sl.name === "Gmail" ? "_self" : "_blank"}
               rel="noopener noreferrer"

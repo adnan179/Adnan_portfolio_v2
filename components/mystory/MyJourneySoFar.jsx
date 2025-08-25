@@ -42,7 +42,7 @@ const MyJourneySoFar = () => {
     tl.fromTo(
       "#my-journey-so-far-cont",
       { y: 100, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1, ease: "power3.inOut" }
+      { y: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
     );
   }, []);
 

@@ -6,7 +6,7 @@ import { useNav } from "@/context/NavContext";
 //lazy load components
 const Hero = lazy(() => import("@/components/projects/Hero"));
 const ProjectsSection = lazy(() =>
-  import("@/components/projects/ProjectsSection")
+  import("@/components/projects/ProjectsComponent")
 );
 
 const ProjectsPage = () => {

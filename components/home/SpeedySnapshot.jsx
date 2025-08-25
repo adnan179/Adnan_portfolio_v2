@@ -1,14 +1,13 @@
 "use client";
 import React, { useEffect } from "react";
-import catAndBoy from "../../app/public/home/cat and boy.jpg";
 import profileImage from "../../app/public/home/Media.jpeg";
 import Image from "next/image";
 import {
-  degreeAndDeeds,
-  essentialToolsIcons,
-  hobbies,
   skills,
+  hobbies,
   socialLinks,
+  essentialToolsData,
+  degreeAndDeeds,
 } from "@/data";
 import world from "../../app/public/home/world.gif";
 import Link from "next/link";
@@ -27,50 +26,53 @@ const SpeedySnapshot = () => {
         toggleActions: "play none none none",
       },
     });
+
     tl.fromTo(
       "#speedy-heading",
-      { x: -200, opacity: 0 },
-      { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
+      { x: -100, opacity: 0 },
+      { x: 0, opacity: 1, duration: 0.3, ease: "power2.out" }
     )
       .fromTo(
         "#bio-cont",
-        { x: -200, opacity: 0 },
-        {
-          x: 0,
-          opacity: 1,
-          duration: 0.5,
-          ease: "power3.inOut",
-        }
+        { x: -100, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.3, ease: "power2.out" },
+        "-=0.15"
       )
       .fromTo(
         "#social-links",
-        { x: 300, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
+        { x: 100, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.3, ease: "power2.out" },
+        "-=0.2"
       )
       .fromTo(
         "#essential-tools",
-        { x: 300, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
+        { x: 100, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.3, ease: "power2.out" },
+        "-=0.2"
       )
       .fromTo(
         "#hobbies",
-        { x: 300, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut", stagger: 0.3 }
+        { y: 40, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.3, ease: "power2.out", stagger: 0.1 },
+        "-=0.1"
       )
       .fromTo(
         "#degree-and-deeds",
-        { x: -200, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
+        { x: -100, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.3, ease: "power2.out" },
+        "-=0.2"
       )
       .fromTo(
         "#skills",
-        { x: 300, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
+        { x: 100, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.3, ease: "power2.out" },
+        "-=0.2"
       )
       .fromTo(
         "#world",
-        { x: 300, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
+        { scale: 0.8, opacity: 0 },
+        { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(1.7)" },
+        "-=0.15"
       );
   }, []);
 
@@ -94,7 +96,7 @@ const SpeedySnapshot = () => {
         {/* first row first col */}
         <div
           id="bio-cont"
-          className="bg-[#101012]  rounded-[24px] p-4 shadow-lg flex flex-row gap-3 drop-shadow-lg sm:w-[600px] w-full"
+          className="bg-[#101012] rounded-[24px] p-4 shadow-lg flex flex-row gap-3 drop-shadow-lg sm:w-[600px] w-full"
         >
           <Image
             src={profileImage}
@@ -113,8 +115,8 @@ const SpeedySnapshot = () => {
               A Front-end developer & UI/UX designer
             </p>
             <p className="text-white font-light lg:text-sm md:text-[12px] text-[10px]">
-              Crafting pixels and code into seamless, eye-catching
-              experiences—guess who’s behind your next favorite website?
+              Crafting pixels and code into seamless, eye-catching experiences—
+              guess who’s behind your next favorite website?
             </p>
           </div>
         </div>
@@ -157,7 +159,7 @@ const SpeedySnapshot = () => {
                 Optimize My Workflow
               </p>
               <div className="flex flex-wrap gap-3">
-                {essentialToolsIcons.map((i, idx) => (
+                {essentialToolsData.map((i, idx) => (
                   <Image
                     src={i.icon}
                     alt={i.name}

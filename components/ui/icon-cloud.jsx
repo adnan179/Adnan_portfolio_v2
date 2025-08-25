@@ -30,14 +30,9 @@ export const cloudProps = {
   },
 };
 
-export const renderCustomIcon = (icon, theme) => {
-  const bgHex = theme === "light" ? "#f3f2ef" : "#080510";
-  const fallbackHex = theme === "light" ? "#6e6e73" : "#ffffff";
-  const minContrastRatio = theme === "dark" ? 2 : 1.2;
-
+export const renderCustomIcon = (icon) => {
   return renderSimpleIcon({
     icon,
-
     size: 42,
     aProps: {
       href: undefined,

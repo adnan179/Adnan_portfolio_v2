@@ -21,7 +21,7 @@ const Certifications = () => {
         y: 100,
         opacity: 0,
       },
-      { y: 0, opacity: 1, duration: 1.5, stagger: 0.3, ease: "power3.inOut" }
+      { y: 0, opacity: 1, duration: 1, stagger: 0.3, ease: "power3.inOut" }
     );
   }, []);
 

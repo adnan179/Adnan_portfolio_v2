@@ -6,27 +6,30 @@ import blackCatLaptop from "../../app/public/projects/black-cat-laptop.jpg";
 const Hero = () => {
   //gsap animations
   useEffect(() => {
-    const tl = gsap.timeline();
+    const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
 
     tl.fromTo(
       "#main-heading",
       { x: -100, opacity: 0 },
-      { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
+      { x: 0, opacity: 1, duration: 0.4 }
     )
       .fromTo(
         "#sub-heading",
-        { x: -100, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
+        { x: -80, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.35 },
+        "<0.1" // start slightly overlapping previous
       )
       .fromTo(
         "#black-cat-image",
-        { z: -200, opacity: 0, scale: 0.5 },
-        { z: 0, opacity: 1, scale: 1.2, duration: 1, ease: "power3.inOut" }
+        { y: 50, opacity: 0, scale: 0.7 },
+        { y: 0, opacity: 1, scale: 1, duration: 0.6 },
+        "<0.15" // overlap for smoothness
       )
       .fromTo(
         "#desc",
-        { x: 100, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
+        { y: 30, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.5 },
+        "<0.1" // slight overlap for natural flow
       );
   }, []);
 
@@ -63,18 +66,9 @@ const Hero = () => {
       <div className="flex w-full justify-end mt-10">
         <p
           id="desc"
-          className="xl:w-[500px] lg:w-[450px] md:w-[400px] font-inter font-medium xl:text-[22px] lg:text-[20px] text-[16px] text-justify"
+          className="xl:w-[500px] lg:w-[450px] md:w-[400px] font-inter xl:text-[22px] lg:text-[20px] text-[16px] text-justify"
         >
-          Over the past two years, I have embarked on an exciting journey with
-          JavaScript, honing my skills in both the design and development of
-          websites. Through various projects and hands-on experience, I’ve
-          developed proficiency in frameworks and technologies like React,
-          Next.js, Node.js, Express.js, and MongoDB. My technical expertise
-          extends to Firebase for backend services, and I bring interactivity to
-          life with GSAP and Three.js. In addition to development, I design
-          seamless, user-centric web applications using Figma. This blend of
-          design and development has fueled my freelance journey, enabling me to
-          deliver impactful, engaging solutions.
+          Over the past two years, I’ve <strong>helped</strong> businesses and individuals <strong>turn</strong> their ideas into functional, user-friendly digital products. Whether it’s a dashboard to <strong>simplify</strong> daily operations, a platform to <strong>manage</strong> customers and sales in real time, or a sleek website that <strong>elevates</strong> brand presence, I focus on <strong>delivering</strong> solutions that work and scale. I <strong>handle</strong> everything end-to-end — from <strong>designing</strong> intuitive interfaces in Figma to <strong>developing</strong> responsive, interactive applications with React, Next.js, Node.js, and MongoDB. My goal is simple: <strong>build</strong> tools that <strong>save</strong> you time, <strong>improve</strong> efficiency, and <strong>create</strong> seamless experiences for your users.
         </p>
       </div>
     </section>

@@ -4,6 +4,8 @@ import gsap from "gsap";
 import _ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(_ScrollTrigger);
+
+//icons data
 const slugs = [
   "typescript",
   "javascript",
@@ -16,18 +18,20 @@ const slugs = [
   "nextdotjs",
   "firebase",
   "vercel",
-  "jest",
   "git",
   "jira",
   "github",
   "gitlab",
-  "visualstudiocode",
   "figma",
   "tailwindcss",
   "notion",
   "framer",
   "postman",
+  "vitest",
+  "tanstack",
+  "react-query"
 ];
+
 const MyTechStack = () => {
   //gsap animations
   useEffect(() => {
@@ -43,13 +47,14 @@ const MyTechStack = () => {
       { y: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }
     );
   }, []);
+
   return (
     <div
       id="my-tech-stack"
-      className="flex flex-col gap-3 rounded-[24px] bg-[#101012] border border-[#808080]/10 drop-shadow-lg md:w-[300px] lg:w-[400px] 
+      className="flex flex-col gap-3 rounded-[24px] bg-gray-100 border border-[#808080]/10 drop-shadow-lg md:w-[300px] lg:w-[400px] 
      w-full h-[350px] p-5"
     >
-      <h1 className="font-Montserrat font-bold text-[1rem] text-white">
+      <h1 className="font-Montserrat font-bold text-[1rem] text-[#171717]">
         My Tech Stack
       </h1>
       <div

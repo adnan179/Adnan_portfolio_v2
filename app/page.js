@@ -7,7 +7,7 @@ import { useNav } from "@/context/NavContext";
 // Lazy load components
 const Hero = lazy(() => import("@/components/home/Hero"));
 const ProjectsComponent = lazy(() =>
-  import("@/components/home/ProjectsComponent")
+  import("@/components/projects/ProjectsComponent")
 );
 const SpeedySnapshot = lazy(() => import("@/components/home/SpeedySnapshot"));
 

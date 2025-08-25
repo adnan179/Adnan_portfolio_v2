@@ -11,63 +11,66 @@ const Hero = () => {
 
   //carousel effect
   useEffect(() => {
-    // Randomize the ImagesArray every time the component mounts
     const shuffledImages = [...OriginalImagesArray].sort(
       () => 0.5 - Math.random()
     );
     setRandomizedImages(shuffledImages);
 
-    // Infinite scrolling logic
     const scrollCarousel = () => {
       if (carouselRef.current) {
-        carouselRef.current.scrollLeft += 1; // Adjust speed by changing the increment
+        carouselRef.current.scrollLeft += 1.5; // slightly faster scroll
         if (
           carouselRef.current.scrollLeft >=
           carouselRef.current.scrollWidth - carouselRef.current.clientWidth
         ) {
-          carouselRef.current.scrollLeft = 0; // Reset to start for infinite scrolling
+          carouselRef.current.scrollLeft = 0;
         }
       }
     };
 
-    const interval = setInterval(scrollCarousel, 25); // Adjust speed by changing interval
+    const interval = setInterval(scrollCarousel, 20); // faster interval
     return () => clearInterval(interval);
   }, []);
 
   //gsap animations
   useEffect(() => {
-    const tl = gsap.timeline();
+    const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
+
     tl.fromTo(
       "#black-cat > *",
-      { y: -200, opacity: 0 },
-      { y: 0, opacity: 1, duration: 2, ease: "power3.inOut", stagger: 0.3 }
+      { y: -150, opacity: 0, scale: 0.8 },
+      { y: 0, opacity: 1, scale: 1, duration: 1, stagger: 0.2 }
     )
       .fromTo(
         "#story-heading",
-        { y: 100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.4, ease: "power3.inOut" }
+        { y: 50, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.5 },
+        "<0.1" // overlap
       )
       .fromTo(
         "#story-location",
-        { y: 100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.4, ease: "power3.inOut" }
+        { y: 30, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.4 },
+        "<0.1"
       )
       .fromTo(
         "#carousel",
-        { y: 100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.4, ease: "power3.inOut" }
+        { y: 50, opacity: 0, scale: 0.95 },
+        { y: 0, opacity: 1, scale: 1, duration: 0.5 },
+        "<0.1"
       )
       .fromTo(
         "#story-heading-2",
-        { y: 100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.4, ease: "power3.inOut" }
+        { y: 30, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.4 },
+        "<0.1"
       );
   }, []);
 
   return (
     <section className="font-mono font-medium flex flex-col gap-5 w-full md:mt-[150px]">
       {/* greeting */}
-      <div id="black-cat" className="flex items-center">
+      <div id="black-cat" className="flex items-center gap-4">
         <Image
           src={blackCat}
           alt="black-cat in bag"
@@ -75,16 +78,16 @@ const Hero = () => {
         />
         <h1 className="font-Montez text-white text-[48px]">Hello</h1>
       </div>
-      {/* greeting */}
+
       {/* Heading */}
       <h1 id="story-heading" className="text-white md:text-[24px] text-justify">
-        I&apos;m Adnan Shaik, a 23-year-old front-end developer, passionate
-        about crafting user-centric, immersive websites.
+        I&apos;m Adnan Shaik, a 23-year-old Front-End Developer at <strong>Technoidentity</strong> and <strong>Freelancer</strong> (1+ yr) who builds end-to-end web solutions — from Figma research and prototypes to production React/Next.js apps. I deliver <strong>pixel-perfect</strong>, responsive dashboards and real-time systems , driving measurable wins for clients. As a <strong>proactive problem-solver</strong> and <strong>self-starter</strong>, I lead cross-functional handoffs, communicate clearly with PMs and designers, and iterate quickly from usability feedback. <strong>Results- and detail-oriented</strong> with a <strong>growth mindset</strong> and a willingness to learn new tools on the fly — I unblock teams, ship maintainable UI, and turn ambiguous requirements into working product.
       </h1>
-      {/* Heading */}
+
       <h2 id="story-location" className="md:text-[20px] text-gray-400">
         Based in Hyderabad
       </h2>
+
       {/* Image Carousel */}
       <div
         id="carousel"
@@ -107,7 +110,6 @@ const Hero = () => {
               />
             </div>
           ))}
-          {/* Repeat the images for seamless looping */}
           {randomizedImages.map((item, idx) => (
             <div
               key={`loop-${idx}`}
@@ -125,7 +127,7 @@ const Hero = () => {
           ))}
         </div>
       </div>
-      {/* Image Carousel */}
+
       <h2
         id="story-heading-2"
         className="text-gray-400 md:text-[20px] text-justify font-bold"
