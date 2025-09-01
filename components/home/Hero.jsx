@@ -77,8 +77,8 @@ const Hero = () => {
         Self-taught front-end developer from{" "}
         <span className="font-bold">Bengaluru</span>, crafting immersive
         websites while <br /> diving deep into{" "}
-        <span className="font-bold">UI/UX</span> and
-        <span className="font-bold">Product Design</span>—where creativity meets
+        <span className="font-bold">Web Development</span> and{" "}
+        <span className="font-bold">UI/UX Design</span>—where creativity meets
         code!
       </p>
       <Link

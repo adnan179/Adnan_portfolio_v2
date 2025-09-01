@@ -67,31 +67,6 @@ export const projectsData = [
     projectImages: [formGenerator, formGenerator2],
   },
   {
-    projectName: "IonArc",
-    projectHeading: "IonArc Consultancy Website",
-    period: "July 2024 - July 2024",
-    projectLink: "https://ionarc-website.vercel.app/",
-    projectDescription:
-      "A dynamic and engaging digital platform 🌐 designed to showcase the client’s expertise and services 💼. The website delivers a seamless user experience with its modern, responsive design 📱, ensuring visitors can easily navigate and access key information 🔍. Crafted to highlight industry-leading solutions 🏆, the site combines professional aesthetics with intuitive functionality 🎨, positioning the client as a trusted consultancy partner 🤝 while effectively capturing the attention of potential clients 👥.",
-    techStack: ["React", "tailwind CSS", "Figma", "Postman"],
-    colorPalette: [
-      "#34E89E",
-      "#1D2671",
-      "#FFFFFF",
-      "#0C1240",
-      "#00000",
-      "#D7D5D5",
-    ],
-    theJourney: [
-      "Client consultation",
-      "User Research",
-      "Design & wire framing",
-      "Development",
-      "Testing & deployment",
-    ],
-    projectImages: [ionarcThumbnail1, ionarcThumbnail2, ionarcThumbnail3],
-  },
-  {
     projectName: "Projects Section",
     projectHeading: "Portfolio Projects Section",
     period: "October 2024 - Present",

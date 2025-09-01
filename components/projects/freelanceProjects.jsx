@@ -5,12 +5,18 @@ import React, { useState, useEffect, useRef } from "react";
 import { freelanceProjectsData } from "@/data";
 import linkIcon from "../../app/public/icons/icons8-link-64.png";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const FreelanceProjects = () => {
   const [selectedProject, setSelectedProject] = useState(freelanceProjectsData[0]);
-  const [selectedProjectName, setSelectedProjectName] = useState(freelanceProjectsData[0].projectName);
+  const [selectedProjectName, setSelectedProjectName] = useState(
+    freelanceProjectsData[0].projectName
+  );
 
-  // refs for GSAP
+  // refs
+  const sectionRef = useRef(null);
   const linksRef = useRef(null);
   const contentRef = useRef(null);
   const bulletPointsRef = useRef([]);
@@ -21,28 +27,53 @@ const FreelanceProjects = () => {
     setSelectedProjectName(project.projectName);
   };
 
-  // Initial animations
+  // 👉 Initial section animations when scrolling in
   useEffect(() => {
-    if (linksRef.current) {
-      gsap.fromTo(
-        linksRef.current,
-        { x: -100, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.8, ease: "power2.out" }
-      );
-    }
+    if (!sectionRef.current) return;
 
-    if (contentRef.current) {
-      gsap.fromTo(
-        contentRef.current,
-        { scale: 0.95, opacity: 0 },
-        { scale: 1, opacity: 1, duration: 0.8, ease: "power2.out", delay: 0.2 }
-      );
-    }
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 80%", // animate when 80% of section enters viewport
+          toggleActions: "play none none none",
+        },
+      });
+
+      tl.from(linksRef.current, {
+        x: -100,
+        opacity: 0,
+        duration: 0.6,
+        ease: "power2.out",
+      })
+        .from(
+          contentRef.current,
+          {
+            y: 50,
+            opacity: 0,
+            duration: 0.6,
+            ease: "power2.out",
+          },
+          "-=0.3"
+        )
+        .from(
+          bulletPointsRef.current,
+          {
+            x: -20,
+            opacity: 0,
+            duration: 0.4,
+            ease: "power2.out",
+            stagger: 0.1,
+          },
+          "-=0.2"
+        );
+    }, sectionRef);
+
+    return () => ctx.revert();
   }, []);
 
-  // Animate bullet points and images on project change
+  // 👉 Animate bullet points and images when switching projects
   useEffect(() => {
-    // Animate bullet points
     if (bulletPointsRef.current.length > 0) {
       gsap.fromTo(
         bulletPointsRef.current,
@@ -57,9 +88,7 @@ const FreelanceProjects = () => {
       );
     }
 
-    // Animate images if they exist
-    if (selectedProject.projectImages && selectedProject.projectImages.length > 0) {
-      // Filter out any null refs
+    if (selectedProject.projectImages?.length > 0) {
       const validImages = imagesRef.current.filter(Boolean);
       if (validImages.length > 0) {
         gsap.fromTo(
@@ -77,13 +106,13 @@ const FreelanceProjects = () => {
       }
     }
 
-    // Reset images refs when project changes
+    // reset refs
     imagesRef.current = [];
     bulletPointsRef.current = [];
   }, [selectedProject]);
 
   return (
-    <section>
+    <section ref={sectionRef}>
       <div className="flex lg:flex-row flex-col gap-3 w-full h-full md:mt-0 mt-5">
         {/* links container */}
         <div className="flex md:flex-row flex-col gap-2 lg:w-1/6 w-full h-full">
@@ -166,7 +195,7 @@ const FreelanceProjects = () => {
           </div>
 
           {/* images container */}
-          {selectedProject.projectImages && selectedProject.projectImages.length > 0 && (
+          {selectedProject.projectImages?.length > 0 && (
             <div
               id="project-images"
               className="w-full flex flex-row gap-3 overflow-x-auto custom-scrollbar-2 mt-4"
